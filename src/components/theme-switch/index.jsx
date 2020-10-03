@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Switch from 'react-switch'
+import ThemeContext from '../../layout'
 
 import * as Dom from '../../utils/dom'
 import * as Storage from '../../utils/storage'
