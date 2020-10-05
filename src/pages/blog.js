@@ -10,7 +10,7 @@ import { useCategory } from '../hooks/useCategory'
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 import { useRenderedCount } from '../hooks/useRenderedCount'
 import { useScrollEvent } from '../hooks/useScrollEvent'
-import { Layout } from '../layout'
+import Layout from '../layout'
 import * as Dom from '../utils/dom'
 import * as EventManager from '../utils/event-manager'
 

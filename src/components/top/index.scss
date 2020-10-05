@@ -3,7 +3,7 @@
 .top {
   position: relative;
   width: 100%;
-  height: 30vh;
+  height: 33vh;
   // background: $theme-gradient;
   background: #102e7b;
 
@@ -19,21 +19,40 @@
   }
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 750px) {
   .top {
     position: relative;
     width: 100%;
-    height: 55vh;
+    height: 40vh;
     // background: $theme-gradient;
     background: #102e7b;
   }
 }
 
-@media only screen and (max-width: 630px) {
+@media only screen and (max-width: 368px) {
+  .isv {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 576px) {
   .top {
     position: relative;
     width: 100%;
     height: 40vh;
+    // background: $theme-gradient;
+    background: #102e7b;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .isv {
+    display: none;
+  }
+  .top {
+    position: relative;
+    width: 100%;
+    height: 30vh;
     // background: $theme-gradient;
     background: #102e7b;
   }

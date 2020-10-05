@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { graphql } from 'gatsby'
 
 import * as Elements from '../components/elements'
-import { Layout } from '../layout'
+import Layout from '../layout'
 import { Head } from '../components/head'
 import { PostTitle } from '../components/post-title'
 import { PostDate } from '../components/post-date'
