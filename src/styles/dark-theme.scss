@@ -70,7 +70,13 @@ body.dark {
 
   h1,
   h2 {
-    border-bottom-color: rgba(255, 255, 255, 0.3);
+    border-bottom-color: rgba(255, 255, 255, 0.3) !important;
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: $dark-light-font-color !important;
   }
 
   .navigator {

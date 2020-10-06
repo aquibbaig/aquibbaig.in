@@ -1,14 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import './index.scss'
 import Img from 'gatsby-image'
 import { Menu, Row, Col, Typography } from 'antd'
 import { ThemeSwitch } from '../theme-switch'
 import { ProjectOutlined, ProfileOutlined } from '@ant-design/icons'
 import { StaticQuery, graphql } from 'gatsby'
-
-const { SubMenu } = Menu
-
-import './index.scss'
 
 export const Top = ({ title, location, rootPath }) => {
   const isRoot = location.pathname === rootPath

@@ -10,11 +10,15 @@ export default ({ data, location }) => {
   return (
     <div>
       <Layout title={title.toLowerCase()} location="/">
+        {/* Latest BlogPosts */}
         <p style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>Latest Posts</p>
         {(latestPosts || []).map(post => {
           return <ThumbnailItem key={post.node.excerpt} node={post.node} />
         })}
         <Link to="/blog">Read all...</Link>
+        {/* Latest BlogPosts end */}
+        {/* Carousel for latest events. */}
+        {/* Carousel end */}
       </Layout>
     </div>
   )

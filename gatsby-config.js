@@ -4,9 +4,6 @@ module.exports = {
   siteMetadata: metaConfig,
   plugins: [
     {
-      resolve: 'gatsby-plugin-antd',
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,
@@ -104,5 +101,8 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-lodash`,
     `gatsby-plugin-sitemap`,
+    {
+      resolve: 'gatsby-plugin-antd',
+    },
   ],
 }
