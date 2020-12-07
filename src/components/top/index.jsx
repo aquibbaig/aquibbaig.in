@@ -1,8 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import './index.scss'
-import Img from 'gatsby-image'
-import { Menu, Row, Col, Typography } from 'antd'
+import { Menu, Row, Col } from 'antd'
 import { ThemeSwitch } from '../theme-switch'
 import { ProjectOutlined, ProfileOutlined } from '@ant-design/icons'
 import { StaticQuery, graphql } from 'gatsby'
@@ -40,6 +39,7 @@ export const Top = ({ title, location, rootPath }) => {
                           background: 'transparent',
                           border: '0',
                           color: '#fff',
+                          fontSize: '1rem'
                         }}
                         selectedKeys={[1]}
                         mode="horizontal"
@@ -59,27 +59,15 @@ export const Top = ({ title, location, rootPath }) => {
                 </Row>
                 <Row justify="center" align="middle">
                   <Col
+                    className="bio"
                     style={{
                       color: 'white',
                       display: 'flex',
-                      fontSize: '1.8rem',
                     }}
                   >
                     Hi, I am an Open Source web developer {<br />}
                     who also likes to play video games, {<br />}
-                    paint and not read books.
-                  </Col>
-                  <Col
-                    style={{
-                      color: 'white',
-                      display: 'flex',
-                      fontSize: '1.8rem',
-                    }}
-                  >
-                    {/* <div className="isv">
-                      <Img fixed={data.file.childImageSharp.fixed} />
-                    </div> */}
-                    <div className="isv">#dev</div>
+                    and occasionally paint.
                   </Col>
                 </Row>
               </>
