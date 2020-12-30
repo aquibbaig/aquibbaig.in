@@ -79,6 +79,15 @@ body.dark {
     color: $dark-light-font-color !important;
   }
 
+  // Tile colors
+  .ant-card-body {
+    background-color: $dark-background-color;
+    color: white;
+  }
+  .ant-card-bordered {
+    border: none;
+  }
+
   .navigator {
     a {
       background-color: $navigator-background-color;

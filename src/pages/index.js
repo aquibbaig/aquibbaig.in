@@ -2,7 +2,10 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 
 import Layout from '../layout/index'
-import { ThumbnailItem } from '../components/thumbnail-item'
+import { ThumbnailItem } from '../components/thumbnail-item';
+import { rhythm } from '../utils/typography';
+import Tile from '../components/tiles';
+import { Suspense } from 'react';
 
 export default ({ data, location }) => {
   const { title } = data.site.siteMetadata
@@ -11,14 +14,20 @@ export default ({ data, location }) => {
     <div>
       <Layout title={title.toLowerCase()} location="/">
         {/* Latest BlogPosts */}
-        <p style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>Latest Posts</p>
-        {(latestPosts || []).map(post => {
-          return <ThumbnailItem key={post.node.excerpt} node={post.node} />
-        })}
-        <Link to="/blog">Read all...</Link>
+        <div style={{ padding: `${rhythm(1.5)} ${rhythm(3 / 4)}` }}>
+          <p style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>Latest Posts</p>
+          {(latestPosts || []).map(post => {
+            return <ThumbnailItem key={post.node.excerpt} node={post.node} />
+          })}
+          <Link to="/blog">Read all...</Link>
+        </div>
         {/* Latest BlogPosts end */}
-        {/* Carousel for latest events. */}
-        {/* Carousel end */}
+        {/* Tiles. */}
+        <Suspense fallback={<div>Loading...</div>}>
+          <Tile header="Codeforces" content="I recently started solving competitive problems,
+          and learning how to approach real world problems algorithmically." />
+        </Suspense>
+        {/* Tiles end */}
       </Layout>
     </div>
   )
