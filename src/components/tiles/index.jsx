@@ -1,10 +1,15 @@
-import React from 'react';
-
+import React, { useEffect, useState } from 'react';
 import { Card, Row, Col } from 'antd';
 
 export default (props) => {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 5000);
+  }, []);
   return (
-    <Card hoverable {...props}>
+    <Card hoverable {...props} loading={loading}>
       <Row align="middle">
         <Col xs={16}>
           <p style={{ fontSize: '1.2rem' }}>
