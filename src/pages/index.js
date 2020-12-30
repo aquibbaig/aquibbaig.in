@@ -5,11 +5,27 @@ import Layout from '../layout/index'
 import { ThumbnailItem } from '../components/thumbnail-item';
 import { rhythm } from '../utils/typography';
 import Tile from '../components/tiles';
-import { Suspense } from 'react';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import { StarFilled } from '@ant-design/icons';
 
 export default ({ data, location }) => {
   const { title } = data.site.siteMetadata
   const latestPosts = data.allMarkdownRemark.edges
+  const [cfCardLoading, setCfCardLoading] = useState(true);
+  const cfStars = (
+    <div>
+      785 <StarFilled style={{ color: '#d4af37' }} />
+    </div>
+  );
+  const fossImage = (
+    <img src="https://fossi-foundation.org/assets/fossi_logo_large.png" />
+  );
+  useEffect(() => {
+    setTimeout(() => {
+      setCfCardLoading(false);
+    }, 2000);
+  }, []);
   return (
     <div>
       <Layout title={title.toLowerCase()} location="/">
@@ -23,10 +39,28 @@ export default ({ data, location }) => {
         </div>
         {/* Latest BlogPosts end */}
         {/* Tiles. */}
-        <Suspense fallback={<div>Loading...</div>}>
-          <Tile header="Codeforces" content="I recently started solving competitive problems,
-          and learning how to approach real world problems algorithmically." />
-        </Suspense>
+        <Tile
+          bg="#040250"
+          textCol="white"
+          className="codeforces"
+          loading={cfCardLoading}
+          header="Codeforces"
+          img={cfStars}
+          buttonLink="https://codeforces.com/profile/aquibbaig97"
+          content="I recently started solving competitive problems,
+            and learning how to approach real world problems algorithmically."
+        />
+        <Tile
+          bg="white"
+          textCol="black"
+          className="codeforces"
+          loading={cfCardLoading}
+          header="Google summer of Code 2019"
+          img={fossImage || '2019'}
+          buttonLink="https://summerofcode.withgoogle.com/archive/2019/projects/6739681302020096/"
+          content="This is my open source project which was a thrilling 3 months under Google's
+          summer internship. It was my first real world learning experience."
+        />
         {/* Tiles end */}
       </Layout>
     </div>

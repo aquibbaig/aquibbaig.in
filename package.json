@@ -8,6 +8,7 @@
     "url": "https://github.com/JaeYeopHan/gatsby-starter-bee/issues"
   },
   "dependencies": {
+    "@ant-design/icons": "^4.3.0",
     "antd": "^4.6.6",
     "gatsby": "^2.2.8",
     "gatsby-image": "^2.0.34",

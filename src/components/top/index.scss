@@ -4,7 +4,7 @@
 
 .top {
   width: 100%;
-  background: #102e7b;
+  background: $theme-gradient;
   .link {
     // display: inline-block;
     font-size: 28px;
@@ -35,8 +35,6 @@
     position: relative;
     width: 100%;
     height: 80vh;
-    // background: $theme-gradient;
-    background: #102e7b;
   }
 }
 
@@ -45,8 +43,6 @@
     position: relative;
     width: 100%;
     height: 70vh;
-    // background: $theme-gradient;
-    background: #102e7b;
   }
   .bio {
     font-size: 1.4rem;
@@ -57,9 +53,7 @@
   .top {
     position: relative;
     width: 100%;
-    height: 50vh;
-    // background: $theme-gradient;
-    background: #102e7b;
+    height: 40vh;
   }
   .bio {
     font-size: 1.4rem;
