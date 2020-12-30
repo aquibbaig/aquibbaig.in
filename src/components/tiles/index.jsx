@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Card, Row, Col, Button } from 'antd';
 
 export default (props) => {
-  const { bg, textCol, buttonLink, loading, img } = props;
+  const { bg, textCol, buttonLink, loading, img, className } = props;
   useEffect(() => {
     // setLoading(loading);
   }, [loading]);
   return (
     <Card
-      hoverable
       loading={loading}
-      style={{ backgroundColor: bg, color: textCol }}
+      style={{ backgroundColor: bg, color: textCol, marginTop: '5vh' }}
+      className={className}
     >
       <Row align="middle">
         <Col xs={16}>

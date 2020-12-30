@@ -80,7 +80,16 @@ body.dark {
   }
 
   // Tile colors
-  .ant-card-body {
+  // .dark-orange > .ant-card {
+  //   background-image: linear-gradient(182deg,#820FA9,  #48085E) !important;
+  // }
+  // .dark-blue > .ant-card {
+  //   background-image: linear-gradient(182deg,#ABC4AB, #334833) !important;
+  // }
+  // .dark-coffee > .ant-card {
+  //   background-image: linear-gradient(182deg,#A39171, #635640) !important;
+  // }
+  .dark > .ant-card-body {
     background-color: $dark-background-color;
     color: white;
   }

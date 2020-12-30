@@ -5,8 +5,10 @@ import Layout from '../layout/index'
 import { ThumbnailItem } from '../components/thumbnail-item';
 import { rhythm } from '../utils/typography';
 import Tile from '../components/tiles';
+import Flag from '../components/flag';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { Row, Col } from 'antd';
 import { StarFilled } from '@ant-design/icons';
 
 export default ({ data, location }) => {
@@ -42,9 +44,9 @@ export default ({ data, location }) => {
         <Tile
           bg="#040250"
           textCol="white"
-          className="codeforces"
+          className="tile"
           loading={cfCardLoading}
-          header="Codeforces"
+          header="codeforces.com"
           img={cfStars}
           buttonLink="https://codeforces.com/profile/aquibbaig97"
           content="I recently started solving competitive problems,
@@ -53,15 +55,46 @@ export default ({ data, location }) => {
         <Tile
           bg="white"
           textCol="black"
-          className="codeforces"
+          className="dark"
           loading={cfCardLoading}
-          header="Google summer of Code 2019"
+          header="summerofcode.withgoogle.com"
           img={fossImage || '2019'}
           buttonLink="https://summerofcode.withgoogle.com/archive/2019/projects/6739681302020096/"
           content="This is my open source project which was a thrilling 3 months under Google's
           summer internship. It was my first real world learning experience."
         />
         {/* Tiles end */}
+        {/* Flag group */}
+        <Row align="middle" gutter={[8, 8]} style={{ paddingTop: '5vh' }}>
+          <Col md={8} sm={8} xs={24}>
+            <Flag
+              className="dark-orange"
+              header="Resume"
+              bg="#D9514E"
+              textCol="white"
+              loading={false}
+            />
+          </Col>
+          <Col md={8} sm={8} xs={24}>
+            <Flag
+              className="dark-blue"
+              header="Gallery"
+              bg="#50A3A4"
+              textCol="white"
+              loading={false}
+            />
+          </Col>
+          <Col md={8} sm={8} xs={24}>
+            <Flag
+              className="dark-coffee"
+              header="Misc."
+              bg="#2DA8D8"
+              textCol="white"
+              loading={false}
+            />
+          </Col>
+        </Row>
+        {/* Flag group end */}
       </Layout>
     </div>
   )
