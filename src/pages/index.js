@@ -119,6 +119,7 @@ export default ({ data, location }) => {
     </div>
   )
 }
+
 export const pageQuery = graphql`
   query {
     site {

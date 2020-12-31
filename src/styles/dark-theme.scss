@@ -89,7 +89,7 @@ body.dark {
   // .dark-coffee > .ant-card {
   //   background-image: linear-gradient(182deg,#A39171, #635640) !important;
   // }
-  .dark > .ant-card-body {
+  .dark > .ant-card-body, .dark {
     background-color: $dark-background-color;
     color: white;
   }
