@@ -1,7 +1,10 @@
 @import '../../styles/variables.scss';
 
 .footer {
-  padding-top: 52px;
+  background-color: $theme-gradient;
+  padding-top: 20vh;
+  color: white;
+  margin-top: -10vh;
   text-align: center;
   font-size: 12px;
 

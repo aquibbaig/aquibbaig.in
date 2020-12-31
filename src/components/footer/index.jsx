@@ -1,10 +1,21 @@
-import React from 'react'
+import React from 'react';
+import { Row } from 'antd';
 
-import './index.scss'
+import './index.scss';
+import { rhythm } from '../../utils/typography';
 
 export const Footer = () => (
   <footer className="footer">
-    ©<a href="https://github.com/aquibbaig"> aquibbaig</a>, Built with{' '}
-    <a href="https://github.com/JaeYeopHan/gatsby-starter-bee">Gatsby</a>
+    <Row
+      justify="end"
+      align="bottom"
+      className="footer-content"
+      style={{ maxWidth: rhythm(24), marginLeft: 'auto', marginRight: 'auto', marginTop: '-10vh' }}
+    >
+      <a
+        href="https://github.com/aquibbaig"
+        style={{ color: '#FF9523', fontSize: '2rem' }}
+      >عقبی بیگ.</a>
+    </Row>
   </footer>
 )

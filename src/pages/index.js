@@ -6,6 +6,7 @@ import { ThumbnailItem } from '../components/thumbnail-item';
 import { rhythm } from '../utils/typography';
 import Tile from '../components/tiles';
 import Flag from '../components/flag';
+import EmailForm from '../components/email-form';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { Row, Col } from 'antd';
@@ -102,6 +103,18 @@ export default ({ data, location }) => {
           </Col>
         </Row>
         {/* Flag group end */}
+        {/* Email */}
+        <Row justify="start" style={{ background: 'transparent', position: 'relative', marginTop: '100px' }}>
+          <Col xs={24} sm={12}>
+            <EmailForm
+              className="dark-blue"
+              bg="#0039a6"
+              textCol="white"
+              loading={false}
+            />
+          </Col>
+        </Row>
+        {/* Email end */}
       </Layout>
     </div>
   )

@@ -1,0 +1,10 @@
+$highlighter-color: #7FFFD4;
+
+.ant-form-item-explain, .ant-input-affix-wrapper-focused, .ant-input-affix-wrapper {
+  color: $highlighter-color !important;
+  border-color: white !important;
+}
+
+.ant-input-prefix > .anticon {
+  color: black !important;
+}
