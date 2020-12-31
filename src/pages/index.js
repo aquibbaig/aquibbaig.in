@@ -21,9 +21,6 @@ export default ({ data, location }) => {
       785 <StarFilled style={{ color: '#d4af37' }} />
     </div>
   );
-  const fossImage = (
-    <img src="https://fossi-foundation.org/assets/fossi_logo_large.png" />
-  );
   useEffect(() => {
     setTimeout(() => {
       setCfCardLoading(false);
@@ -49,6 +46,7 @@ export default ({ data, location }) => {
           loading={cfCardLoading}
           header="codeforces.com"
           img={cfStars}
+          useGatsbyImage={false}
           buttonLink="https://codeforces.com/profile/aquibbaig97"
           content="I recently started solving competitive problems,
             and learning how to approach real world problems algorithmically."
@@ -59,7 +57,7 @@ export default ({ data, location }) => {
           className="dark"
           loading={cfCardLoading}
           header="summerofcode.withgoogle.com"
-          img={fossImage || '2019'}
+          img={data.fossiLogo.childImageSharp.fixed}
           buttonLink="https://summerofcode.withgoogle.com/archive/2019/projects/6739681302020096/"
           content="This is my open source project which was a thrilling 3 months under Google's
           summer internship. It was my first real world learning experience."
@@ -127,6 +125,13 @@ export const pageQuery = graphql`
         title
         configs {
           countOfInitialPost
+        }
+      }
+    }
+    fossiLogo: file(absolutePath: { regex: "/fossi_logo_large.png/" }) {
+      childImageSharp {
+        fixed(width: 100, height: 100) {
+          ...GatsbyImageSharpFixed
         }
       }
     }

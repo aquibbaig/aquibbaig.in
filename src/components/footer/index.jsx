@@ -15,7 +15,7 @@ export const Footer = () => (
       <a
         href="https://github.com/aquibbaig"
         style={{ color: '#FF9523', fontSize: '2rem' }}
-      >عقبی بیگ.</a>
+      >عاقب بیگ.</a>
     </Row>
   </footer>
 )

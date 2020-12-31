@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 import { Card, Row, Col, Button } from 'antd';
+import Image from 'gatsby-image';
 
 export default (props) => {
   const { bg, textCol, buttonLink, loading, img, className } = props;
+  console.log(img);
   useEffect(() => {
     // setLoading(loading);
   }, [loading]);
@@ -25,7 +27,7 @@ export default (props) => {
           </p>
         </Col>
         <Col xs={8} align="center" style={{ fontSize: '1.4rem' }}>
-          {img}
+          {img.base64 ? <Image fixed={img} alt="fossi" /> : img}
         </Col>
       </Row>
     </Card>
