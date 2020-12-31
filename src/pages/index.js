@@ -67,31 +67,38 @@ export default ({ data, location }) => {
         {/* Flag group */}
         <Row align="middle" gutter={[8, 8]} style={{ paddingTop: '5vh' }}>
           <Col md={8} sm={8} xs={24}>
-            <Flag
-              className="dark-orange"
-              header="Resume"
-              bg="#D9514E"
-              textCol="white"
-              loading={false}
-            />
+            <a href="
+              https://drive.google.com/file/d/1-EEP_q239KPlD2NZd5xJrFTTN9bvqTYb/view?usp=sharing">
+              <Flag
+                className="dark-orange"
+                header="Resume"
+                bg="#B9D9EB"
+                textCol="black"
+                loading={false}
+              />
+            </a>
           </Col>
           <Col md={8} sm={8} xs={24}>
-            <Flag
-              className="dark-blue"
-              header="Gallery"
-              bg="#50A3A4"
-              textCol="white"
-              loading={false}
-            />
+            <a href="">
+              <Flag
+                className="dark-blue"
+                header="Gallery"
+                bg="#6699CC"
+                textCol="black"
+                loading={false}
+              />
+            </a>
           </Col>
           <Col md={8} sm={8} xs={24}>
-            <Flag
-              className="dark-coffee"
-              header="Misc."
-              bg="#2DA8D8"
-              textCol="white"
-              loading={false}
-            />
+            <a href="">
+              <Flag
+                className="dark-coffee"
+                header="Misc."
+                bg="#B0C4DE"
+                textCol="black"
+                loading={false}
+              />
+            </a>
           </Col>
         </Row>
         {/* Flag group end */}

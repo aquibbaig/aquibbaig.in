@@ -44,11 +44,11 @@ export const Top = ({ title, location, rootPath }) => {
                         selectedKeys={[1]}
                         mode="horizontal"
                       >
-                        <Menu.Item key="blog" icon={<ProfileOutlined />}>
-                          blog
+                        <Menu.Item key="blog">
+                          <Link to="/blog" style={{ color: 'white' }}>Blog</Link>
                         </Menu.Item>
-                        <Menu.Item key="projects" icon={<ProjectOutlined />}>
-                          projects
+                        <Menu.Item key="projects">
+                          <Link to="/projects" style={{ color: 'white' }}>Projects</Link>
                         </Menu.Item>
                       </Menu>
                       <Col push={2} style={{ paddingTop: '10px' }}>
