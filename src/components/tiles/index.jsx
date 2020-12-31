@@ -4,7 +4,6 @@ import Image from 'gatsby-image';
 
 export default (props) => {
   const { bg, textCol, buttonLink, loading, img, className } = props;
-  console.log(img);
   useEffect(() => {
     // setLoading(loading);
   }, [loading]);

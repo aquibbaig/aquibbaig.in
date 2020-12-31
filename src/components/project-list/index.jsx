@@ -10,7 +10,7 @@ export default (props) => {
         return (
           <Col sm={24} md={8} key={project.link}>
             <Card hoverable style={{ minHeight: rhythm(10) }} className="dark">
-              <h4>{(project.title).toUpperCase()}</h4>
+              <p>{(project.title).toUpperCase()}</p>
               <p>{(project.desc).substring(0, 120)}...</p>
               <a href={project.link} style={{ marginBottom: '0' }}>Learn more</a>
             </Card>

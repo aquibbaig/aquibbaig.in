@@ -7,7 +7,7 @@ import './index.scss'
 
 export const ThumbnailItem = ({ node }) => {
   return (
-    <Card hoverable style={{ cursor: 'text', marginBottom: '2vh' }}>
+    <Card className="dark" hoverable style={{ cursor: 'text', marginBottom: '2vh' }}>
       <div key={node.fields.slug}>
         <h3>{node.frontmatter.title || node.fields.slug}, {node.frontmatter.date}</h3>
         <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
