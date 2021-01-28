@@ -1,17 +1,62 @@
-import React from 'react'
+import React, { createContext, useEffect, useState } from 'react'
 
 import { Top } from '../components/top'
 import { Header } from '../components/header'
 import { Footer } from '../components/footer'
 import { rhythm } from '../utils/typography'
 
+// Theme vars
+import * as Dom from '../utils/dom'
+import * as Storage from '../utils/storage'
+import { THEME } from '../constants'
+
 import './index.scss'
 
+function getTheme(checked) {
+  return checked ? THEME.DARK : THEME.LIGHT
+}
+
+function toggleTheme(theme) {
+  switch (theme) {
+    case THEME.LIGHT: {
+      Dom.addClassToBody(THEME.LIGHT)
+      Dom.removeClassToBody(THEME.DARK)
+      break
+    }
+    case THEME.DARK: {
+      Dom.addClassToBody(THEME.DARK)
+      Dom.removeClassToBody(THEME.LIGHT)
+      break
+    }
+  }
+}
+
+export const ThemeCtx = createContext(false)
+
 const Layout = ({ location, title, children }) => {
+  const [checked, setChecked] = useState(false)
+  const handleChange = checked => {
+    const theme = getTheme(checked)
+
+    Storage.setTheme(checked)
+    setChecked(checked)
+    toggleTheme(theme)
+  }
+  useEffect(() => {
+    const checked = Storage.getTheme(Dom.hasClassOfBody(THEME.DARK))
+
+    handleChange(checked)
+  }, [checked])
   const rootPath = `${__PATH_PREFIX__}/`
   return (
-    <React.Fragment>
-      <Top title={title} location={location} rootPath={rootPath} />
+    <ThemeCtx.Provider value={checked}>
+      <Top
+        setCheckVar={(c) => setChecked(c)}
+        title={title}
+        location={location}
+        rootPath={rootPath}
+        checked={checked}
+      />
       <br />
       <div
         style={{
@@ -26,7 +71,7 @@ const Layout = ({ location, title, children }) => {
         {children}
       </div>
       <Footer />
-    </React.Fragment>
+    </ThemeCtx.Provider>
   )
 }
 

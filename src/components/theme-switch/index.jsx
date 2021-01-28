@@ -52,7 +52,8 @@ function toggleTheme(theme) {
   }
 }
 
-export const ThemeSwitch = () => {
+export const ThemeSwitch = (props) => {
+  const { setVar } = props;
   const [checked, setChecked] = useState(false)
 
   const handleChange = checked => {
@@ -60,6 +61,9 @@ export const ThemeSwitch = () => {
 
     Storage.setTheme(checked)
     setChecked(checked)
+    if (setVar) {
+      setVar(checked)
+    }
     toggleTheme(theme)
   }
 

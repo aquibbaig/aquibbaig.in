@@ -8,6 +8,12 @@ body.dark {
     color: $dark-light-font-color;
   }
 
+  a {
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: $dark-link-color;
+  }
+
   .bio {
     .author-name-content {
       background-color: $dark-category-border-color;
