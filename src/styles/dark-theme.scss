@@ -99,8 +99,19 @@ body.dark {
     background-color: $dark-background-color;
     color: white;
   }
+
   .ant-card-bordered {
+    background: transparent;
     border: none;
+  }
+
+  .ant-card-meta-title {
+    color: 'white' !important;
+  }
+
+  .ant-btn-ghost > a {
+    color: white;
+    text-decoration: none;
   }
 
   .navigator {

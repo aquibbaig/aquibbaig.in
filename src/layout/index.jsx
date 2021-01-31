@@ -31,25 +31,32 @@ function toggleTheme(theme) {
   }
 }
 
-export const ThemeCtx = createContext(false)
+export const ThemeContext = createContext();
 
 const Layout = ({ location, title, children }) => {
   const [checked, setChecked] = useState(false)
-  const handleChange = checked => {
-    const theme = getTheme(checked)
+  const renderChildren = (children) => {
+    return (
+      <ThemeContext.Provider value={{ "dark": checked }}>
+        {children}
+      </ThemeContext.Provider>
+    )
+  }
+  const handleChange = ch => {
+    const theme = getTheme(ch)
 
-    Storage.setTheme(checked)
-    setChecked(checked)
+    Storage.setTheme(ch)
+    setChecked(ch)
     toggleTheme(theme)
   }
   useEffect(() => {
-    const checked = Storage.getTheme(Dom.hasClassOfBody(THEME.DARK))
+    const ch = Storage.getTheme(Dom.hasClassOfBody(THEME.DARK))
 
-    handleChange(checked)
-  }, [checked])
+    handleChange(ch)
+  }, [Storage.getTheme(Dom.hasClassOfBody(THEME.DARK))])
   const rootPath = `${__PATH_PREFIX__}/`
   return (
-    <ThemeCtx.Provider value={checked}>
+    <>
       <Top
         setCheckVar={(c) => setChecked(c)}
         title={title}
@@ -68,10 +75,10 @@ const Layout = ({ location, title, children }) => {
         }}
       >
         <Header title={title} location={location} rootPath={rootPath} />
-        {children}
+        {renderChildren(children)}
       </div>
       <Footer />
-    </ThemeCtx.Provider>
+    </>
   )
 }
 

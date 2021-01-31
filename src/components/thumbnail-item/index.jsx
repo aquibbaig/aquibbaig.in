@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'gatsby'
 import { Card } from 'antd';
 import { TARGET_CLASS } from '../../utils/visible'

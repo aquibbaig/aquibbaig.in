@@ -3,11 +3,8 @@ import { Link } from 'gatsby'
 import './index.scss'
 import { Menu, Row, Col, Dropdown } from 'antd'
 import { ThemeSwitch } from '../theme-switch'
-import { MenuOutlined } from '@ant-design/icons'
+import { MoreOutlined } from '@ant-design/icons'
 import { StaticQuery, graphql } from 'gatsby'
-
-// Theme Handlers
-import * as Dom from '../../utils/dom'
 
 export const Top = ({ title, location, rootPath, ...props }) => {
   const isRoot = location.pathname === rootPath
@@ -18,7 +15,7 @@ export const Top = ({ title, location, rootPath, ...props }) => {
   }
 
   const menu = (
-    <Menu style={{ backgroundColor: 'white' }}>
+    <Menu>
       <Menu.Item key="1">
         <Link to="/blog">Blog</Link>
       </Menu.Item>
@@ -59,7 +56,7 @@ export const Top = ({ title, location, rootPath, ...props }) => {
                         trigger={['click']}
                         overlay={menu}
                       >
-                        <MenuOutlined
+                        <MoreOutlined
                           style={!checked ?
                             {
                               fontSize: '1.8rem',

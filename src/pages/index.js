@@ -4,121 +4,94 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../layout/index'
 import { ThumbnailItem } from '../components/thumbnail-item';
 import { rhythm } from '../utils/typography';
-import Tile from '../components/tiles';
-import Flag from '../components/flag';
+// import Tile from '../components/tiles';
+// import Flag from '../components/flag';
 import EmailForm from '../components/email-form';
-import { useState } from 'react';
-import { useEffect } from 'react';
-import { Row, Col } from 'antd';
-import { StarFilled } from '@ant-design/icons';
-
-import { ThemeCtx } from '../layout/index';
+import { Row, Col, Button } from 'antd';
+import Banner from '../components/banner';
 
 export default ({ data, location }) => {
   const { title } = data.site.siteMetadata
   const latestPosts = data.allMarkdownRemark.edges
-  const [cfCardLoading, setCfCardLoading] = useState(true);
-  const cfStars = (
-    <div>
-      785 <StarFilled style={{ color: '#d4af37' }} />
-    </div>
-  );
-  useEffect(() => {
-    setTimeout(() => {
-      setCfCardLoading(false);
-    }, 2000);
-  }, []);
+
   return (
-    <ThemeCtx.Consumer>
-      {dark => (
-        <Layout title={title.toLowerCase()} location="/">
-          {/* Latest BlogPosts */}
-          <div style={{ padding: `${rhythm(1.5)} ${rhythm(3 / 4)}` }}>
-            <p style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>Latest Posts</p>
-            {(latestPosts || []).map(post => {
-              return <ThumbnailItem key={post.node.excerpt} node={post.node} />
-            })}
-            <Link to="/blog">Read all...</Link>
-          </div>
-          {/* Latest BlogPosts end */}
-          {/* Tiles. */}
-          <Tile
-            bg="#040250"
-            textCol="white"
-            className="tile"
-            loading={cfCardLoading}
-            header="codeforces.com"
-            img={cfStars}
-            useGatsbyImage={false}
-            buttonLink="https://codeforces.com/profile/aquibbaig97"
-            content="I recently started solving competitive problems,
-            and learning how to approach real world problems algorithmically."
-          />
-          <Tile
-            bg="white"
-            textCol="black"
-            className="dark"
-            loading={cfCardLoading}
-            header="summerofcode.withgoogle.com"
-            img={data.fossiLogo.childImageSharp.fixed}
-            buttonLink="https://summerofcode.withgoogle.com/archive/2019/projects/6739681302020096/"
-            content="This is my open source project which was a thrilling 3 months under Google's
-          summer internship. It was my first real world learning experience."
-          />
-          {/* Tiles end */}
-          {/* Flag group */}
-          <Row align="middle" gutter={[8, 8]} style={{ paddingTop: '5vh' }}>
-            <Col md={8} sm={8} xs={24}>
-              <a href="
+    <Layout title={title.toLowerCase()} location="/">
+      {/* Latest BlogPosts */}
+      <div style={{ padding: `${rhythm(1.5)} ${rhythm(3 / 4)}` }}>
+        <p style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>Latest Posts</p>
+        {(latestPosts || []).map(post => {
+          return <ThumbnailItem key={post.node.excerpt} node={post.node} />
+        })}
+        <Link to="/blog">Read all...</Link>
+      </div>
+      {/* Latest BlogPosts end */}
+      {/* Tiles. */}
+      <Banner
+        darkModeImage={data.darkLinesBanner.childImageSharp.fluid}
+        lightImage={data.lightBanner.childImageSharp.fluid}
+        h1="LEARN GOLANG"
+        smallText="The Better Way"
+        button={<Button type="ghost"><a href={''}>Gophertuts</a></Button>}
+      />
+      <Banner
+        darkModeImage={data.darkLinesBanner.childImageSharp.fluid}
+        lightImage={data.lightMixerBanner.childImageSharp.fluid}
+        h1="LEARN GOLANG"
+        smallText="The Better Way"
+        button={<Button type="ghost"><a href={''}>Gophertuts</a></Button>}
+      />
+      {/* Tiles end */}
+      {/* Flag group */}
+      {/* <Row align="middle" gutter={[8, 8]}>
+        <Col md={8} sm={8} xs={24}>
+          <a href="
               https://drive.google.com/file/d/1-EEP_q239KPlD2NZd5xJrFTTN9bvqTYb/view?usp=sharing">
-                <Flag
-                  className="dark-orange"
-                  header="Resume"
-                  bg="#B9D9EB"
-                  textCol="black"
-                  loading={false}
-                />
-              </a>
-            </Col>
-            <Col md={8} sm={8} xs={24}>
-              <a href="">
-                <Flag
-                  className="dark-blue"
-                  header="Gallery"
-                  bg="#6699CC"
-                  textCol="black"
-                  loading={false}
-                />
-              </a>
-            </Col>
-            <Col md={8} sm={8} xs={24}>
-              <a href="">
-                <Flag
-                  className="dark-coffee"
-                  header="Misc."
-                  bg="#B0C4DE"
-                  textCol="black"
-                  loading={false}
-                />
-              </a>
-            </Col>
-          </Row>
-          {/* Flag group end */}
-          {/* Email */}
-          <Row justify="start" style={{ background: 'transparent', position: 'relative', marginTop: '100px' }}>
-            <Col xs={24} sm={12}>
-              <EmailForm
-                className="dark-blue"
-                bg="#0039a6"
-                textCol="white"
-                loading={false}
-              />
-            </Col>
-          </Row>
-          {/* Email end */}
-        </Layout>
-      )}
-    </ThemeCtx.Consumer>
+            <Flag
+              className="dark-orange"
+              header="Resume"
+              bg="#B9D9EB"
+              textCol="black"
+              loading={false}
+            />
+          </a>
+        </Col>
+        <Col md={8} sm={8} xs={24}>
+          <a href="">
+            <Flag
+              className="dark-blue"
+              header="Gallery"
+              bg="#6699CC"
+              textCol="black"
+              loading={false}
+            />
+          </a>
+        </Col>
+        <Col md={8} sm={8} xs={24}>
+          <a href="">
+            <Flag
+              className="dark-coffee"
+              header="Misc."
+              bg="#B0C4DE"
+              textCol="black"
+              loading={false}
+            />
+          </a>
+        </Col>
+      </Row> */}
+      {/* Flag group end */}
+      {/* Email */}
+      <Row justify="start" style={{ background: 'transparent', position: 'relative', marginTop: '100px' }}>
+        <Col xs={24} sm={12}>
+          <EmailForm
+            className="dark-blue"
+            bg="#0039a6"
+            textCol="white"
+            loading={false}
+          />
+        </Col>
+      </Row>
+      {/* Email end */}
+    </Layout>
   )
 }
 
@@ -136,6 +109,34 @@ export const pageQuery = graphql`
       childImageSharp {
         fixed(width: 100, height: 100) {
           ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    lightBanner: file(absolutePath: { regex: "/banner-light.png/" }) {
+      childImageSharp {
+        fluid(quality: 100, maxWidth: 1920) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    lightMixerBanner: file(absolutePath: { regex: "/mixer.png/" }) {
+      childImageSharp {
+        fluid(quality: 100, maxWidth: 1920) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    darkFaceBanner: file(absolutePath: { regex: "/banner-dark.png/" }) {
+      childImageSharp {
+        fluid(quality: 100, maxWidth: 1920) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    darkLinesBanner: file(absolutePath: { regex: "/banner-dark-lines.png/" }) {
+      childImageSharp {
+        fluid(quality: 100, maxWidth: 1920) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
