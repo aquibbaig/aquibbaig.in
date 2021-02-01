@@ -10,12 +10,12 @@ export const Footer = () => (
       justify="end"
       align="bottom"
       className="footer-content"
-      style={{ maxWidth: rhythm(24), marginLeft: 'auto', marginRight: 'auto', marginTop: '-10vh' }}
+      style={{ maxWidth: rhythm(24), marginLeft: 'auto', marginRight: 'auto' }}
     >
       <a
         href="https://github.com/aquibbaig"
-        style={{ color: '#FF9523', fontSize: '2rem' }}
-      >عاقب بیگ.</a>
+        style={{ fontSize: '1rem' }}
+      >© Aquib.</a>
     </Row>
   </footer>
 )

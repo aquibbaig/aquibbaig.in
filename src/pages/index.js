@@ -6,7 +6,6 @@ import { ThumbnailItem } from '../components/thumbnail-item';
 import { rhythm } from '../utils/typography';
 // import Tile from '../components/tiles';
 // import Flag from '../components/flag';
-import EmailForm from '../components/email-form';
 import { Row, Col, Button } from 'antd';
 import Banner from '../components/banner';
 
@@ -22,7 +21,7 @@ export default ({ data, location }) => {
         {(latestPosts || []).map(post => {
           return <ThumbnailItem key={post.node.excerpt} node={post.node} />
         })}
-        <Link to="/blog">Read all...</Link>
+        <Link to="/blog">View all blog posts...</Link>
       </div>
       {/* Latest BlogPosts end */}
       {/* Tiles. */}
@@ -36,9 +35,9 @@ export default ({ data, location }) => {
       <Banner
         darkModeImage={data.darkLinesBanner.childImageSharp.fluid}
         lightImage={data.lightMixerBanner.childImageSharp.fluid}
-        h1="LEARN GOLANG"
-        smallText="The Better Way"
-        button={<Button type="ghost"><a href={''}>Gophertuts</a></Button>}
+        h1="MONITOR YOUR APIs"
+        smallText="With Bench Routes"
+        button={<Button type="ghost"><a href={'https://github.com/zairza-cetb/bench-routes'}>Showtime</a></Button>}
       />
       {/* Tiles end */}
       {/* Flag group */}
@@ -79,18 +78,6 @@ export default ({ data, location }) => {
         </Col>
       </Row> */}
       {/* Flag group end */}
-      {/* Email */}
-      <Row justify="start" style={{ background: 'transparent', position: 'relative', marginTop: '100px' }}>
-        <Col xs={24} sm={12}>
-          <EmailForm
-            className="dark-blue"
-            bg="#0039a6"
-            textCol="white"
-            loading={false}
-          />
-        </Col>
-      </Row>
-      {/* Email end */}
     </Layout>
   )
 }

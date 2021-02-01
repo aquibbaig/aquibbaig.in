@@ -114,6 +114,23 @@ body.dark {
     text-decoration: none;
   }
 
+  .footer {
+    background-color: $dark-background-color;
+  }
+
+  .ant-dropdown > .ant-dropdown-menu > .ant-dropdown-menu-item {
+    background: $dark-background-color;
+  }
+
+  .ant-dropdown-menu {
+    padding: 0;
+  }
+
+  .ant-dropdown > .ant-dropdown-menu > .ant-dropdown-menu-item > a {
+    color: white;
+    text-decoration: none;
+  }
+
   .navigator {
     a {
       background-color: $navigator-background-color;

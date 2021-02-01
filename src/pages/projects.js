@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { Row, Col } from 'antd';
-import EmailForm from '../components/email-form';
 import ProjectList from '../components/project-list';
 import Layout from '../layout'
 
@@ -42,18 +41,6 @@ export default ({ data, location }) => {
             <ProjectList projects={projectList} />
           </Row>
         </div>
-        {/* Email */}
-        <Row justify="start" style={{ background: 'transparent', position: 'relative', marginTop: '100px' }}>
-          <Col xs={24} sm={12}>
-            <EmailForm
-              className="dark-blue"
-              bg="#0039a6"
-              textCol="white"
-              loading={false}
-            />
-          </Col>
-        </Row>
-        {/* Email end */}
       </Layout>
     </div>
   )

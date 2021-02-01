@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Link } from 'gatsby'
 import './index.scss'
 import { Menu, Row, Col, Dropdown } from 'antd'
@@ -81,7 +81,7 @@ export const Top = ({ title, location, rootPath, ...props }) => {
                       className="bio"
                       style={!checked ? { color: 'black' } : { color: 'white' }}
                     >
-                      <div style={{ fontSize: '2.5rem' }}>Hi, I'm Aquib Baig.</div>
+                      <div style={{ fontSize: '2.5rem' }}>Hi, I'm <Link to="/">Aquib.</Link></div>
                       <div style={{ fontSize: '1.4rem' }}>I am a full stack web developer.</div>
                     </Col>
                   </Row>

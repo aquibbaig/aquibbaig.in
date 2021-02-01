@@ -53,7 +53,7 @@ const Layout = ({ location, title, children }) => {
     const ch = Storage.getTheme(Dom.hasClassOfBody(THEME.DARK))
 
     handleChange(ch)
-  }, [Storage.getTheme(Dom.hasClassOfBody(THEME.DARK))])
+  }, [checked])
   const rootPath = `${__PATH_PREFIX__}/`
   return (
     <>
