@@ -30,7 +30,7 @@ export default ({ data, location }) => {
         lightImage={data.lightBanner.childImageSharp.fluid}
         h1="LEARN GOLANG"
         smallText="The Better Way"
-        button={<Button type="ghost"><a href={''}>Gophertuts</a></Button>}
+        button={<Button type="ghost"><a href={'https://gophertuts.surge.sh'} target="blank">Gophertuts</a></Button>}
       />
       <Banner
         darkModeImage={data.darkLinesBanner.childImageSharp.fluid}

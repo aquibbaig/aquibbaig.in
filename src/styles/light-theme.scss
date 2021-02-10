@@ -72,6 +72,10 @@ body.light {
     border: none;
   }
 
+  .ant-card {
+    background-color: $light-background-color;
+  }
+
   .dark > .ant-card-body {
     background-color: $light-background-color;
     color: black;
