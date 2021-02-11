@@ -3,9 +3,8 @@ body.dark {
   text-shadow: $dark-text-shadow;
   color: $dark-light-font-color;
 
-  // home
-  .home-header {
-    color: $dark-light-font-color;
+  .top {
+    background-color:$dark-background-color;
   }
 
   a {
@@ -60,13 +59,6 @@ body.dark {
     }
   }
 
-  .footer {
-    color: $dark-middle-font-color;
-    a {
-      color: $dark-lightest-font-color;
-    }
-  }
-
   // post
   blockquote {
     border-left: 4px solid rgba(255, 255, 255, 0.822);
@@ -79,7 +71,7 @@ body.dark {
 
   h1,
   h2,
-  h3 {
+  h3, p {
     color: $dark-light-font-color !important;
   }
 
@@ -95,7 +87,17 @@ body.dark {
   // }
   .dark > .ant-card-body, .dark {
     background-color: $dark-background-color;
-    color: white;
+    color: $dark-light-font-color;
+  }
+
+  .footer {
+    h3, svg, h6, h5 {
+      color: #F48EB1 !important;
+    }
+    a {
+      color: $dark-lightest-font-color;
+    }
+    background-color: #3B3831 ;
   }
 
   .ant-card-bordered {
@@ -110,10 +112,6 @@ body.dark {
   .ant-btn-ghost > a {
     color: white;
     text-decoration: none;
-  }
-
-  .footer {
-    background-color: $dark-background-color;
   }
 
   .ant-dropdown > .ant-dropdown-menu > .ant-dropdown-menu-item {

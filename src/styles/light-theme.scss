@@ -7,6 +7,16 @@ body.light {
     color: $dark-gray;
   }
 
+  .ant-btn-primary {
+    background: transparent;
+    color: black;
+    border: 1px solid $dark-gray;
+  }
+
+  .top {
+    background-color: #F7F3ED;
+  }
+
   a {
     color: $light-category-text-color;
     // text-decoration: underline;
@@ -70,6 +80,10 @@ body.light {
 
   .ant-card-bordered {
     border: none;
+  }
+
+  .footer {
+    background-color: #f8f3a1;
   }
 
   .ant-card {

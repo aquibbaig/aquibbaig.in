@@ -4,8 +4,6 @@
 
 .top {
   width: 100%;
-  // background: #F7F3ED;
-  // font-family: 'Courier
   .link {
     // display: inline-block;
     font-size: 28px;
@@ -16,10 +14,18 @@
     font-family: 'Catamaran';
     font-weight: 800;
   }
-  .bio {
-    padding-top: 2vh;
+  .switch-container {
+    margin-right: 20vw;
+  }
+  .bio, .hello {
     padding-left: 20vw;
     font-size: 2.4rem;
+  }
+  .hello {
+    padding-top: 2vh;
+  }
+  .navigation {
+    margin: 2vh 10vw 0 10vw;
   }
   .toolbar {
     padding-right: '20vw';
@@ -33,7 +39,7 @@
   .top {
     position: relative;
     width: 100%;
-    height: 35vh;
+    height: 40vh;
   }
   .toolbar {
     padding-right: '20vw';
@@ -55,7 +61,7 @@
   .top {
     position: relative;
     width: 100%;
-    height: 25vh;
+    height: 35vh;
   }
   .bio {
     font-size: 1.4rem;
@@ -66,7 +72,7 @@
   .top {
     position: relative;
     width: 100%;
-    height: 25vh;
+    height: 35vh;
   }
   .bio {
     font-size: 1.4rem;
@@ -77,7 +83,7 @@
   .top {
     position: relative;
     width: 100%;
-    height: 25vh;
+    height: 27vh;
   }
   .bio {
     font-size: 1.4rem;

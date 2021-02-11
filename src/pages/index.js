@@ -1,83 +1,67 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { graphql, Link } from 'gatsby'
 
 import Layout from '../layout/index'
 import { ThumbnailItem } from '../components/thumbnail-item';
 import { rhythm } from '../utils/typography';
-// import Tile from '../components/tiles';
+import Tile from '../components/tiles';
 // import Flag from '../components/flag';
-import { Row, Col, Button } from 'antd';
-import Banner from '../components/banner';
+// import { Row, Col, Button } from 'antd';
+// import Banner from '../components/banner';
 
 export default ({ data, location }) => {
   const { title } = data.site.siteMetadata
   const latestPosts = data.allMarkdownRemark.edges
 
+  const OuterStyles = {
+    // padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+    // background: "black",
+  }
+
+  const InnerStyles = {
+    padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+  }
+
   return (
     <Layout title={title.toLowerCase()} location="/">
       {/* Latest BlogPosts */}
       <div style={{ padding: `${rhythm(1.5)} ${rhythm(3 / 4)}` }}>
-        <p style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>Latest Posts</p>
+        <p style={{ fontSize: '1.2rem', fontWeight: 'bold', textAlign: 'center' }}>Latest Posts</p>
         {(latestPosts || []).map(post => {
           return <ThumbnailItem key={post.node.excerpt} node={post.node} />
         })}
-        <Link to="/blog">View all blog posts...</Link>
+        <p style={{ textAlign: 'center', fontWeight: 'bold', textDecoration: 'underline' }}>
+          <Link to="/blog">VIEW MORE</Link>
+        </p>
       </div>
       {/* Latest BlogPosts end */}
       {/* Tiles. */}
-      <Banner
-        darkModeImage={data.darkLinesBanner.childImageSharp.fluid}
-        lightImage={data.lightBanner.childImageSharp.fluid}
-        h1="LEARN GOLANG"
-        smallText="The Better Way"
-        button={<Button type="ghost"><a href={'https://gophertuts.surge.sh'} target="blank">Gophertuts</a></Button>}
+      <Tile
+        loading={false}
+        outerStyle={OuterStyles}
+        innerStyles={InnerStyles}
+        darkBg="#273037"
+        lightBg="#C7D3E6"
+        className="tile"
+        buttonLink=""
+        top="Golang Tutorials with"
+        header="Hands on Exercises"
+        content="Gophertuts is a collection of topics in golang which are lesser known, but widely used."
       />
-      <Banner
-        darkModeImage={data.darkLinesBanner.childImageSharp.fluid}
-        lightImage={data.lightMixerBanner.childImageSharp.fluid}
-        h1="MONITOR YOUR APIs"
-        smallText="With Bench Routes"
-        button={<Button type="ghost"><a href={'https://github.com/zairza-cetb/bench-routes'}>Showtime</a></Button>}
+      <Tile
+        loading={false}
+        outerStyle={OuterStyles}
+        innerStyles={InnerStyles}
+        // darkOutline="#EAC6A2"
+        darkBg="#273037"
+        lightBg="#C7D3E6"
+        className="tile"
+        buttonLink=""
+        top="Golang Tutorials with"
+        header="Hands on Exercises"
+        content="Gophertuts is a collection of topics in golang which are lesser known, but widely used."
       />
       {/* Tiles end */}
-      {/* Flag group */}
-      {/* <Row align="middle" gutter={[8, 8]}>
-        <Col md={8} sm={8} xs={24}>
-          <a href="
-              https://drive.google.com/file/d/1-EEP_q239KPlD2NZd5xJrFTTN9bvqTYb/view?usp=sharing">
-            <Flag
-              className="dark-orange"
-              header="Resume"
-              bg="#B9D9EB"
-              textCol="black"
-              loading={false}
-            />
-          </a>
-        </Col>
-        <Col md={8} sm={8} xs={24}>
-          <a href="">
-            <Flag
-              className="dark-blue"
-              header="Gallery"
-              bg="#6699CC"
-              textCol="black"
-              loading={false}
-            />
-          </a>
-        </Col>
-        <Col md={8} sm={8} xs={24}>
-          <a href="">
-            <Flag
-              className="dark-coffee"
-              header="Misc."
-              bg="#B0C4DE"
-              textCol="black"
-              loading={false}
-            />
-          </a>
-        </Col>
-      </Row> */}
-      {/* Flag group end */}
     </Layout>
   )
 }
@@ -96,34 +80,6 @@ export const pageQuery = graphql`
       childImageSharp {
         fixed(width: 100, height: 100) {
           ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    lightBanner: file(absolutePath: { regex: "/banner-light.png/" }) {
-      childImageSharp {
-        fluid(quality: 100, maxWidth: 1920) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    lightMixerBanner: file(absolutePath: { regex: "/mixer.png/" }) {
-      childImageSharp {
-        fluid(quality: 100, maxWidth: 1920) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    darkFaceBanner: file(absolutePath: { regex: "/banner-dark.png/" }) {
-      childImageSharp {
-        fluid(quality: 100, maxWidth: 1920) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    darkLinesBanner: file(absolutePath: { regex: "/banner-dark-lines.png/" }) {
-      childImageSharp {
-        fluid(quality: 100, maxWidth: 1920) {
-          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

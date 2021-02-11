@@ -1,21 +1,44 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Card, Row, Col, Button } from 'antd';
 import Image from 'gatsby-image';
+import { ThemeContext } from '../../layout';
 
 export default (props) => {
-  const { bg, textCol, buttonLink, loading, img, className } = props;
+  const {
+    buttonLink,
+    loading,
+    className,
+    outerStyle,
+    innerStyle,
+    darkBg,
+    lightBg,
+    darkOutline
+  } = props;
+
+  const { dark } = useContext(ThemeContext);
+
   useEffect(() => {
     // setLoading(loading);
   }, [loading]);
   return (
     <Card
       loading={loading}
-      style={{ backgroundColor: bg, color: textCol, marginTop: '5vh' }}
       className={className}
+      style={outerStyle, dark ?
+        {
+          backgroundColor: darkBg,
+          border: `1px solid ${darkOutline}`
+        } : {
+          backgroundColor: lightBg
+        }
+      }
     >
       <Row align="middle">
-        <Col xs={16}>
-          <p style={{ fontSize: '1.3rem' }}>
+        <Col style={innerStyle}>
+          <p style={{ fontSize: '1.5rem', margin: '0' }}>
+            {props.top}
+          </p>
+          <p style={{ fontSize: '2.5rem', margin: '0' }}>
             {props.header}
           </p>
           <p style={{ fontSize: '1rem' }}>
@@ -24,9 +47,6 @@ export default (props) => {
           <p>
             <Button type="primary"><a href={buttonLink}>View</a></Button>
           </p>
-        </Col>
-        <Col xs={8} align="center" style={{ fontSize: '1.4rem' }}>
-          {img.base64 ? <Image fixed={img} alt="fossi" /> : img}
         </Col>
       </Row>
     </Card>

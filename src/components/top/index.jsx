@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import './index.scss'
-import { Menu, Row, Col, Dropdown } from 'antd'
+import { Menu, Row, Col, Dropdown, Divider } from 'antd'
 import { ThemeSwitch } from '../theme-switch'
 import { MoreOutlined } from '@ant-design/icons'
 import { StaticQuery, graphql } from 'gatsby'
+import { rhythm } from '../../utils/typography'
 
 export const Top = ({ title, location, rootPath, ...props }) => {
   const isRoot = location.pathname === rootPath
@@ -14,23 +15,9 @@ export const Top = ({ title, location, rootPath, ...props }) => {
     setCheckVar(ch);
   }
 
-  const menu = (
-    <Menu>
-      <Menu.Item key="1">
-        <Link to="/blog">Blog</Link>
-      </Menu.Item>
-      <Menu.Item key="2">
-        <Link to="/projects">Projects</Link>
-      </Menu.Item>
-      <Menu.Item key="3">
-        <ThemeSwitch setVar={(c) => setThemeCheck(c)} />
-      </Menu.Item>
-    </Menu>
-  );
   return (
     <>
       <div className="top"
-        style={!checked ? { backgroundColor: '#F7F3ED' } : { backgroundColor: '#282C35' }}
       >
         <StaticQuery
           query={graphql`
@@ -48,7 +35,7 @@ export const Top = ({ title, location, rootPath, ...props }) => {
             return (
               !isRoot && (
                 <>
-                  <Row justify="space-between">
+                  {/* <Row justify="space-between">
                     <Col>
                     </Col>
                     <Col style={{ paddingRight: '20vw' }}>
@@ -71,18 +58,37 @@ export const Top = ({ title, location, rootPath, ...props }) => {
                       </Dropdown>
                       {/* ThemeSwitch was not able to access the root
                           level component. Hacky fix for dark mode. */}
-                      <div style={{ display: 'none' }}>
+                  {/* <div style={{ display: 'none' }}>
                         <ThemeSwitch style={{ display: 'none' }} />
                       </div>
+                    </Col> */}
+                  {/* </Row> */}
+                  <Row justify="space-between" className="hello" align="middle">
+                    <Col>
+                      <div style={{ fontSize: '3.5rem', fontWeight: 'bold' }}>Hello,</div>
+                    </Col>
+                    <Col>
+                      <ThemeSwitch setVar={(c) => setThemeCheck(c)} />
                     </Col>
                   </Row>
-                  <Row justify="left" align="middle">
+                  <Row justify="space-between" className="heading" align="middle">
                     <Col
                       className="bio"
-                      style={!checked ? { color: 'black' } : { color: 'white' }}
                     >
-                      <div style={{ fontSize: '2.5rem' }}>Hi, I'm <Link to="/">Aquib.</Link></div>
-                      <div style={{ fontSize: '1.4rem' }}>I am a full stack web developer.</div>
+                      <div style={{ fontSize: '1.5rem' }}>I'm <Link to="/">Aquib,</Link></div>
+                      <div style={{ fontSize: '1rem' }}>A full stack developer from India.</div>
+                      <hr />
+                    </Col>
+                  </Row>
+                  <Row
+                    className="navigation"
+                    justify="space-around" align="middle">
+                    <Col>
+                      <p>HOME</p>
+                    </Col>
+                    <p>BLOG</p>
+                    <Col>
+                      <p>CONTACT</p>
                     </Col>
                   </Row>
                 </>
@@ -92,23 +98,23 @@ export const Top = ({ title, location, rootPath, ...props }) => {
         />
       </div>
       {/* Banners */}
-      {!checked ? (
+      {/* {!checked ? (
         <>
-          <Row style={{ backgroundColor: '#FEBE26', height: '2vh' }}></Row>
-          <Row style={{ backgroundColor: '#FE672E', height: '2vh' }}></Row>
-          <Row style={{ backgroundColor: '#F52D3A', height: '2vh' }}></Row>
-          <Row style={{ backgroundColor: '#B81E67', height: '2vh' }}></Row>
-          <Row style={{ backgroundColor: '#710965', height: '2vh' }}></Row>
+          <Row style={{ backgroundColor: '#FEE761', height: '1vh' }}></Row>
+          <Row style={{ backgroundColor: '#FF755A', height: '1vh' }}></Row>
+          <Row style={{ backgroundColor: '#F52D3A', height: '1vh' }}></Row>
+          <Row style={{ backgroundColor: '#B81E67', height: '1vh' }}></Row>
+          <Row style={{ backgroundColor: '#710965', height: '1vh' }}></Row>
         </>
       ) : (
           <>
-            <Row style={{ backgroundColor: '#D050B1', height: '2vh' }}></Row>
-            <Row style={{ backgroundColor: '#9C1DCC', height: '2vh' }}></Row>
-            <Row style={{ backgroundColor: '#750EB5', height: '2vh' }}></Row>
-            <Row style={{ backgroundColor: '#4A1B8F', height: '2vh' }}></Row>
-            <Row style={{ backgroundColor: '#24145D', height: '2vh' }}></Row>
+            <Row style={{ backgroundColor: '#D050B1', height: '1vh' }}></Row>
+            <Row style={{ backgroundColor: '#9C1DCC', height: '1vh' }}></Row>
+            <Row style={{ backgroundColor: '#750EB5', height: '1vh' }}></Row>
+            <Row style={{ backgroundColor: '#4A1B8F', height: '1vh' }}></Row>
+            <Row style={{ backgroundColor: '#24145D', height: '1vh' }}></Row>
           </>
-        )}
+        )} */}
     </>
   )
 }
