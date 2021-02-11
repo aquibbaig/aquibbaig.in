@@ -26,7 +26,7 @@ export default ({ data, location }) => {
     <Layout title={title.toLowerCase()} location="/">
       {/* Latest BlogPosts */}
       <div className="posts" style={{ padding: `${rhythm(1.5)} ${rhythm(3 / 4)}` }}>
-        <p style={{ fontSize: '1.2rem', fontWeight: 'bold', textAlign: 'center' }}>Latest Posts</p>
+        <p style={{ fontSize: '1.2rem', fontWeight: 'bold', textAlign: 'center', fontFamily: 'Work Sans' }}>Latest Posts</p>
         {(latestPosts || []).map(post => {
           return <ThumbnailItem key={post.node.excerpt} node={post.node} />
         })}
@@ -57,7 +57,7 @@ export default ({ data, location }) => {
         darkBg="#273037"
         lightBg="#C7D3E6"
         className="tile"
-        buttonLink=""
+        buttonLink="https://github.com/zairza-cetb/bench-routes"
         top="Monitor Your Endpoints"
         header="With Bench Routes"
         content="Bench-routes is a monitoring tool that monitors system, kernel
