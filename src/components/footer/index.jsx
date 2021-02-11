@@ -38,15 +38,25 @@ export const Footer = () => (
             </h6>
           </Col>
           <Col lg={12} xs={24} md={12} justify="start">
-            <h3>Resume</h3>
+            <h3>
+              <a target="blank" href="https://drive.google.com/file/d/1-EEP_q239KPlD2NZd5xJrFTTN9bvqTYb/view?usp=sharing">
+                Resume
+              </a>
+            </h3>
             {/* <h5>Hire me!!</h5> */}
           </Col>
         </Row>
       </Col>
       <Col lg={8} xs={24} md={8}>
-        <GithubOutlined style={{ marginLeft: '0.3rem', fontSize: '1.4rem' }} />
-        <LinkedinFilled style={{ marginLeft: '0.3rem', fontSize: '1.4rem' }} />
-        <TwitterCircleFilled style={{ marginLeft: '0.3rem', fontSize: '1.4rem' }} />
+        <a target="blank" href="https://www.github.com/aquibbaig">
+          <GithubOutlined style={{ marginLeft: '0.3rem', fontSize: '1.4rem' }} />
+        </a>
+        <a target="blank" href="https://linked.in/baigaquib">
+          <LinkedinFilled style={{ marginLeft: '0.3rem', fontSize: '1.4rem' }} />
+        </a>
+        <a target="blank" href="https://twitter.com/BaigAquib">
+          <TwitterCircleFilled style={{ marginLeft: '0.3rem', fontSize: '1.4rem' }} />
+        </a>
       </Col>
     </Row>
   </footer>

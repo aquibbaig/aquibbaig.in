@@ -1,6 +1,5 @@
 import React, { useContext, useEffect } from 'react';
 import { Card, Row, Col, Button } from 'antd';
-import Image from 'gatsby-image';
 import { ThemeContext } from '../../layout';
 
 export default (props) => {
@@ -12,7 +11,7 @@ export default (props) => {
     innerStyle,
     darkBg,
     lightBg,
-    darkOutline
+    darkOutline,
   } = props;
 
   const { dark } = useContext(ThemeContext);
@@ -45,7 +44,12 @@ export default (props) => {
             {props.content}
           </p>
           <p>
-            <Button type="primary"><a href={buttonLink}>View</a></Button>
+            <Button type="primary">
+              <a href={buttonLink}
+                target="blank" style={{ fontFamily: 'Work Sans' }}>
+                Launch
+              </a>
+            </Button>
           </p>
         </Col>
       </Row>

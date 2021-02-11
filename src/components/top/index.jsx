@@ -1,11 +1,10 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import './index.scss'
-import { Menu, Row, Col, Dropdown, Divider } from 'antd'
+import { Row, Col } from 'antd'
 import { ThemeSwitch } from '../theme-switch'
-import { MoreOutlined } from '@ant-design/icons'
-import { StaticQuery, graphql } from 'gatsby'
-import { rhythm } from '../../utils/typography'
+import "fontsource-work-sans";
+import { StaticQuery, graphql } from 'gatsby';
 
 export const Top = ({ title, location, rootPath, ...props }) => {
   const isRoot = location.pathname === rootPath
@@ -82,13 +81,15 @@ export const Top = ({ title, location, rootPath, ...props }) => {
                   </Row>
                   <Row
                     className="navigation"
-                    justify="space-around" align="middle">
+                    justify="space-around"
+                    align="middle"
+                    style={{ fontFamily: 'Work Sans', fontWeight: 'bold' }}
+                  >
                     <Col>
-                      <p>HOME</p>
+                      <Link to="/">HOME</Link>
                     </Col>
-                    <p>BLOG</p>
                     <Col>
-                      <p>CONTACT</p>
+                      <Link to="/blog">BLOG</Link>
                     </Col>
                   </Row>
                 </>

@@ -9,6 +9,13 @@
   }
 }
 
+.switch-container > label > svg {
+  cursor: pointer;
+  width: 42px;
+  height: 50px;
+  margin: 0 10px;
+}
+
 [class^="hex-icon"] {
   cursor: pointer;
   width: 42px;

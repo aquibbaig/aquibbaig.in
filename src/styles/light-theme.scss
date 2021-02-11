@@ -13,6 +13,14 @@ body.light {
     border: 1px solid $dark-gray;
   }
 
+  .posts > p > a {
+    background-color: transparent;
+    border: 1px solid $dark-gray;
+    color: black;
+    padding: 5px;
+    border-radius: 2px;
+  }
+
   .top {
     background-color: #F7F3ED;
   }

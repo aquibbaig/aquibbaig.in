@@ -25,12 +25,12 @@ export default ({ data, location }) => {
   return (
     <Layout title={title.toLowerCase()} location="/">
       {/* Latest BlogPosts */}
-      <div style={{ padding: `${rhythm(1.5)} ${rhythm(3 / 4)}` }}>
+      <div className="posts" style={{ padding: `${rhythm(1.5)} ${rhythm(3 / 4)}` }}>
         <p style={{ fontSize: '1.2rem', fontWeight: 'bold', textAlign: 'center' }}>Latest Posts</p>
         {(latestPosts || []).map(post => {
           return <ThumbnailItem key={post.node.excerpt} node={post.node} />
         })}
-        <p style={{ textAlign: 'center', fontWeight: 'bold', textDecoration: 'underline' }}>
+        <p style={{ textAlign: 'center', fontFamily: 'Work Sans' }}>
           <Link to="/blog">VIEW MORE</Link>
         </p>
       </div>
@@ -43,10 +43,11 @@ export default ({ data, location }) => {
         darkBg="#273037"
         lightBg="#C7D3E6"
         className="tile"
-        buttonLink=""
+        buttonLink="https://gophertuts.surge.sh"
         top="Golang Tutorials with"
         header="Hands on Exercises"
-        content="Gophertuts is a collection of topics in golang which are lesser known, but widely used."
+        content="Gophertuts is a collection of topics in golang which are
+        lesser known, but widely used."
       />
       <Tile
         loading={false}
@@ -57,9 +58,11 @@ export default ({ data, location }) => {
         lightBg="#C7D3E6"
         className="tile"
         buttonLink=""
-        top="Golang Tutorials with"
-        header="Hands on Exercises"
-        content="Gophertuts is a collection of topics in golang which are lesser known, but widely used."
+        top="Monitor Your Endpoints"
+        header="With Bench Routes"
+        content="Bench-routes is a monitoring tool that monitors system, kernel
+        and the application level logs and performance of routes in
+        unix-based systems."
       />
       {/* Tiles end */}
     </Layout>

@@ -75,29 +75,33 @@ body.dark {
     color: $dark-light-font-color !important;
   }
 
-  // Tile colors
-  // .dark-orange > .ant-card {
-  //   background-image: linear-gradient(182deg,#820FA9,  #48085E) !important;
-  // }
-  // .dark-blue > .ant-card {
-  //   background-image: linear-gradient(182deg,#ABC4AB, #334833) !important;
-  // }
-  // .dark-coffee > .ant-card {
-  //   background-image: linear-gradient(182deg,#A39171, #635640) !important;
-  // }
+  .tile > .ant-card-body > .ant-row > .ant-col > p > button {
+    background-color: #F6B6CC;
+    border: 1px solid #F6B6CC;
+    color: black;
+  }
+
+  .posts > p > a {
+    background-color: #F6B6CC;
+    border: 1px solid #F6B6CC;
+    color: black;
+    padding: 5px;
+    border-radius: 2px;
+  }
+
   .dark > .ant-card-body, .dark {
     background-color: $dark-background-color;
     color: $dark-light-font-color;
   }
 
   .footer {
-    h3, svg, h6, h5 {
+    h3, svg, h6, h5, a {
       color: #F48EB1 !important;
     }
     a {
       color: $dark-lightest-font-color;
     }
-    background-color: #3B3831 ;
+    background-color: #3B3831;
   }
 
   .ant-card-bordered {
