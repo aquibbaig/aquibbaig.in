@@ -4,15 +4,30 @@ import { Card } from 'antd';
 import { TARGET_CLASS } from '../../utils/visible'
 
 import './index.scss'
+import { ThemeContext } from '../../layout';
 
-export const ThumbnailItem = ({ node }) => {
+export const ThumbnailItem = ({ node }, props) => {
+  const { darkBg, lightBg } = props;
+  const { dark } = useContext(ThemeContext);
   return (
-    <Card className="dark" hoverable style={{ cursor: 'text', marginBottom: '2vh' }}>
+    <Card
+      className="dark"
+      hoverable
+      style={dark ?
+        {
+          backgroundColor: darkBg
+        } : {
+          backgroundColor: lightBg
+        },
+        { marginBottom: '1vh' }
+      }
+    >
       <div key={node.fields.slug}>
-        <h3>{node.frontmatter.title || node.fields.slug}, {node.frontmatter.date}</h3>
-        <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+        <p style={{ fontSize: '1.6rem', margin: '0' }}>{node.frontmatter.title || node.fields.slug}</p>
+        <p>{node.frontmatter.date}</p>
+        <p style={{ textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: node.excerpt }} />
       </div>
-      <Link className={`thumbnail ${TARGET_CLASS}`} to={node.fields.slug}>
+      <Link style={{ fontSize: '1rem' }} className={`thumbnail ${TARGET_CLASS}`} to={node.fields.slug}>
         Read more..
       </Link>
     </Card>

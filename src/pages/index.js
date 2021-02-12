@@ -23,14 +23,26 @@ export default ({ data, location }) => {
   }
 
   return (
-    <Layout title={title.toLowerCase()} location="/">
+    <Layout
+      title={title.toLowerCase()}
+      location="/"
+    >
       {/* Latest BlogPosts */}
       <div className="posts" style={{ padding: `${rhythm(1.5)} ${rhythm(3 / 4)}` }}>
         <p style={{ fontSize: '1.2rem', fontWeight: 'bold', textAlign: 'center', fontFamily: 'Work Sans' }}>Latest Posts</p>
         {(latestPosts || []).map(post => {
-          return <ThumbnailItem key={post.node.excerpt} node={post.node} />
+          return <ThumbnailItem
+            lightBg="#ECF5F7"
+            darkBg="#282C35"
+            key={post.node.excerpt}
+            node={post.node}
+          />
         })}
-        <p style={{ textAlign: 'center', fontFamily: 'Work Sans' }}>
+        <p
+          style={{
+            textAlign: 'center',
+            fontFamily: 'Work Sans',
+          }}>
           <Link to="/blog">VIEW MORE</Link>
         </p>
       </div>
@@ -93,7 +105,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 60, truncate: true)
+          excerpt(pruneLength: 200, truncate: true)
           fields {
             slug
           }
