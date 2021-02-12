@@ -89,11 +89,6 @@ body.dark {
     border-radius: 2px;
   }
 
-  .dark > .ant-card-body, .dark {
-    background-color: $dark-background-color;
-    color: $dark-light-font-color;
-  }
-
   .footer {
     h3, svg, h6, h5, a {
       color: #F48EB1 !important;
@@ -115,19 +110,6 @@ body.dark {
   }
 
   .ant-btn-ghost > a {
-    color: white;
-    text-decoration: none;
-  }
-
-  .ant-dropdown > .ant-dropdown-menu > .ant-dropdown-menu-item {
-    background: $dark-background-color;
-  }
-
-  .ant-dropdown-menu {
-    padding: 0;
-  }
-
-  .ant-dropdown > .ant-dropdown-menu > .ant-dropdown-menu-item > a {
     color: white;
     text-decoration: none;
   }

@@ -6,21 +6,14 @@ import { TARGET_CLASS } from '../../utils/visible'
 import './index.scss'
 import { ThemeContext } from '../../layout';
 
-export const ThumbnailItem = ({ node }, props) => {
-  const { darkBg, lightBg } = props;
+export const ThumbnailItem = (props) => {
+  const { darkBg, lightBg, node } = props;
   const { dark } = useContext(ThemeContext);
   return (
     <Card
       className="dark"
       hoverable
-      style={dark ?
-        {
-          backgroundColor: darkBg
-        } : {
-          backgroundColor: lightBg
-        },
-        { marginBottom: '1vh' }
-      }
+      style={dark ? { background: darkBg, marginBottom: '1vh' } : { background: lightBg, marginBottom: '1vh' }}
     >
       <div key={node.fields.slug}>
         <p style={{ fontSize: '1.6rem', margin: '0' }}>{node.frontmatter.title || node.fields.slug}</p>
