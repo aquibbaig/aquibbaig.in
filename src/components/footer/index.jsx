@@ -1,7 +1,8 @@
 import React from 'react';
 import { Col, Row } from 'antd';
 import "fontsource-work-sans";
-import { FileTextFilled, GithubOutlined, LinkedinFilled, TwitterCircleFilled } from '@ant-design/icons'
+import { GithubOutlined, LinkedinFilled, TwitterCircleFilled } from '@ant-design/icons'
+import CV from '../../../content/assets/Resume.pdf';
 
 import './index.scss';
 // import { rhythm } from '../../utils/typography';
@@ -21,7 +22,11 @@ export const Footer = () => (
       <Col lg={8} xs={24} md={8}
         style={{ marginBottom: '4vh' }}
       >
-        <h3>AQUIB.</h3>
+        <h3>
+          <a style={{ marginLeft: '0.3rem', fontSize: '1.4rem' }} href={CV} download>
+            Download CV
+          </a>
+        </h3>
       </Col>
       <Col lg={8} xs={24} md={8}>
         <Row justify="space-around">
@@ -62,9 +67,9 @@ export const Footer = () => (
         <a target="blank" href="https://twitter.com/BaigAquib">
           <TwitterCircleFilled style={{ marginLeft: '0.3rem', fontSize: '1.4rem' }} />
         </a>
-        <a target="blank" style={{ marginLeft: '0.3rem', fontSize: '1.4rem' }} href="https://drive.google.com/file/d/1-EEP_q239KPlD2NZd5xJrFTTN9bvqTYb/view?usp=sharing">
+        {/* <a target="blank" style={{ marginLeft: '0.3rem', fontSize: '1.4rem' }} href="https://drive.google.com/file/d/1-EEP_q239KPlD2NZd5xJrFTTN9bvqTYb/view?usp=sharing">
           <FileTextFilled />
-        </a>
+        </a> */}
       </Col>
     </Row>
   </footer>
