@@ -16,7 +16,7 @@ export const ThumbnailItem = (props) => {
       style={dark ? { background: darkBg, marginBottom: '1vh' } : { background: lightBg, marginBottom: '1vh' }}
     >
       <div key={node.fields.slug}>
-        <p style={{ fontSize: '1.6rem', margin: '0' }}>{node.frontmatter.title || node.fields.slug}</p>
+        <p style={{ fontSize: '1.6rem', margin: '0', textAlign: 'left' }}>{node.frontmatter.title || node.fields.slug}</p>
         <p>{node.frontmatter.date}</p>
         <p style={{ textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: node.excerpt }} />
       </div>

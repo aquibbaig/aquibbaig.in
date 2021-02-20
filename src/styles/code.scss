@@ -151,5 +151,9 @@ pre[class*='language-'] {
 h1 {
   border-bottom: 0;
   margin-bottom: 10px;
-  text-align: justify;
+  text-align: left;
+}
+
+h2, h3, h4 {
+  text-align: left;
 }

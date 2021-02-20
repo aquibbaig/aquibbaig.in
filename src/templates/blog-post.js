@@ -32,26 +32,28 @@ export default ({ data, pageContext, location }) => {
 
   return (
     <Layout location={location} title={title}>
-      <Head title={postTitle} description={post.excerpt} />
-      <PostTitle title={postTitle} />
-      <PostDate date={date} />
-      <PostContainer html={post.html} />
-      <SocialShare title={postTitle} author={author} />
-      {!!sponsor.buyMeACoffeeId && (
-        <SponsorButton sponsorId={sponsor.buyMeACoffeeId} />
-      )}
-      <Elements.Hr />
-      <Bio />
-      <PostNavigator pageContext={pageContext} />
-      {!!disqusShortName && (
-        <Disqus
-          post={post}
-          shortName={disqusShortName}
-          siteUrl={siteUrl}
-          slug={pageContext.slug}
-        />
-      )}
-      {!!utterances && <Utterances repo={utterances} />}
+      <div style={{ padding: '24px' }}>
+        <Head title={postTitle} description={post.excerpt} />
+        <PostTitle title={postTitle} />
+        <PostDate date={date} />
+        <PostContainer html={post.html} />
+        <SocialShare title={postTitle} author={author} />
+        {!!sponsor.buyMeACoffeeId && (
+          <SponsorButton sponsorId={sponsor.buyMeACoffeeId} />
+        )}
+        <Elements.Hr />
+        <Bio />
+        <PostNavigator pageContext={pageContext} />
+        {!!disqusShortName && (
+          <Disqus
+            post={post}
+            shortName={disqusShortName}
+            siteUrl={siteUrl}
+            slug={pageContext.slug}
+          />
+        )}
+        {!!utterances && <Utterances repo={utterances} />}
+      </div>
     </Layout>
   )
 }
