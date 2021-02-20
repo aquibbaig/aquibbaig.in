@@ -34,7 +34,6 @@ pre[class*='language-'] {
   word-break: normal;
   word-wrap: normal;
   line-height: 1.6;
-  font-size: 13px;
 
   -moz-tab-size: 2;
   -o-tab-size: 2;
@@ -147,4 +146,10 @@ pre[class*='language-'] {
 
 .token.inserted {
   color: green;
+}
+
+h1 {
+  border-bottom: 0;
+  margin-bottom: 10px;
+  text-align: justify;
 }

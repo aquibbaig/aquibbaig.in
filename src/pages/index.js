@@ -32,7 +32,7 @@ export default ({ data, location }) => {
         <p style={{ fontSize: '1.2rem', fontWeight: 'bold', textAlign: 'center', fontFamily: 'Work Sans' }}>Latest Posts</p>
         {(latestPosts || []).map(post => {
           return <ThumbnailItem
-            lightBg="#ECF5F7"
+            lightBg="#f3fcfd"
             darkBg="#282C35"
             key={post.node.excerpt}
             node={post.node}

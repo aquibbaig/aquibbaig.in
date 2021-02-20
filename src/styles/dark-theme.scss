@@ -114,10 +114,15 @@ body.dark {
     text-decoration: none;
   }
 
+  .language-text {
+    background-color: $navigator-background-color;
+      // color: $navigator-text-color;
+  }
+
   .navigator {
     a {
       background-color: $navigator-background-color;
-      color: $navigator-text-color;
+      color: rgb(75, 32, 67);
     }
   }
   td {

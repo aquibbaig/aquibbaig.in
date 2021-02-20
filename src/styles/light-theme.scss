@@ -90,15 +90,28 @@ body.light {
     border: none;
   }
 
+  .ant-card-body {
+    padding: 12px;
+  }
+
   .footer {
     background-color: #f8f3a1;
+  }
+
+  .resp-sharing-button {
+    color: white;
+  }
+
+  .language-text {
+    background-color:#c4deee;
+    color: black;
   }
 
   // post
   .navigator {
     a {
-      background-color: $navigator-background-color;
-      color: $navigator-text-color;
+      background-color: #c4deee;
+      color: black;
     }
   }
 }

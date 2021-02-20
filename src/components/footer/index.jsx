@@ -23,8 +23,8 @@ export const Footer = () => (
         style={{ marginBottom: '4vh' }}
       >
         <h3>
-          <a style={{ marginLeft: '0.3rem', fontSize: '1.4rem' }} href={CV} download>
-            Download CV
+          <a target="_blank" style={{ marginLeft: '0.3rem', fontSize: '1.4rem' }} href={CV} download>
+            Download Resume
           </a>
         </h3>
       </Col>

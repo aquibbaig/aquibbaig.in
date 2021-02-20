@@ -26,7 +26,7 @@ export default (props) => {
       style={outerStyle, dark ?
         {
           backgroundColor: darkBg,
-          border: `1px solid ${darkOutline}`
+          border: `1px solid ${darkOutline}`,
         } : {
           backgroundColor: lightBg
         }

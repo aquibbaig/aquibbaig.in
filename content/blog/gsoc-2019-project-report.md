@@ -68,7 +68,7 @@ LibreCores.org lists free and open-source “IP Cores” on the website for the 
   In this phase, I made the following PR's:
 
   1.  [GSoC 2019] RabbitMQ architecture for notification system - [#382](https://github.com/librecores/librecores-web/pull/382)
-  2.  [GSoC 2019]Notification System: Mgilet/notification-bundle - [#383](https://github.com/librecores/librecores-web/pull/383)
+  2.  [GSoC 2019] Notification System: Mgilet/notification-bundle - [#383](https://github.com/librecores/librecores-web/pull/383)
 
   ## Notification Consumers
 
