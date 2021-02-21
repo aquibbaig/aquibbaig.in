@@ -69,12 +69,11 @@ export default ({ data, location }) => {
         darkBg="#273037"
         lightBg="#C7D3E6"
         className="tile"
-        buttonLink="https://github.com/zairza-cetb/bench-routes"
-        top="Monitor Your Endpoints"
-        header="With Bench Routes"
-        content="Bench-routes is a monitoring tool that monitors system, kernel
-        and the application level logs and performance of routes in
-        unix-based systems."
+        buttonLink="http://localhost:8000/blog?category=linux"
+        top="Explore the series of"
+        header="Linux Blog Posts"
+        content="The Linux series of blog posts are aimed at 
+        improving a broad understanding of Linux and it's tools."
       />
       {/* Tiles end */}
     </Layout>

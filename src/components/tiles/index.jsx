@@ -46,7 +46,7 @@ export default (props) => {
           <p>
             <Button type="primary">
               <a href={buttonLink}
-                target="blank" style={{ fontFamily: 'Work Sans' }}>
+                style={{ fontFamily: 'Work Sans' }}>
                 Launch
               </a>
             </Button>
