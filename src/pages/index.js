@@ -69,7 +69,7 @@ export default ({ data, location }) => {
         darkBg="#273037"
         lightBg="#C7D3E6"
         className="tile"
-        buttonLink="http://localhost:8000/blog?category=linux"
+        buttonLink="/blog?category=linux"
         top="Explore the series of"
         header="Linux Blog Posts"
         content="The Linux series of blog posts are aimed at 
