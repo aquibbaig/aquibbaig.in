@@ -29,11 +29,12 @@ export default ({ data, location }) => {
     >
       {/* Latest BlogPosts */}
       <div className="posts" style={{ padding: `${rhythm(1.5)} ${rhythm(3 / 4)}` }}>
-        <p style={{ fontSize: '1.2rem', fontWeight: 'bold', textAlign: 'center', fontFamily: 'Work Sans' }}>Latest Posts</p>
+        <p className="header" style={{ fontSize: '1.6rem', fontWeight: 'bold' }}>Latest Posts</p>
+        <hr style={{ border: '2px solid #ED585B', width: '10%' }} />
         {(latestPosts || []).map(post => {
           return <ThumbnailItem
-            lightBg="#f3fcfd"
-            darkBg="#282C35"
+            lightBg="#FAF6EB"
+            darkBg="#0F1029"
             key={post.node.excerpt}
             node={post.node}
           />
@@ -52,8 +53,8 @@ export default ({ data, location }) => {
         loading={false}
         outerStyle={OuterStyles}
         innerStyles={InnerStyles}
-        darkBg="#273037"
-        lightBg="#C7D3E6"
+        darkBg="#0F1029"
+        lightBg="#F6F2E7"
         className="tile"
         buttonLink="https://gophertuts.surge.sh"
         top="Golang Tutorials with"
@@ -66,8 +67,8 @@ export default ({ data, location }) => {
         outerStyle={OuterStyles}
         innerStyles={InnerStyles}
         // darkOutline="#EAC6A2"
-        darkBg="#273037"
-        lightBg="#C7D3E6"
+        darkBg="#0F1029"
+        lightBg="#F6F2E7"
         className="tile"
         buttonLink="/blog?category=linux"
         top="Explore the series of"

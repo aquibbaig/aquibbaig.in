@@ -1,5 +1,5 @@
 ---
-title: 'How are "software updates" rolled out?'
+title: 'How are software updates rolled out'
 date: 2021-02-19 21:05:23
 category: 'development'
 draft: false

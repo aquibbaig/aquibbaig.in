@@ -1,5 +1,5 @@
 ---
-title: 'The ultimate guide to SSH'
+title: 'The Ultimate Guide to SSH'
 date: 2021-2-21 21:05:23
 category: 'linux'
 draft: false

@@ -13,16 +13,31 @@ body.light {
     border: 1px solid $dark-gray;
   }
 
-  .posts > p > a {
-    background-color: transparent;
-    border: 1px solid $dark-gray;
-    color: black;
-    padding: 5px;
-    border-radius: 2px;
+  .posts {
+    .header {
+      font-size: '1.4rem';
+      font-weight: 'bold';
+      text-align: 'left';
+      font-family: 'Work Sans';
+      padding-bottom: 1vh;
+      margin:0;
+    }
   }
 
   .top {
-    background-color: #F7F3ED;
+    background-color: #ED585B;
+    color: $dimmed-color !important;
+    font-family: 'Work Sans';
+
+    .ant-row > .ant-col > a {
+      color: $dimmed-color;
+      font-family: 'Work Sans';
+    }
+
+    .bio > div > a {
+      color: $dimmed-color;
+      font-family: 'Work Sans';
+    }
   }
 
   a {
@@ -49,6 +64,7 @@ body.light {
     border-right: 6px solid $light-category-border-color;
     border-left: 6px solid $light-category-border-color;
     background-color: $light-category-background-color;
+    font-family: 'Work Sans';
     .item {
       border: 1px solid $light-category-border-color;
       background-color: $light-category-item-color;
@@ -58,8 +74,8 @@ body.light {
         color: $light-category-text-color;
       }
       &[aria-selected='true'] {
-        border: 2px solid $light-category-highlight-border-color;
-        font-weight: bolder;
+        border: 2px solid #38365D;
+        font-weight: bold;
       }
       &[aria-selected='true'] a {
         color: $light-category-highlight-text-color;
@@ -79,13 +95,6 @@ body.light {
     }
   }
 
-  .footer {
-    color: $light-gray;
-    a {
-      color: $dark-gray;
-    }
-  }
-
   .ant-card-bordered {
     border: none;
   }
@@ -95,23 +104,35 @@ body.light {
   }
 
   .footer {
-    background-color: #f8f3a1;
+    color: white;
+    .locale {
+      fill: $navigator-text-color;
+    }
+    a, h1, h2, h3, h4, h5, h6, p {
+      color: white;
+    }
+    background-color: #33325B;
   }
 
   .resp-sharing-button {
     color: white;
   }
 
-  .language-text {
-    background-color:#c4deee;
+  .gatsby-highlight > pre, .gatsby-highlight > pre > code {
+    background-color:#fcfaf5;
     color: black;
+  }
+
+  .language-text {
+    background-color:#38365D;
+    color: white;
   }
 
   // post
   .navigator {
     a {
-      background-color: #c4deee;
-      color: black;
+      background-color: #38365D;
+      color: white;
     }
   }
 }
