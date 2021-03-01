@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "@ant-design/icons": "^4.3.0",
+    "@fontsource/open-sans": "^4.2.1",
+    "@fontsource/roboto": "^4.2.1",
     "antd": "^4.6.6",
     "fontsource-work-sans": "^4.0.0",
     "gatsby": "^2.2.8",

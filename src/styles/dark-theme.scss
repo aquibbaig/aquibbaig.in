@@ -75,54 +75,43 @@ body.dark {
     color: $dark-light-font-color !important;
   }
 
-  .tile > .ant-card-body > .ant-row > .ant-col > p > button {
-    background-color: #F6B6CC;
-    border: 1px solid #F6B6CC;
-    color: black;
-  }
+  // .ant-card-bordered {
+  //   border: 0;
+  // }
 
-  .posts > p > a {
-    background-color: #F6B6CC;
-    border: 1px solid #F6B6CC;
-    color: black;
-    padding: 5px;
-    border-radius: 2px;
+  .tile > .ant-card-body > .ant-row > .ant-col > p > button {
+    background-color: #4a74f4;
+    border: 1px solid #302E65;
+    color: white;
   }
 
   .footer {
-    h3, svg, h6, h5, a {
-      color: #F48EB1 !important;
-      fill: #F48EB1 !important;
+    h3, h6, h5, a {
+      color: white !important;
+    }
+    h3 > svg {
+      fill:white !important;
     }
     a {
       color: $dark-lightest-font-color;
     }
-    background-color: #3B3831;
-  }
-
-  .ant-card-bordered {
-    background: transparent;
-    border: none;
-  }
-
-  .ant-card-meta-title {
-    color: 'white' !important;
-  }
-
-  .ant-btn-ghost > a {
-    color: white;
-    text-decoration: none;
+    background-color: #33325B;
   }
 
   .language-text {
-    background-color: $navigator-background-color;
+    background-color: #4a74f4;
+    color: white;
       // color: $navigator-text-color;
+  }
+
+  .gatsby-highlight > pre, .gatsby-highlight > pre > code {
+    background-color: #111D2D;
   }
 
   .navigator {
     a {
-      background-color: $navigator-background-color;
-      color: rgb(75, 32, 67);
+      background-color: #4a74f4;
+      color:white;
     }
   }
   td {

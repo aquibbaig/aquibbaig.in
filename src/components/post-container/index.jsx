@@ -1,5 +1,9 @@
-import React from 'react'
+import React from 'react';
+
+const styles = {
+  fontFamily: 'Roboto'
+}
 
 export const PostContainer = ({ html }) => (
-  <div dangerouslySetInnerHTML={{ __html: html }} />
+  <div style={styles} dangerouslySetInnerHTML={{ __html: html }} />
 )

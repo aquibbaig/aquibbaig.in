@@ -75,7 +75,7 @@ export const Top = ({ title, location, rootPath, ...props }) => {
                       className="bio"
                     >
                       <div style={{ fontSize: '1.5rem' }}>I'm <Link to="/">Aquib,</Link></div>
-                      <div style={{ fontSize: '1rem' }}>A full stack developer from India.</div>
+                      <div style={{ fontSize: '1rem' }}>Welcome to my blog.</div>
                       <hr />
                     </Col>
                   </Row>
@@ -98,24 +98,6 @@ export const Top = ({ title, location, rootPath, ...props }) => {
           }}
         />
       </div>
-      {/* Banners */}
-      {/* {!checked ? (
-        <>
-          <Row style={{ backgroundColor: '#FEE761', height: '1vh' }}></Row>
-          <Row style={{ backgroundColor: '#FF755A', height: '1vh' }}></Row>
-          <Row style={{ backgroundColor: '#F52D3A', height: '1vh' }}></Row>
-          <Row style={{ backgroundColor: '#B81E67', height: '1vh' }}></Row>
-          <Row style={{ backgroundColor: '#710965', height: '1vh' }}></Row>
-        </>
-      ) : (
-          <>
-            <Row style={{ backgroundColor: '#D050B1', height: '1vh' }}></Row>
-            <Row style={{ backgroundColor: '#9C1DCC', height: '1vh' }}></Row>
-            <Row style={{ backgroundColor: '#750EB5', height: '1vh' }}></Row>
-            <Row style={{ backgroundColor: '#4A1B8F', height: '1vh' }}></Row>
-            <Row style={{ backgroundColor: '#24145D', height: '1vh' }}></Row>
-          </>
-        )} */}
     </>
   )
 }

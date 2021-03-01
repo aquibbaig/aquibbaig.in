@@ -26,7 +26,7 @@ export default (props) => {
       style={outerStyle, dark ?
         {
           backgroundColor: darkBg,
-          border: `1px solid ${darkOutline}`,
+          border: `0`,
         } : {
           backgroundColor: lightBg
         }
@@ -34,10 +34,10 @@ export default (props) => {
     >
       <Row align="middle">
         <Col style={innerStyle}>
-          <p style={{ fontSize: '1.5rem', margin: '0' }}>
+          <p style={{ fontSize: '1.5rem', margin: '0', textAlign: 'left' }}>
             {props.top}
           </p>
-          <p style={{ fontSize: '2.5rem', margin: '0' }}>
+          <p style={{ fontSize: '2.5rem', margin: '0', textAlign: 'left' }}>
             {props.header}
           </p>
           <p style={{ fontSize: '1rem' }}>
@@ -53,6 +53,6 @@ export default (props) => {
           </p>
         </Col>
       </Row>
-    </Card>
+    </Card >
   );
 };
