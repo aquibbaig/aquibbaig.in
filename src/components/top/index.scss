@@ -17,12 +17,14 @@
   .switch-container {
     margin-right: 20vw;
   }
-  .bio, .hello {
+  .bio {
     padding-left: 20vw;
+    padding-right: 20vw;
     font-size: 2.4rem;
   }
   .hello {
     padding-top: 2vh;
+    padding-left: 20vw;
   }
   .navigation {
     margin: 2vh 10vw 0 10vw;
@@ -41,19 +43,50 @@
     width: 100%;
     height: 40vh;
   }
+  .hellohead {
+    font-size: 1.8rem !important;
+  }
   .toolbar {
     padding-right: '20vw';
   }
 }
 
-@media (min-width: 396px) {
-  .bio {
-    font-size: 1.2rem;
+@media (min-width: 168px) {
+  .info {
+    font-size: 0.7rem;
+    font-weight: bold;
+  }
+  .def {
+    font-size: 0.6rem !important;
+    font-weight: bold;
   }
   .top {
     position: relative;
     width: 100%;
-    height: 35vh;
+    height: 30vh;
+  }
+}
+
+@media (min-width: 258px) {
+  .hellohead {
+    font-size: 1.8rem !important;
+  }
+  .info {
+    font-size: 1.3rem;
+  }
+  .def {
+    font-size: 1rem !important;
+  }
+}
+
+@media (min-width: 396px) {
+  .hellohead {
+    font-size: 3.3rem !important;
+  }
+  .top {
+    position: relative;
+    width: 100%;
+    height: 30vh;
   }
 }
 
@@ -61,7 +94,7 @@
   .top {
     position: relative;
     width: 100%;
-    height: 35vh;
+    height: 30vh;
   }
   .bio {
     font-size: 1.4rem;
@@ -72,7 +105,7 @@
   .top {
     position: relative;
     width: 100%;
-    height: 35vh;
+    height: 30vh;
   }
   .bio {
     font-size: 1.4rem;

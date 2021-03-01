@@ -64,7 +64,7 @@ export const Top = ({ title, location, rootPath, ...props }) => {
                   {/* </Row> */}
                   <Row justify="space-between" className="hello" align="middle">
                     <Col>
-                      <div style={{ fontSize: '3.5rem', fontWeight: 'bold' }}>Hello,</div>
+                      <div className="hellohead" style={{ fontWeight: 'bold' }}>Hello,</div>
                     </Col>
                     <Col>
                       <ThemeSwitch setVar={(c) => setThemeCheck(c)} />
@@ -74,16 +74,21 @@ export const Top = ({ title, location, rootPath, ...props }) => {
                     <Col
                       className="bio"
                     >
-                      <div style={{ fontSize: '1.5rem' }}>I'm <Link to="/">Aquib,</Link></div>
-                      <div style={{ fontSize: '1rem' }}>Welcome to my blog.</div>
+                      <div className="info">I'm <Link to="/">Aquib,</Link></div>
+                      <div className="def" style={{ fontSize: '1rem' }}>I like to write code, watch movies and listen to music.</div>
                       <hr />
                     </Col>
                   </Row>
                   <Row
                     className="navigation"
-                    justify="space-around"
+                    justify="space-between"
                     align="middle"
-                    style={{ fontFamily: 'Work Sans', fontWeight: 'bold' }}
+                    style={{
+                      fontFamily: 'Work Sans',
+                      fontWeight: 'bold',
+                      marginLeft: '20vw',
+                      marginRight: '20vw'
+                    }}
                   >
                     <Col>
                       <Link to="/">HOME</Link>
