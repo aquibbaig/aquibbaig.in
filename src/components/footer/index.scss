@@ -3,10 +3,41 @@
   font-size: 12px;
   padding-top:5vh;
   padding-bottom: 2vh;
+}
 
-  a, h3 {
-    text-decoration: none !important;
-    font-family: Work Sans;
+.footer-content {
+  margin-left: 20vw;
+  margin-right: 20vw;
+}
+
+@media (min-width: 168px) {
+  .leftCol {
+    a, h3, h5, h2, h6 {
+      text-decoration: none !important;
+      font-family: 'Work Sans';
+      text-align: center !important;
+    }
+  }
+  .centerCol {
     text-align: center;
+  }
+  .rightCol {
+    text-align: center;
+  }
+}
+
+@media (min-width: 1000px) {
+  .leftCol {
+    a, h3, h5, h2, h6 {
+      text-decoration: none !important;
+      font-family: Work Sans;
+      text-align: left !important;
+    }
+  }
+  .centerCol {
+    text-align: center;
+  }
+  .rightCol {
+    text-align: right;
   }
 }

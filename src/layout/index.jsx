@@ -66,6 +66,7 @@ const Layout = ({ location, title, children }) => {
       />
       <br />
       <div
+        id="layout-content"
         style={{
           marginLeft: `auto`,
           marginRight: `auto`,

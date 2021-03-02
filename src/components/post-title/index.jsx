@@ -6,7 +6,7 @@ const lightStyles = {
   textAlign: 'left',
   fontFamily: 'Work Sans',
   fontWeight: 'bold',
-  fontSize: '2.4rem',
+  fontSize: '1.8rem',
   marginBottom: '2vh',
   color: '#38365D'
 }
@@ -15,7 +15,7 @@ const darkStyles = {
   textAlign: 'left',
   fontFamily: 'Work Sans',
   fontWeight: 'bold',
-  fontSize: '2.4rem',
+  fontSize: '1.8rem',
   marginBottom: '2vh',
   color: 'white'
 }
@@ -28,7 +28,6 @@ const hrStyles = {
 
 export const PostTitle = ({ title }) => {
   const { dark } = useContext(ThemeContext);
-  console.log(dark);
   return (
     <div className="postTitle" style={dark ? darkStyles : lightStyles}>
       {title}

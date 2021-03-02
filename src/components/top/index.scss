@@ -14,21 +14,6 @@
     font-family: 'Catamaran';
     font-weight: 800;
   }
-  .switch-container {
-    margin-right: 20vw;
-  }
-  .bio {
-    padding-left: 20vw;
-    padding-right: 20vw;
-    font-size: 2.4rem;
-  }
-  .hello {
-    padding-top: 2vh;
-    padding-left: 20vw;
-  }
-  .navigation {
-    margin: 2vh 10vw 0 10vw;
-  }
   .toolbar {
     padding-right: '20vw';
   }
@@ -49,6 +34,11 @@
   .toolbar {
     padding-right: '20vw';
   }
+  .bio {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    font-size: 2.4rem;
+  }
 }
 
 @media (min-width: 168px) {
@@ -63,7 +53,22 @@
   .top {
     position: relative;
     width: 100%;
-    height: 30vh;
+    height: 32vh;
+  }
+  .toolbar {
+    padding-right: '20vw';
+  }
+  .switch-container {
+    margin-right: 5vw;
+  }
+  .hello {
+    padding-top: 2vh;
+    padding-left: 5vw;
+  }
+  .navigation {
+    padding-top: 2vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
   }
 }
 
@@ -79,14 +84,14 @@
   }
 }
 
-@media (min-width: 396px) {
+@media (min-width: 375px) {
   .hellohead {
     font-size: 3.3rem !important;
   }
   .top {
     position: relative;
     width: 100%;
-    height: 30vh;
+    height: 35vh;
   }
 }
 
@@ -94,7 +99,7 @@
   .top {
     position: relative;
     width: 100%;
-    height: 30vh;
+    height: 35vh;
   }
   .bio {
     font-size: 1.4rem;
@@ -119,6 +124,19 @@
     height: 27vh;
   }
   .bio {
+    padding-left: 20vw;
+    padding-right: 20vw;
     font-size: 1.4rem;
+  }
+  .hello {
+    padding-top: 2vh;
+    padding-left: 20vw;
+  }
+  .navigation {
+    margin-left: 20vw;
+    margin-right: 20vw;
+  }
+  .switch-container {
+    margin-right: 20vw;
   }
 }

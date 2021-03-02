@@ -5,6 +5,7 @@ import Layout from '../layout/index'
 import { ThumbnailItem } from '../components/thumbnail-item';
 import { rhythm } from '../utils/typography';
 import Tile from '../components/tiles';
+import "@fontsource/work-sans"
 // import Flag from '../components/flag';
 // import { Row, Col, Button } from 'antd';
 // import Banner from '../components/banner';
@@ -29,7 +30,11 @@ export default ({ data, location }) => {
     >
       {/* Latest BlogPosts */}
       <div className="posts" style={{ padding: `${rhythm(1.5)} ${rhythm(3 / 4)}` }}>
-        <p className="header" style={{ fontSize: '1.6rem', fontWeight: 'bold' }}>Latest Posts</p>
+        <p className="header" style={{
+          fontSize: '1.6rem',
+          fontWeight: 'bold',
+          marginBottom: '1vh'
+        }}>Latest Posts</p>
         <hr style={{ border: '2px solid #ED585B', width: '10%' }} />
         {(latestPosts || []).map(post => {
           return <ThumbnailItem
@@ -42,40 +47,62 @@ export default ({ data, location }) => {
         <p
           style={{
             textAlign: 'center',
-            fontFamily: 'Work Sans',
+            fontFamily: 'Roboto',
           }}>
           <Link to="/blog">VIEW MORE</Link>
         </p>
       </div>
       {/* Latest BlogPosts end */}
       {/* Tiles. */}
-      <Tile
-        loading={false}
-        outerStyle={OuterStyles}
-        innerStyles={InnerStyles}
-        darkBg="#0F1029"
-        lightBg="#F6F2E7"
-        className="tile"
-        buttonLink="https://gophertuts.surge.sh"
-        top="Golang Tutorials with"
-        header="Hands on Exercises"
-        content="Gophertuts is a collection of topics in golang which are
+      <div style={{ padding: `${rhythm(1.5)} ${rhythm(3 / 4)}` }}>
+        <p className="header" style={{
+          fontSize: '1.6rem',
+          fontWeight: 'bold',
+          marginBottom: '1vh',
+        }}>Featured</p>
+        <hr style={{ border: '2px solid #ED585B', width: '10%' }} />
+        <Tile
+          loading={false}
+          outerStyle={OuterStyles}
+          innerStyles={InnerStyles}
+          // darkOutline="#EAC6A2"
+          darkBg="#0F1029"
+          lightBg="#F6F2E7"
+          className="tile"
+          buttonLink="/gsoc-2019-project-report/"
+          top="Student at 2019's"
+          header="Google Summer of Code"
+          content="An excerpt of my gsoc journey with fossi foundation,
+        working towards improving the Librecores project."
+        />
+        <Tile
+          loading={false}
+          outerStyle={OuterStyles}
+          innerStyles={InnerStyles}
+          darkBg="#0F1029"
+          lightBg="#F6F2E7"
+          className="tile"
+          buttonLink="https://gophertuts.surge.sh"
+          top="Golang Tutorials with"
+          header="Hands on Exercises"
+          content="Gophertuts is a collection of topics in golang which are
         lesser known, but widely used."
-      />
-      <Tile
-        loading={false}
-        outerStyle={OuterStyles}
-        innerStyles={InnerStyles}
-        // darkOutline="#EAC6A2"
-        darkBg="#0F1029"
-        lightBg="#F6F2E7"
-        className="tile"
-        buttonLink="/blog?category=linux"
-        top="Explore the series of"
-        header="Linux Blog Posts"
-        content="The Linux series of blog posts are aimed at 
+        />
+        <Tile
+          loading={false}
+          outerStyle={OuterStyles}
+          innerStyles={InnerStyles}
+          // darkOutline="#EAC6A2"
+          darkBg="#0F1029"
+          lightBg="#F6F2E7"
+          className="tile"
+          buttonLink="/blog?category=linux"
+          top="Explore the series of"
+          header="Linux Blog Posts"
+          content="The Linux series of blog posts are aimed at 
         improving a broad understanding of Linux and it's tools."
-      />
+        />
+      </div>
       {/* Tiles end */}
     </Layout>
   )

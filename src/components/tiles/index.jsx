@@ -27,27 +27,29 @@ export default (props) => {
         {
           backgroundColor: darkBg,
           border: `0`,
+          marginBottom: '1vh'
         } : {
-          backgroundColor: lightBg
+          backgroundColor: lightBg,
+          marginBottom: '1vh'
         }
       }
     >
-      <Row align="middle">
+      <Row align="middle" style={{ padding: '10px' }}>
         <Col style={innerStyle}>
-          <p style={{ fontSize: '1.5rem', margin: '0', textAlign: 'left' }}>
+          <p style={{ fontSize: '1.3rem', margin: '0', textAlign: 'left', fontWeight: '600', fontFamily: 'Work Sans', }}>
             {props.top}
           </p>
-          <p style={{ fontSize: '2.5rem', margin: '0', textAlign: 'left' }}>
+          <p style={{ fontSize: '1.6rem', margin: '0', textAlign: 'left', fontFamily: 'Work Sans', fontWeight: '600' }}>
             {props.header}
           </p>
-          <p style={{ fontSize: '1rem' }}>
+          <p style={{ fontSize: '1rem', fontFamily: 'Roboto' }}>
             {props.content}
           </p>
           <p>
             <Button type="primary">
               <a href={buttonLink}
                 style={{ fontFamily: 'Work Sans' }}>
-                Launch
+                Navigate
               </a>
             </Button>
           </p>

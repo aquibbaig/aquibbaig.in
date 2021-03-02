@@ -2,7 +2,8 @@ import React, { useContext } from 'react'
 import { Link } from 'gatsby'
 import { Card } from 'antd';
 import { TARGET_CLASS } from '../../utils/visible';
-import "@fontsource/roboto"
+import "@fontsource/roboto";
+import "@fontsource/work-sans";
 
 import './index.scss'
 import { ThemeContext } from '../../layout';
@@ -21,9 +22,16 @@ export const ThumbnailItem = (props) => {
       }
     >
       <div key={node.fields.slug}>
-        <p style={{ fontSize: '1.6rem', fontWeight: '600', fontFamily: 'Work Sans', margin: '0', textAlign: 'left' }}>{node.frontmatter.title || node.fields.slug}</p>
+        <p className="thumbnailTitle"
+          style={{ fontFamily: 'Work Sans' }}>
+          <b>
+            {node.frontmatter.title || node.fields.slug}
+          </b>
+        </p>
         <p>{node.frontmatter.date}</p>
-        <p style={{ textAlign: 'justify', fontFamily: 'Roboto' }} dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+        <p className="thumbnailContent"
+          style={{ fontFamily: 'Roboto' }}
+          dangerouslySetInnerHTML={{ __html: node.excerpt }} />
       </div>
       <Link style={{ fontSize: '1rem' }} className={`thumbnail ${TARGET_CLASS}`} to={node.fields.slug}>
         Read more..

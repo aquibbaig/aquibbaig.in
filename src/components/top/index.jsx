@@ -86,12 +86,13 @@ export const Top = ({ title, location, rootPath, ...props }) => {
                     style={{
                       fontFamily: 'Work Sans',
                       fontWeight: 'bold',
-                      marginLeft: '20vw',
-                      marginRight: '20vw'
                     }}
                   >
                     <Col>
                       <Link to="/">HOME</Link>
+                    </Col>
+                    <Col>
+                      <Link to="/">PROJECTS</Link>
                     </Col>
                     <Col>
                       <Link to="/blog">BLOG</Link>
