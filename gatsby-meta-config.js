@@ -14,7 +14,7 @@ module.exports = {
   icon: `content/assets/felog.png`, // Add your favicon
   keywords: [`blog`],
   comment: {
-    disqusShortName: 'aquibbaig-in', // Your disqus-short-name. check disqus.com.
+    disqusShortName: '', // Your disqus-short-name. check disqus.com.
     utterances: '', // Your repository for archive comment
   },
   configs: {
