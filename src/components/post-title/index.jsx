@@ -4,7 +4,6 @@ import { ThemeContext } from '../../layout';
 
 const lightStyles = {
   textAlign: 'left',
-  fontFamily: 'Work Sans',
   fontWeight: 'bold',
   fontSize: '1.8rem',
   marginBottom: '2vh',
@@ -13,7 +12,6 @@ const lightStyles = {
 
 const darkStyles = {
   textAlign: 'left',
-  fontFamily: 'Work Sans',
   fontWeight: 'bold',
   fontSize: '1.8rem',
   marginBottom: '2vh',

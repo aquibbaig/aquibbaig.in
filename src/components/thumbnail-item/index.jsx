@@ -22,8 +22,7 @@ export const ThumbnailItem = (props) => {
       }
     >
       <div key={node.fields.slug}>
-        <p className="thumbnailTitle"
-          style={{ fontFamily: 'Work Sans' }}>
+        <p className="thumbnailTitle">
           <b>
             {node.frontmatter.title || node.fields.slug}
           </b>

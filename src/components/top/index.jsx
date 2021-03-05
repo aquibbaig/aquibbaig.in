@@ -74,7 +74,7 @@ export const Top = ({ title, location, rootPath, ...props }) => {
                     <Col
                       className="bio"
                     >
-                      <div className="info">I'm <Link to="/">Aquib,</Link></div>
+                      <div className="info">I'm Aquib,</div>
                       <div className="def" style={{ fontSize: '1rem' }}>I like to write code, watch movies and listen to music.</div>
                       <hr />
                     </Col>

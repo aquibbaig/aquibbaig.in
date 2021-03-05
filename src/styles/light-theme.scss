@@ -16,23 +16,18 @@ body.light {
   .top {
     background-color: #ED585B;
     color: $dimmed-color !important;
-    font-family: 'Work Sans';
 
     .ant-row > .ant-col > a {
       color: $dimmed-color;
-      font-family: 'Work Sans';
     }
 
     .bio > div > a {
       color: $dimmed-color;
-      font-family: 'Work Sans';
     }
   }
 
   a {
     color: $light-category-text-color;
-    // text-decoration: underline;
-    // text-decoration-color: $light-link-color;
   }
 
   .bio {

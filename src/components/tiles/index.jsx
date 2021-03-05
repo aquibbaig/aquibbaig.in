@@ -36,10 +36,10 @@ export default (props) => {
     >
       <Row align="middle" style={{ padding: '10px' }}>
         <Col style={innerStyle}>
-          <p style={{ fontSize: '1.3rem', margin: '0', textAlign: 'left', fontWeight: '600', fontFamily: 'Work Sans', }}>
+          <p style={{ fontSize: '1.3rem', margin: '0', textAlign: 'left', fontWeight: '600' }}>
             {props.top}
           </p>
-          <p style={{ fontSize: '1.6rem', margin: '0', textAlign: 'left', fontFamily: 'Work Sans', fontWeight: '600' }}>
+          <p style={{ fontSize: '1.6rem', margin: '0', textAlign: 'left', fontWeight: '600' }}>
             {props.header}
           </p>
           <p style={{ fontSize: '1rem', fontFamily: 'Roboto' }}>
