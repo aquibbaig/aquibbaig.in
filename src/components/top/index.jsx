@@ -92,7 +92,7 @@ export const Top = ({ title, location, rootPath, ...props }) => {
                       <Link to="/">HOME</Link>
                     </Col>
                     <Col>
-                      <Link to="/">PROJECTS</Link>
+                      <Link to="/projects">PROJECTS</Link>
                     </Col>
                     <Col>
                       <Link to="/blog">BLOG</Link>

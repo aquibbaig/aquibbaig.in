@@ -79,10 +79,22 @@ body.dark {
     padding: 12px !important;
   }
 
+  .ant-tag {
+    background-color:  #323486;
+    border: white;
+    color: white;
+  }
+
   .tile > .ant-card-body > .ant-row > .ant-col > p > button {
-    background-color: #4a74f4;
+    background-color: #323486;
     border: 1px solid #302E65;
     color: white;
+  }
+
+  .tile > .ant-card-body > .ant-row > .ant-col > p > button:hover {
+    background-color: white;
+    border: 1px solid white;
+    color:  #323486;
   }
 
   .footer {

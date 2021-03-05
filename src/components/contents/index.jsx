@@ -19,6 +19,7 @@ export const Contents = ({ posts, countOfInitialPost, count, category }) => {
     <ThumbnailContainer>
       {refinedPosts.map(({ node }, index) => (
         <ThumbnailItem
+          view="stripped-view"
           node={node}
           key={`item_${index}`}
           lightBg="#FAF6EB"

@@ -38,19 +38,13 @@ export default ({ data, location }) => {
         <hr style={{ border: '2px solid #ED585B', width: '10%' }} />
         {(latestPosts || []).map(post => {
           return <ThumbnailItem
+            view="complete-view"
             lightBg="#FAF6EB"
             darkBg="#0F1029"
             key={post.node.excerpt}
             node={post.node}
           />
         })}
-        <p
-          style={{
-            textAlign: 'center',
-            fontFamily: 'Roboto',
-          }}>
-          <Link to="/blog">VIEW MORE</Link>
-        </p>
       </div>
       {/* Latest BlogPosts end */}
       {/* Tiles. */}

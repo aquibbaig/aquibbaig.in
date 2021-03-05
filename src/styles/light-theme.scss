@@ -13,6 +13,10 @@ body.light {
     border: 1px solid $dark-gray;
   }
 
+  .ant-tag {
+    background-color:#F9F7F1;
+  }
+
   .top {
     background-color: #ED585B;
     color: $dimmed-color !important;
@@ -24,6 +28,12 @@ body.light {
     .bio > div > a {
       color: $dimmed-color;
     }
+  }
+
+  .tile > .ant-card-body > .ant-row > .ant-col > p > button:hover {
+    color: #F1EFBB;
+    background-color: #ED5756;
+    border: 1px solid transparent;
   }
 
   a {

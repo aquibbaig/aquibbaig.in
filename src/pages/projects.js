@@ -1,8 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Row, Col } from 'antd';
 import ProjectList from '../components/project-list';
 import Layout from '../layout'
+import { rhythm } from '../utils/typography';
 
 export default ({ data, location }) => {
   const { siteMetadata } = data.site;
@@ -13,7 +13,8 @@ export default ({ data, location }) => {
         routes performance and monitoring tool,
         that monitors in regular intervals the state of the server,
         running as a daemon process.`,
-      link: `https://github.com/zairza-cetb/bench-routes`
+      link: `https://github.com/zairza-cetb/bench-routes`,
+      tags: ['go', 'react', 'scheduling', 'time-series']
     },
     {
       title: 'Literature',
@@ -22,7 +23,8 @@ export default ({ data, location }) => {
       single game, add friends from social media
       play the epic game of literature
       get coins and get fancy items from the store.`,
-      link: `https://github.com/aquibbaig/literature`
+      link: `https://github.com/aquibbaig/literature`,
+      tags: ['flutter/dart', 'node.js', 'socket/sync']
     },
     {
       title: 'Quiz generator',
@@ -30,19 +32,24 @@ export default ({ data, location }) => {
       your favorite story and the application will generate a set of questions for you to
       test your comprehensive skills. We built this to help people taking entrance examinations
       to test their reading and comprehension skills.`,
-      link: `https://github.com/ganeshpatro321/quizGenerator`
+      link: `https://github.com/ganeshpatro321/quizGenerator`,
+      tags: ['ml/nlp', 'react', 'summarisation']
     },
   ]
   return (
-    <div className="dark">
+    <>
       <Layout location={location} title={siteMetadata.title}>
-        <div>
-          <Row>
-            <ProjectList projects={projectList} />
-          </Row>
+        <div style={{ padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`, minHeight: '50vh' }}>
+          <p className="header" style={{
+            fontSize: '1.6rem',
+            fontWeight: 'bold',
+            marginBottom: '1vh'
+          }}>Projects</p>
+          <hr style={{ border: '2px solid #ED585B', width: '10%' }} />
+          <ProjectList projects={projectList} />
         </div>
       </Layout>
-    </div>
+    </>
   )
 }
 

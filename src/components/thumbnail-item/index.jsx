@@ -9,7 +9,7 @@ import './index.scss'
 import { ThemeContext } from '../../layout';
 
 export const ThumbnailItem = (props) => {
-  const { darkBg, lightBg, node } = props;
+  const { darkBg, lightBg, node, view } = props;
   const { dark } = useContext(ThemeContext);
   return (
     <Card
@@ -28,9 +28,9 @@ export const ThumbnailItem = (props) => {
           </b>
         </p>
         <p>{node.frontmatter.date}</p>
-        <p className="thumbnailContent"
+        {view === "complete-view" ? <p className="thumbnailContent"
           style={{ fontFamily: 'Roboto' }}
-          dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+          dangerouslySetInnerHTML={{ __html: node.excerpt }} /> : <></>}
       </div>
       <Link style={{ fontSize: '1rem' }} className={`thumbnail ${TARGET_CLASS}`} to={node.fields.slug}>
         Read more..
