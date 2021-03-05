@@ -27,6 +27,15 @@ export default ({ data, location }) => {
       tags: ['flutter/dart', 'node.js', 'socket/sync']
     },
     {
+      title: 'Gophertuts',
+      desc: `Gophertuts is a series based on golang tutorials to help beginners find
+      some interesting topics to refer to. In the world of development, it is pretty
+      easy to search for resources once you know what you're looking for but it is
+      hard to find out if something exists in the first place. `,
+      link: `https://gophertuts.surge.sh/`,
+      tags: ['tutorials', 'gatsby/react']
+    },
+    {
       title: 'Quiz generator',
       desc: `Automated question generator using NLP. Just put in an input paragraph from
       your favorite story and the application will generate a set of questions for you to
