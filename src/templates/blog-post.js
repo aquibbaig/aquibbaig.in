@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import * as Elements from '../components/elements'
 import Layout from '../layout'
@@ -15,10 +15,17 @@ import { Disqus } from '../components/disqus'
 import { Utterances } from '../components/utterances'
 import * as ScrollManager from '../utils/scroll'
 
+import { GithubOutlined } from '@ant-design/icons'
+
 import '../styles/code.scss'
 import 'katex/dist/katex.min.css'
 
+const getUrlSuffix = (location) => {
+  return `${location.slice(1, -1)}.md`;
+}
+
 export default ({ data, pageContext, location }) => {
+  console.log(data);
   useEffect(() => {
     ScrollManager.init()
     return () => ScrollManager.destroy()
@@ -29,6 +36,8 @@ export default ({ data, pageContext, location }) => {
   const { title, comment, siteUrl, author, sponsor } = metaData
   const { disqusShortName, utterances } = comment
   const { title: postTitle, date } = post.frontmatter
+  const { repositoryUrl } = data.site.siteMetadata
+  console.log(location)
 
   return (
     <Layout location={location} title={title}>
@@ -37,6 +46,10 @@ export default ({ data, pageContext, location }) => {
         <PostTitle title={postTitle} />
         <PostDate date={date} />
         <PostContainer html={post.html} />
+        <Link
+          to={`${repositoryUrl}/blob/master/content/blog/${getUrlSuffix(location.pathname)}`}>
+          Edit this page on <GithubOutlined style={{ marginLeft: '0.3rem', fontSize: '1.4rem' }} />
+        </Link>
         <SocialShare title={postTitle} author={author} />
         {!!sponsor.buyMeACoffeeId && (
           <SponsorButton sponsorId={sponsor.buyMeACoffeeId} />
@@ -65,6 +78,7 @@ export const pageQuery = graphql`
         title
         author
         siteUrl
+        repositoryUrl
         comment {
           disqusShortName
           utterances

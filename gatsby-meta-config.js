@@ -4,6 +4,7 @@ module.exports = {
   author: `[Aquib Baig]`,
   introduction: `Web Developer`,
   siteUrl: `https://aquibbaig.in`, // Your blog site url
+  repositoryUrl: 'https://github.com/aquibbaig/aquibbaig.in',
   social: {
     twitter: ``, // Your Twitter account
     github: ``, // Your GitHub account
