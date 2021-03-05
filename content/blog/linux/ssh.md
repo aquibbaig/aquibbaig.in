@@ -126,5 +126,5 @@ command to reference your key and passphrase to ssh-agent.
 ```
 
 ## Conclusion
-Learning how ssh works can be very vital when you are dealing with vitual machines and remote systems in a microservice architecture. I hope this article was useful.
+Learning how ssh works can be very vital when you are dealing with virtual machines and remote systems in a microservice architecture. I hope this article was useful.
 
