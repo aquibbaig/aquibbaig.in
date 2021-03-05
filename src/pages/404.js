@@ -1,8 +1,7 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import Layout from '../layout'
-import { Head } from '../components/head'
 
 class NotFoundPage extends React.Component {
   render() {
@@ -11,9 +10,19 @@ class NotFoundPage extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <Head title="404: Not Found" />
-        <h1>Not Found</h1>
-        <p>You just hit a route that doesn&#39;t exist...</p>
+        <div style={{ minHeight: '70vh', textAlign: 'center' }}>
+          <center>
+            <p style={{ fontSize: '10rem', marginBottom: '2vh' }}>
+              404
+            </p>
+            <p style={{ fontSize: '1.6rem', paddingLeft: '2vw', paddingRight: '2vw' }}>
+              Dang!!! The URL that you have requested for does not exist.
+            </p>
+            <p style={{ fontSize: '1.2rem' }}>
+              <Link to="/">Start Again</Link>
+            </p>
+          </center>
+        </div>
       </Layout>
     )
   }

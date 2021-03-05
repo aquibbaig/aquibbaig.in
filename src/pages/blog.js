@@ -49,7 +49,7 @@ export default ({ data, location }) => {
     <Layout location={location} title={siteMetadata.title}>
       <Head title={HOME_TITLE} keywords={siteMetadata.keywords} />
       <Bio posts={posts} />
-      <div style={{ padding: `${rhythm(1.5)} ${rhythm(3 / 4)}` }}>
+      <div style={{ padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`, minHeight: '70vh' }}>
         <p className="header" style={{
           fontSize: '1.6rem',
           fontWeight: 'bold',

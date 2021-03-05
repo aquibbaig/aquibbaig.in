@@ -48,7 +48,7 @@ export default ({ data, location }) => {
   return (
     <>
       <Layout location={location} title={siteMetadata.title}>
-        <div style={{ padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`, minHeight: '50vh' }}>
+        <div style={{ padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`, minHeight: '70vh' }}>
           <p className="header" style={{
             fontSize: '1.6rem',
             fontWeight: 'bold',

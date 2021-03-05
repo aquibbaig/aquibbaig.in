@@ -29,7 +29,7 @@ export default ({ data, location }) => {
       location="/"
     >
       {/* Latest BlogPosts */}
-      <div className="posts" style={{ padding: `${rhythm(1.5)} ${rhythm(3 / 4)}` }}>
+      <div className="posts" style={{ padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`, minHeight: '70vh' }}>
         <p className="header" style={{
           fontSize: '1.6rem',
           fontWeight: 'bold',
