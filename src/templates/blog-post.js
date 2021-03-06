@@ -37,7 +37,6 @@ export default ({ data, pageContext, location }) => {
   const { disqusShortName, utterances } = comment
   const { title: postTitle, date } = post.frontmatter
   const { repositoryUrl } = data.site.siteMetadata
-  console.log(location)
 
   return (
     <Layout location={location} title={title}>
