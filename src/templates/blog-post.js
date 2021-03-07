@@ -25,7 +25,6 @@ const getUrlSuffix = (location) => {
 }
 
 export default ({ data, pageContext, location }) => {
-  console.log(data);
   useEffect(() => {
     ScrollManager.init()
     return () => ScrollManager.destroy()
