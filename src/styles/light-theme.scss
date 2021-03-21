@@ -112,14 +112,20 @@ body.light {
     color: white;
   }
 
-  .gatsby-highlight > pre, .gatsby-highlight > pre > code {
-    background-color:#fcfaf5;
+  .gatsby-highlight > pre {
+    background-color:#F8F8F8;
+    border: 1px solid #999DA0;
     color: black;
   }
 
   .language-text {
     background-color:#38365D;
     color: white;
+  }
+
+  .gatsby-highlight > pre > code {
+    color: black;
+    background-color:#F8F8F8;
   }
 
   // post
