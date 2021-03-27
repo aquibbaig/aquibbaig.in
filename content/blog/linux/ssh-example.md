@@ -1,5 +1,5 @@
 ---
-title: 'Exploring SSH to hack NASA'
+title: 'Does SSH work on any machine on the internet?'
 date: 2021-3-6 21:05:23
 category: 'linux'
 draft: false

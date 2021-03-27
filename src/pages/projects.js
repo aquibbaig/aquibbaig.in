@@ -54,7 +54,7 @@ export default ({ data, location }) => {
             fontWeight: 'bold',
             marginBottom: '1vh'
           }}>Projects</p>
-          <hr style={{ border: '2px solid #ED585B', width: '10%' }} />
+          <hr style={{ border: '2px solid #ED585B', width: '10%', background: '#ED585B' }} />
           <ProjectList projects={projectList} />
         </div>
       </Layout>

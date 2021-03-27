@@ -35,7 +35,7 @@ export default ({ data, location }) => {
           fontWeight: 'bold',
           marginBottom: '1vh'
         }}>Latest Posts</p>
-        <hr style={{ border: '2px solid #ED585B', width: '10%' }} />
+        <hr style={{ border: '2px solid #ED585B', width: '10%', background: '#ED585B' }} />
         {(latestPosts || []).map(post => {
           return <ThumbnailItem
             view="complete-view"
