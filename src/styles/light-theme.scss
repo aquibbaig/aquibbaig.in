@@ -14,26 +14,18 @@ body.light {
   }
 
   .ant-tag {
-    background-color:#F9F7F1;
+    background-color:#f5f5f5;
+    color: #2753B3;
+    font-size: 1rem;
+    font-family: 'Calibre-Regular';
   }
 
   .top {
-    background-color: #ED585B;
-    color: $dimmed-color !important;
-
-    .ant-row > .ant-col > a {
-      color: $dimmed-color;
-    }
-
-    .bio > div > a {
-      color: $dimmed-color;
-    }
+    background-color: #fff;
   }
 
   .tile > .ant-card-body > .ant-row > .ant-col > p > button:hover {
-    color: #F1EFBB;
-    background-color: #ED5756;
-    border: 1px solid transparent;
+    color: #1890ff;
   }
 
   a {
@@ -58,7 +50,7 @@ body.light {
     border-right: 6px solid $light-category-border-color;
     border-left: 6px solid $light-category-border-color;
     background-color: $light-category-background-color;
-    font-family: 'Work Sans';
+    font-family: 'Calibre-Regular';
     .item {
       border: 1px solid $light-category-border-color;
       background-color: $light-category-item-color;
@@ -66,13 +58,22 @@ body.light {
       box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
       a {
         color: $light-category-text-color;
+        font-family: 'Calibre-Regular';
+        font-size: 1.2rem;
       }
       &[aria-selected='true'] {
         border: 2px solid #38365D;
         font-weight: bold;
+        font-family: 'Calibre-Regular';
+        font-size: 1.2rem;
       }
       &[aria-selected='true'] a {
         color: $light-category-highlight-text-color;
+        font-family: 'Calibre-Regular';
+        font-size: 1.2rem;
+      }
+      div {
+        font-size: 1rem;
       }
     }
   }
@@ -99,13 +100,10 @@ body.light {
 
   .footer {
     color: white;
-    .locale {
-      fill: #ED585B;
-    }
     a, h1, h2, h3, h4, h5, h6, p {
       color: white;
     }
-    background-color: #33325B;
+    background-color: #0C2252;
   }
 
   .resp-sharing-button {
@@ -119,13 +117,14 @@ body.light {
   }
 
   .language-text {
-    background-color:#38365D;
-    color: white;
+    background-color:#f5f5f5;
+    color: #2753B3;
   }
 
   .gatsby-highlight > pre > code {
     color: black;
     background-color:#F8F8F8;
+    font-size: 1.2rem;
   }
 
   // post

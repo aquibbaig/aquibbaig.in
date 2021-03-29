@@ -2,6 +2,16 @@
 @import '../styles/light-theme.scss';
 @import '../styles/dark-theme.scss';
 
+@font-face {
+  font-family: 'Calibre-Bold';
+  src: local('Calibre-Bold'), url(../fonts/Calibre-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'Calibre-Regular';
+  src: local('Calibre-Regular'), url(../fonts/Calibre-Regular.ttf);
+}
+
 body {
   font-family: 'Noto Sans KR', sans-serif;
   background-color: $light-background-color;

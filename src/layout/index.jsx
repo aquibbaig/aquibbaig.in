@@ -64,15 +64,15 @@ const Layout = ({ location, title, children }) => {
         rootPath={rootPath}
         checked={checked}
       />
-      <br />
       <div
-        id="layout-content"
+        className="layout-content"
         style={{
           marginLeft: `auto`,
           marginRight: `auto`,
-          maxWidth: rhythm(24),
+          maxWidth: rhythm(30),
           fontSize: '1rem',
-          textAlign: 'justify'
+          textAlign: 'justify',
+          marginTop: '10vh'
         }}
       >
         <Header title={title} location={location} rootPath={rootPath} />

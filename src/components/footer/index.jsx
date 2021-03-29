@@ -8,6 +8,12 @@ import { rhythm } from '../../utils/typography';
 
 export const Footer = () => (
   <footer className="footer">
+    <Row justify="space-between"
+      align="middle"
+      className="footer-content">
+      <h2>I build scalable applications for the web.</h2>
+      <h2>made with &hearts; Gatsby.</h2>
+    </Row>
     <Row
       justify="space-between"
       align="middle"
@@ -25,29 +31,7 @@ export const Footer = () => (
         className="leftCol"
         style={{ marginBottom: '4vh' }}
       >
-        <h3>Copyright</h3>
-        <h5>
-          2021, &#xa9;Aquib Baig, All rights reserved.
-        </h5>
-      </Col>
-      <Col
-        xs={24}
-        md={8}
-        lg={8}
-        className="centerCol"
-        style={{ marginBottom: '4vh' }}
-      >
-        <h4 style={{ display: 'inline' }}>
-          {/* <svg
-            className="locale"
-            style={{ marginRight: '0.1vw' }}
-            xmlns="http://www.w3.org/2000/svg"
-            width="24" height="24"
-            viewBox="0 0 24 24">
-            <path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z" />
-          </svg> */}
-              Bangalore, India
-            </h4>
+        <h4>Copyright 2021, &#xa9;Aquib Baig, All rights reserved.</h4>
       </Col>
       <Col
         xs={24}
@@ -57,16 +41,13 @@ export const Footer = () => (
         style={{ marginBottom: '4vh', fontSize: '1rem' }}
       >
         <a target="blank" href="https://www.github.com/aquibbaig">
-          Github,{' '}
-          {/* <GithubOutlined style={{ marginLeft: '0.3rem', fontSize: '1.4rem' }} /> */}
+          <GithubOutlined style={{ marginLeft: '1rem', fontSize: '1.4rem' }} />
         </a>
         <a target="blank" href="https://linked.in/baigaquib">
-          LinkedIn,{' '}
-          {/* <LinkedinFilled style={{ marginLeft: '0.3rem', fontSize: '1.4rem' }} /> */}
+          <LinkedinFilled style={{ marginLeft: '1rem', fontSize: '1.4rem' }} />
         </a>
         <a target="blank" href="https://twitter.com/BaigAquib">
-          Twitter
-          {/* <TwitterCircleFilled style={{ marginLeft: '0.3rem', fontSize: '1.4rem' }} /> */}
+          <TwitterCircleFilled style={{ marginLeft: '1rem', fontSize: '1.4rem' }} />
         </a>
       </Col>
     </Row>

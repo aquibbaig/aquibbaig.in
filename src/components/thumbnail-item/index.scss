@@ -16,10 +16,16 @@
 }
 
 @media (min-width: 168px) {
-  .thumbnailTitle {
-    font-size: 1.4rem;
+  .thumbnailTitle > a {
+    padding: 0;
+  }
+  .thumbnailTitle > a > div {
+    font-size: 1.2rem;
     margin: 0;
     text-align: left;
+    color: black;
+    font-family: 'Noto Sans KR', sans-serif !important;
+    font-weight: 700;
   }
   .thumbnailContent {
     text-align: justify;
@@ -28,10 +34,14 @@
 }
 
 @media (min-width: 1024px) {
-  .thumbnailTitle {
-    font-size: 1.6rem;
+  .thumbnailTitle > a > div {
+    font-size: 1.8rem;
     margin: 0;
     text-align: left;
+    color: black;
+    font-family: 'Noto Sans KR', sans-serif !important;
+    font-weight: 700;
+    padding: 0;
   }
   .thumbnailContent {
     text-align: justify;

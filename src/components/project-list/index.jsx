@@ -14,11 +14,11 @@ export default (props) => {
               <Card hoverable style={dark ?
                 { background: '#0F1029', marginBottom: '1vh', border: 0 }
                 :
-                { background: '#FAF6EB', marginBottom: '1vh', border: 0 }}>
-                <p style={{ fontSize: '1.3rem', margin: '0', textAlign: 'left', fontWeight: '600' }}>
+                { background: '#fff', marginBottom: '1vh', border: 0 }}>
+                <p style={{ fontSize: '1.6rem', margin: '0', textAlign: 'left', fontWeight: '600', fontFamily: 'Calibre-Regular' }}>
                   {project.title}
                 </p>
-                <p style={{ fontSize: '1rem', fontFamily: 'Roboto' }}>
+                <p style={{ fontSize: '1.4rem', fontFamily: 'Calibre-Regular' }}>
                   {(project.desc).substring(0, 200)}...
               </p>
                 {project.tags.map(tag => {

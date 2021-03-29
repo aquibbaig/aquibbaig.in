@@ -33,13 +33,15 @@ export default ({ data, location }) => {
         <p className="header" style={{
           fontSize: '1.6rem',
           fontWeight: 'bold',
-          marginBottom: '1vh'
+          marginBottom: '1vh',
+          textAlign: 'right',
+          color: '#607FF9'
         }}>Latest Posts</p>
-        <hr style={{ border: '2px solid #ED585B', width: '10%', background: '#ED585B' }} />
+        {/* <hr style={{ border: '2px solid #1890ff', width: '10%', background: '#ED585B' }} /> */}
         {(latestPosts || []).map(post => {
           return <ThumbnailItem
             view="complete-view"
-            lightBg="#FAF6EB"
+            lightBg="#fff"
             darkBg="#0F1029"
             key={post.node.excerpt}
             node={post.node}
@@ -53,15 +55,17 @@ export default ({ data, location }) => {
           fontSize: '1.6rem',
           fontWeight: 'bold',
           marginBottom: '1vh',
+          textAlign: 'right',
+          color: '#607FF9'
         }}>Featured</p>
-        <hr style={{ border: '2px solid #ED585B', width: '10%' }} />
+        {/* <hr style={{ border: '2px solid #ED585B', width: '10%' }} /> */}
         <Tile
           loading={false}
           outerStyle={OuterStyles}
           innerStyles={InnerStyles}
           // darkOutline="#EAC6A2"
           darkBg="#0F1029"
-          lightBg="#F6F2E7"
+          lightBg="#fff"
           className="tile"
           buttonLink="/gsoc-2019-project-report/"
           top="Student at 2019's"
@@ -74,7 +78,7 @@ export default ({ data, location }) => {
           outerStyle={OuterStyles}
           innerStyles={InnerStyles}
           darkBg="#0F1029"
-          lightBg="#F6F2E7"
+          lightBg="#fff"
           className="tile"
           buttonLink="https://gophertuts.surge.sh"
           top="Golang Tutorials with"
@@ -88,7 +92,7 @@ export default ({ data, location }) => {
           innerStyles={InnerStyles}
           // darkOutline="#EAC6A2"
           darkBg="#0F1029"
-          lightBg="#F6F2E7"
+          lightBg="#fff"
           className="tile"
           buttonLink="/blog?category=linux"
           top="Explore the series of"

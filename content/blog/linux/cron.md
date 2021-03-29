@@ -5,9 +5,9 @@ category: 'linux'
 draft: false
 ---
 
-Ever felt the requirement to periodically execute jobs on your system,
-jobs such as cleanups or state dumps, even monitoring? The `cron` daemon is a service that runs on all main distributions of Unix and Linux which lets you
-run commands periodically or at any given point of time (scheduling). For example: when you postpone system restart for a software update, it queues up a task in cron to be executed at a certain point in time.
+<p style="color: #8a8a8a">Ever felt the requirement to periodically execute jobs on your system,
+jobs such as cleanups or state dumps, even monitoring? The cron daemon is a service that runs on all main distributions of Unix and Linux which lets you
+run commands periodically or at any given point of time (scheduling). For example: when you postpone system restart for a software update, it queues up a task in cron to be executed at a certain point in time.</p>
 
 ## Cron and Crontable
 `cron` is the daemon that schedules tasks for you. 

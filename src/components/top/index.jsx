@@ -1,22 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import './index.scss'
-import { Row, Col } from 'antd'
+import { Row, Col, Input, Menu } from 'antd'
 import { ThemeSwitch } from '../theme-switch'
 import "fontsource-work-sans";
 import { StaticQuery, graphql } from 'gatsby';
 
+const { Search } = Input;
+
 export const Top = ({ title, location, rootPath, ...props }) => {
-  const isRoot = location.pathname === rootPath
+  const isRoot = location.pathname === rootPath;
+  const [expandMenu, showExpandMenu] = useState(false);
   const { setCheckVar, checked } = props;
 
   const setThemeCheck = (ch) => {
     setCheckVar(ch);
   }
 
+  const toggleShowMenu = (expandMenu) => {
+    showExpandMenu(!expandMenu);
+  }
+
   return (
     <>
-      <div className="top"
+      <div
+        className="top"
+        style={{
+          position: 'fixed',
+          top: '0',
+          zIndex: 100,
+        }}
       >
         <StaticQuery
           query={graphql`
@@ -34,70 +47,75 @@ export const Top = ({ title, location, rootPath, ...props }) => {
             return (
               !isRoot && (
                 <>
-                  {/* <Row justify="space-between">
-                    <Col>
-                    </Col>
-                    <Col style={{ paddingRight: '20vw' }}>
-                      <Dropdown
-                        trigger={['click']}
-                        overlay={menu}
-                      >
-                        <MoreOutlined
-                          style={!checked ?
-                            {
-                              fontSize: '1.8rem',
-                              paddingTop: '1vh',
-                              color: '#FC0027'
-                            } : {
-                              fontSize: '1.8rem',
-                              paddingTop: '1vh',
-                              color: '#D050B1'
-                            }}
-                        />
-                      </Dropdown>
-                      {/* ThemeSwitch was not able to access the root
-                          level component. Hacky fix for dark mode. */}
-                  {/* <div style={{ display: 'none' }}>
-                        <ThemeSwitch style={{ display: 'none' }} />
-                      </div>
-                    </Col> */}
-                  {/* </Row> */}
-                  <Row justify="space-between" className="hello" align="middle">
-                    <Col>
-                      <div className="hellohead" style={{ fontWeight: 'bold' }}>Hello,</div>
-                    </Col>
-                    <Col>
-                      <ThemeSwitch setVar={(c) => setThemeCheck(c)} />
-                    </Col>
-                  </Row>
-                  <Row justify="space-between" className="heading" align="middle">
-                    <Col
-                      className="bio"
-                    >
-                      <div className="info">I'm Aquib,</div>
-                      <div className="def" style={{ fontSize: '1rem' }}>I like to write code, watch movies and listen to music.</div>
-                      <hr />
-                    </Col>
-                  </Row>
                   <Row
                     className="navigation"
                     justify="space-between"
                     align="middle"
                     style={{
-                      fontFamily: 'Work Sans',
-                      fontWeight: 'bold',
+                      fontFamily: "Calibre-Regular"
                     }}
                   >
-                    <Col>
-                      <Link to="/">HOME</Link>
+                    <div className="brand">
+                      Aquib Baig
+                    </div>
+                    <Col lg={8}>
+                      <Menu
+                        className="nav-menu"
+                        mode="horizontal"
+                        overflowedIndicator={<div>&#x2630;</div>}
+                        style={{
+                          background: 'transparent',
+                          border: '0',
+                        }}>
+                        <Menu.Item>
+                          <Link to="/">Home</Link>
+                        </Menu.Item>
+                        <Menu.Item>
+                          <Link to="/projects">Projects</Link>
+                        </Menu.Item>
+                        <Menu.Item>
+                          <Link to="/blog">Blog</Link>
+                        </Menu.Item>
+                      </Menu>
+                    </Col>
+                    <Col lg={8} className="hamburger-menu">
+                      <div onClick={() => toggleShowMenu(expandMenu)}>
+                        &#x2630;
+                      </div>
+                    </Col>
+                    <Col lg={8} className="search">
+                      <Search placeholder="Search" />
                     </Col>
                     <Col>
-                      <Link to="/projects">PROJECTS</Link>
-                    </Col>
-                    <Col>
-                      <Link to="/blog">BLOG</Link>
+                      <ThemeSwitch setVar={(c) => setThemeCheck(c)} />
                     </Col>
                   </Row>
+                  {expandMenu && <Row
+                    className="navigation"
+                    justify="space-between"
+                    align="middle"
+                    style={{
+                      fontFamily: "Calibre-Regular",
+                      backgroundColor: '#0C2252',
+                      margin: '0'
+                    }}
+                  >
+                    <Menu
+                      style={{
+                        background: 'transparent',
+                        border: '0',
+                      }}>
+                      <Menu.Item>
+                        <Link to="/" style={{ color: 'white' }}>Home</Link>
+                      </Menu.Item>
+                      <Menu.Item>
+                        <Link to="/projects" style={{ color: 'white' }}>Projects</Link>
+                      </Menu.Item>
+                      <Menu.Item>
+                        <Link to="/blog" style={{ color: 'white' }}>Blog</Link>
+                      </Menu.Item>
+                    </Menu>
+                  </Row>}
                 </>
               )
             )

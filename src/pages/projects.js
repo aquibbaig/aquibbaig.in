@@ -52,9 +52,10 @@ export default ({ data, location }) => {
           <p className="header" style={{
             fontSize: '1.6rem',
             fontWeight: 'bold',
-            marginBottom: '1vh'
+            marginBottom: '1vh',
+            textAlign: 'right',
+            color: '#607FF9'
           }}>Projects</p>
-          <hr style={{ border: '2px solid #ED585B', width: '10%', background: '#ED585B' }} />
           <ProjectList projects={projectList} />
         </div>
       </Layout>

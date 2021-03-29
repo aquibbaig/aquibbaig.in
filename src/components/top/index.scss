@@ -3,7 +3,6 @@
 @import '../../styles/dark-theme.scss';
 
 .top {
-  font-family: 'Noto Sans KR' !important;
   width: 100%;
   .link {
     // display: inline-block;
@@ -13,58 +12,46 @@
     opacity: 0.7;
     margin-left: 20px;
     font-family: 'Catamaran';
-    font-weight: 800;
   }
   .toolbar {
     padding-right: '20vw';
   }
 }
 
-@media (min-width: 168px) {
-  .bio {
-    font-size: 0.7rem;
+@media (min-width: 0px) {
+  .nav-menu {
+    display: none;
   }
-  .top {
-    position: relative;
-    width: 100%;
-    height: 40vh;
+  .hamburger-menu > div {
+    font-size: 20px;
   }
-  .hellohead {
-    font-size: 1.8rem !important;
+  .search {
+    display: none;
   }
-  .toolbar {
-    padding-right: '20vw';
+  .brand {
+    font-size: 20px !important;
+    font-family: 'Calibre-Regular';
+    font-weight: bold;
   }
-  .bio {
-    padding-left: 5vw;
-    padding-right: 5vw;
-    font-size: 2.4rem;
+  .top > div > .ant-col > ul > li {
+    font-size: 16px !important;
+    font-family: 'Calibre-Regular';
+  }
+  .top > div > ul > li {
+    font-size: 16px !important;
+    font-family: 'Calibre-Regular';
+    font-weight: bold;
   }
 }
 
 @media (min-width: 168px) {
   .info {
     font-size: 0.7rem;
-    font-weight: bold;
-  }
-  .def {
-    font-size: 0.6rem !important;
-    font-weight: bold;
   }
   .top {
     position: relative;
     width: 100%;
-    height: 32vh;
-  }
-  .toolbar {
-    padding-right: '20vw';
-  }
-  .switch-container {
-    margin-right: 5vw;
-  }
-  .hello {
-    padding-top: 2vh;
-    padding-left: 5vw;
+    height: 10vh;
   }
   .navigation {
     padding-top: 2vh;
@@ -73,71 +60,62 @@
   }
 }
 
-@media (min-width: 258px) {
-  .hellohead {
-    font-size: 1.8rem !important;
-  }
-  .info {
-    font-size: 1.3rem;
-  }
-  .def {
-    font-size: 1rem !important;
-  }
-}
-
-@media (min-width: 375px) {
-  .hellohead {
-    font-size: 3.3rem !important;
-  }
+@media (min-width: 400px) {
   .top {
     position: relative;
     width: 100%;
-    height: 35vh;
+    height: 10vh;
+  }
+  .hamburger-menu {
+    display: none;
+  }
+  .nav-menu {
+    display: block;
   }
 }
 
 @media (min-width: 500px) {
   .top {
-    position: relative;
     width: 100%;
-    height: 35vh;
-  }
-  .bio {
-    font-size: 1.4rem;
+    height: 10vh;
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1075px) {
   .top {
-    position: relative;
     width: 100%;
-    height: 30vh;
+    height: 10vh;
   }
-  .bio {
-    font-size: 1.4rem;
+  .search {
+    display: block;
+  }
+  .brand {
+    font-size: 20px !important;
+    font-family: 'Calibre-Regular';
+    font-weight: bold;
+  }
+  .top > div > .ant-col > ul > li {
+    font-size: 20px !important;
+    font-family: 'Calibre-Regular';
   }
 }
 
 @media (min-width: 1300px) {
   .top {
-    position: relative;
     width: 100%;
-    height: 27vh;
-  }
-  .bio {
-    padding-left: 20vw;
-    padding-right: 20vw;
-    font-size: 1.4rem;
-  }
-  .hello {
-    padding-top: 2vh;
-    padding-left: 20vw;
+    height: 10vh;
   }
   .navigation {
     margin-left: 20vw;
     margin-right: 20vw;
+    .brand {
+      font-size: 26px !important;
+      font-family: 'Calibre-Regular';
+      font-weight: bold;
+    }
   }
-  .switch-container {
-    margin-right: 20vw;
+  .top > div > .ant-col > ul > li {
+    font-size: 20px !important;
+    font-family: 'Calibre-Regular';
   }
 }

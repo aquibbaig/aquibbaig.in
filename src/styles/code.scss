@@ -152,8 +152,33 @@ h1 {
   text-align: left;
 }
 
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
 h2, h3, h4 {
   text-align: left;
-  font-family: 'Roboto';
+  font-family: 'Calibre-Regular';
   font-weight: 600;
+}
+
+@media (max-width: 675px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+  }
+  pre[class*='language-'] {
+    font-size: 1rem !important;
+  }
 }

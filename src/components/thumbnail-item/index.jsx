@@ -16,25 +16,24 @@ export const ThumbnailItem = (props) => {
       className="dark"
       hoverable
       style={dark ?
-        { background: darkBg, marginBottom: '1vh', border: 0 }
+        { background: darkBg, marginBottom: '1vh', border: 0, cursor: 'text' }
         :
-        { background: lightBg, marginBottom: '1vh', border: 0 }
+        { background: lightBg, marginBottom: '1vh', border: 0, cursor: 'text' }
       }
     >
       <div key={node.fields.slug}>
-        <p className="thumbnailTitle">
-          <b>
-            {node.frontmatter.title || node.fields.slug}
-          </b>
-        </p>
+        <div className="thumbnailTitle">
+          <Link className={`thumbnail ${TARGET_CLASS}`} to={node.fields.slug}>
+            <div>
+              {node.frontmatter.title || node.fields.slug}
+            </div>
+          </Link>
+        </div>
         <p>{node.frontmatter.date}</p>
         {view === "complete-view" ? <p className="thumbnailContent"
-          style={{ fontFamily: 'Roboto' }}
+          style={{ marginBottom: '1vh', fontFamily: 'Calibre-Regular', fontSize: '1.2rem' }}
           dangerouslySetInnerHTML={{ __html: node.excerpt }} /> : <></>}
       </div>
-      <Link style={{ fontSize: '1rem' }} className={`thumbnail ${TARGET_CLASS}`} to={node.fields.slug}>
-        Read more..
-      </Link>
     </Card>
   )
 }

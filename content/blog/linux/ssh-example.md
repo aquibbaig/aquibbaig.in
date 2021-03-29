@@ -1,12 +1,12 @@
 ---
-title: 'Does SSH work on any machine on the internet?'
+title: 'Testing SSH utility to the limits'
 date: 2021-3-6 21:05:23
 category: 'linux'
 draft: false
 ---
 
-In the last blog post, we learnt all about SSH and how to remotely login
-into other machines. But how far can we go with this, can we access any machine over the internet with SSH, imagine a situation that you guessed the password of some random guy's machine and could hack into it without his knowledge. Let's figure it out.
+<p style="color: #8a8a8a">In the last blog post, we learnt all about SSH and how to remotely login
+into other machines. But how far can we go with this, can we access any machine over the internet with SSH, imagine a situation that you guessed the password of some random guy's machine and could hack into it without his knowledge. Let's figure it out.<p>
 
 ## What SSH can do?
 SSH allows you to remotely log in and passwordless access into machines you can have access to. It allows you a secured and encrypted method of communication.

@@ -1,21 +1,24 @@
 import React, { useContext } from 'react'
 import "@fontsource/open-sans";
 import { ThemeContext } from '../../layout';
+import './index.scss';
 
 const lightStyles = {
   textAlign: 'left',
   fontWeight: 'bold',
-  fontSize: '1.8rem',
+  fontSize: '3rem',
   marginBottom: '2vh',
-  color: '#38365D'
+  color: '#38365D',
+  fontFamily: 'Calibre-Regular'
 }
 
 const darkStyles = {
   textAlign: 'left',
   fontWeight: 'bold',
-  fontSize: '1.8rem',
+  fontSize: '3rem',
   marginBottom: '2vh',
-  color: 'white'
+  color: 'white',
+  fontFamily: 'Calibre-Regular'
 }
 
 const hrStyles = {
@@ -29,7 +32,6 @@ export const PostTitle = ({ title }) => {
   return (
     <div className="postTitle" style={dark ? darkStyles : lightStyles}>
       {title}
-      <hr style={hrStyles} />
     </div>
   )
 }

@@ -1,13 +1,13 @@
 ---
-title: 'The Ultimate Guide to SSH'
+title: 'Everything you should know about SSH'
 date: 2021-2-21 21:05:23
 category: 'linux'
 draft: false
 ---
 
-Almost everyone uses SSH to log into remote machines and I do not see any reason why not. The other way is to use passwords which are not secure cause shorter passwords are easy to be lost or copied while longer ones are hard to
+<p style="color: #8a8a8a">Almost everyone uses SSH to log into remote machines and I do not see any reason why not. The other way is to use passwords which are not secure cause shorter passwords are easy to be lost or copied while longer ones are hard to
 remember. SSH introduces a secured public key authentication mechanism, which
-is ideal.
+is ideal.</p>
 
 - One, you do not have to remember any keys as the clients do that for you.
 - Second SSH keys are properly encrypted so they are hard to imitate, unless you manually give it to them.

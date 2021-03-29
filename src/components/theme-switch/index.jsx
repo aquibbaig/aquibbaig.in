@@ -29,10 +29,7 @@ const MoonIcon = () => {
   return (
     <svg
       width="22px"
-      height="30px"
-      style={{
-        margin: '0 10px'
-      }}
+      height="20px"
       aria-hidden="true"
       focusable="false"
       data-prefix="fas"
