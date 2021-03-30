@@ -1,7 +1,18 @@
-import React from 'react'
+import React from 'react';
+import { Avatar, Row } from 'antd';
 
 import './index.scss'
 
 export const PostDate = ({ date }) => {
-  return <p className="post-date">{date}</p>
-}
+  return (
+    <Row align="middle" style={{ marginBottom: '5vh' }}>
+      <p className="post-date">
+        <Avatar size={60} src="https://avatars.githubusercontent.com/u/26324376?v=4" />
+      </p>
+      <p className="post-date">
+        <p className="brand">Aquib Baig</p>
+        {date}
+      </p>
+    </Row>
+  );
+};

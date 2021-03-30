@@ -1,6 +1,6 @@
 ---
 title: 'Introduction to scheduling jobs in Linux'
-date: 2021-3-21 21:05:23
+date: 2021-3-22 21:05:23
 category: 'linux'
 draft: false
 ---
