@@ -5,7 +5,6 @@ import Layout from '../layout/index'
 import { ThumbnailItem } from '../components/thumbnail-item';
 import { rhythm } from '../utils/typography';
 import Tile from '../components/tiles';
-import "@fontsource/work-sans"
 // import Flag from '../components/flag';
 // import { Row, Col, Button } from 'antd';
 // import Banner from '../components/banner';

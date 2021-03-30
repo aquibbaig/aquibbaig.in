@@ -2,8 +2,6 @@ import React, { useContext } from 'react'
 import { Link } from 'gatsby'
 import { Card } from 'antd';
 import { TARGET_CLASS } from '../../utils/visible';
-import "@fontsource/roboto";
-import "@fontsource/work-sans";
 
 import './index.scss'
 import { ThemeContext } from '../../layout';
@@ -31,7 +29,7 @@ export const ThumbnailItem = (props) => {
         </div>
         <p>{node.frontmatter.date}</p>
         {view === "complete-view" ? <p className="thumbnailContent"
-          style={{ marginBottom: '1vh', fontFamily: 'Calibre-Regular', fontSize: '1.2rem' }}
+          style={{ marginBottom: '1vh', fontFamily: 'Calibre' }}
           dangerouslySetInnerHTML={{ __html: node.excerpt }} /> : <></>}
       </div>
     </Card>

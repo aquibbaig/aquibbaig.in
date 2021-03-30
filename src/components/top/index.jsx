@@ -3,7 +3,6 @@ import { Link } from 'gatsby'
 import './index.scss'
 import { Row, Col, Input, Menu } from 'antd'
 import { ThemeSwitch } from '../theme-switch'
-import "fontsource-work-sans";
 import { StaticQuery, graphql } from 'gatsby';
 
 const { Search } = Input;
@@ -52,7 +51,7 @@ export const Top = ({ title, location, rootPath, ...props }) => {
                     justify="space-between"
                     align="middle"
                     style={{
-                      fontFamily: "Calibre-Regular"
+                      fontFamily: "Calibre"
                     }}
                   >
                     <div className="brand">
@@ -95,7 +94,7 @@ export const Top = ({ title, location, rootPath, ...props }) => {
                     justify="space-between"
                     align="middle"
                     style={{
-                      fontFamily: "Calibre-Regular",
+                      fontFamily: "Calibre",
                       backgroundColor: '#0C2252',
                       margin: '0'
                     }}

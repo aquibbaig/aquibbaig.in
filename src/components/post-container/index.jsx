@@ -1,7 +1,7 @@
 import React from 'react';
 
 const styles = {
-  fontFamily: 'Calibre-Regular',
+  fontFamily: 'Calibre',
   fontSize: '1.3rem'
 }
 

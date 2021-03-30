@@ -43,13 +43,12 @@ export default (props) => {
           <p style={{ margin: '0', textAlign: 'left', fontWeight: '600' }}>
             {props.header}
           </p>
-          <p style={{ fontFamily: 'Roboto' }}>
+          <p>
             {props.content}
           </p>
           <p>
             <Button type="primary">
-              <a href={buttonLink}
-                style={{ fontFamily: 'Work Sans' }}>
+              <a href={buttonLink}>
                 Navigate
               </a>
             </Button>

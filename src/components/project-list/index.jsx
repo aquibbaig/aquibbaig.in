@@ -15,10 +15,10 @@ export default (props) => {
                 { background: '#0F1029', marginBottom: '1vh', border: 0 }
                 :
                 { background: '#fff', marginBottom: '1vh', border: 0 }}>
-                <p style={{ fontSize: '1.6rem', margin: '0', textAlign: 'left', fontWeight: '600', fontFamily: 'Calibre-Regular' }}>
+                <p style={{ fontSize: '1.6rem', margin: '0', textAlign: 'left', fontWeight: '600', fontFamily: 'Calibre' }}>
                   {project.title}
                 </p>
-                <p style={{ fontSize: '1.4rem', fontFamily: 'Calibre-Regular' }}>
+                <p style={{ fontSize: '1.4rem', fontFamily: 'Calibre' }}>
                   {(project.desc).substring(0, 200)}...
               </p>
                 {project.tags.map(tag => {

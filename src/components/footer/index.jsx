@@ -1,6 +1,5 @@
 import React from 'react';
 import { Col, Row } from 'antd';
-import "fontsource-work-sans";
 import { GithubOutlined, LinkedinFilled, TwitterCircleFilled } from '@ant-design/icons'
 
 import './index.scss';

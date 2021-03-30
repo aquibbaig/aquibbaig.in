@@ -17,7 +17,7 @@ body.light {
     background-color:#f5f5f5;
     color: #2753B3;
     font-size: 1rem;
-    font-family: 'Calibre-Regular';
+    font-family: 'Calibre';
   }
 
   .top {
@@ -50,7 +50,7 @@ body.light {
     border-right: 6px solid $light-category-border-color;
     border-left: 6px solid $light-category-border-color;
     background-color: $light-category-background-color;
-    font-family: 'Calibre-Regular';
+    font-family: 'Calibre';
     .item {
       border: 1px solid $light-category-border-color;
       background-color: $light-category-item-color;
@@ -58,18 +58,18 @@ body.light {
       box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
       a {
         color: $light-category-text-color;
-        font-family: 'Calibre-Regular';
+        font-family: 'Calibre';
         font-size: 1.2rem;
       }
       &[aria-selected='true'] {
         border: 2px solid #38365D;
         font-weight: bold;
-        font-family: 'Calibre-Regular';
+        font-family: 'Calibre';
         font-size: 1.2rem;
       }
       &[aria-selected='true'] a {
         color: $light-category-highlight-text-color;
-        font-family: 'Calibre-Regular';
+        font-family: 'Calibre';
         font-size: 1.2rem;
       }
       div {

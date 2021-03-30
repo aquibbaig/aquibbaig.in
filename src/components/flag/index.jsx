@@ -13,7 +13,7 @@ export default (props) => {
         loading={loading}
         style={{ backgroundColor: bg, color: textCol, height: '20vh', textAlign: 'center' }}
       >
-        <p style={{ fontSize: '1.2rem' }}>
+        <p style={{ fontSize: '1.6rem' }}>
           {header}
         </p>
       </Card>

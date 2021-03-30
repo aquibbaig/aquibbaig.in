@@ -1,19 +1,10 @@
 @import '../styles/variables.scss';
 @import '../styles/light-theme.scss';
 @import '../styles/dark-theme.scss';
-
-@font-face {
-  font-family: 'Calibre-Bold';
-  src: local('Calibre-Bold'), url(../fonts/Calibre-Bold.ttf);
-}
-
-@font-face {
-  font-family: 'Calibre-Regular';
-  src: local('Calibre-Regular'), url(../fonts/Calibre-Regular.ttf);
-}
+@import '../fonts/stylesheet.css';
 
 body {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Calibre';
   background-color: $light-background-color;
   -webkit-text-size-adjust: antialiased;
   -moz-osx-font-smoothing: grayscale;

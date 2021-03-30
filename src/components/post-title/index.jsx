@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-import "@fontsource/open-sans";
 import { ThemeContext } from '../../layout';
 import './index.scss';
 
@@ -9,7 +8,7 @@ const lightStyles = {
   fontSize: '3rem',
   marginBottom: '2vh',
   color: '#38365D',
-  fontFamily: 'Calibre-Regular'
+  fontFamily: 'Calibre'
 }
 
 const darkStyles = {
@@ -18,7 +17,7 @@ const darkStyles = {
   fontSize: '3rem',
   marginBottom: '2vh',
   color: 'white',
-  fontFamily: 'Calibre-Regular'
+  fontFamily: 'Calibre'
 }
 
 const hrStyles = {
