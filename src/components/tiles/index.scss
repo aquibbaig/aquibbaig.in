@@ -1,0 +1,23 @@
+@media (min-width: 0px) {
+  .tile > .ant-card-body > .ant-row > .ant-col > p:nth-child(1) {
+    font-size: 1.4rem;
+  }
+  .tile > .ant-card-body > .ant-row > .ant-col > p:nth-child(2) {
+    font-size: 1.2rem;
+  }
+  .tile > .ant-card-body > .ant-row > .ant-col > p:nth-child(3) {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .tile > .ant-card-body > .ant-row > .ant-col > p:nth-child(1) {
+    font-size: 1.6rem;
+  }
+  .tile > .ant-card-body > .ant-row > .ant-col > p:nth-child(2) {
+    font-size: 1.3rem;
+  }
+  .tile > .ant-card-body > .ant-row > .ant-col > p:nth-child(3) {
+    font-size: 1rem;
+  }
+}

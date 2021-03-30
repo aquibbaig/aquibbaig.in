@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import { Card, Row, Col, Button } from 'antd';
 import { ThemeContext } from '../../layout';
+import './index.scss';
 
 export default (props) => {
   const {
@@ -34,15 +35,15 @@ export default (props) => {
         }
       }
     >
-      <Row align="middle" style={{ padding: '10px' }}>
+      <Row align="middle">
         <Col style={innerStyle}>
-          <p style={{ fontSize: '1.3rem', margin: '0', textAlign: 'left', fontWeight: '600' }}>
+          <p style={{ margin: '0', textAlign: 'left', fontWeight: '600' }}>
             {props.top}
           </p>
-          <p style={{ fontSize: '1.6rem', margin: '0', textAlign: 'left', fontWeight: '600' }}>
+          <p style={{ margin: '0', textAlign: 'left', fontWeight: '600' }}>
             {props.header}
           </p>
-          <p style={{ fontSize: '1rem', fontFamily: 'Roboto' }}>
+          <p style={{ fontFamily: 'Roboto' }}>
             {props.content}
           </p>
           <p>

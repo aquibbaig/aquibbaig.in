@@ -5,12 +5,11 @@
   padding-bottom: 2vh;
 }
 
-.footer-content {
-  margin-left: 20vw;
-  margin-right: 20vw;
-}
-
 @media (min-width: 168px) {
+  .footer-content {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
   .leftCol {
     a, h3, h5, h2, h6 {
       text-decoration: none !important;
@@ -26,6 +25,10 @@
 }
 
 @media (min-width: 1000px) {
+  .footer-content {
+    margin-left: 20vw;
+    margin-right: 20vw;
+  }
   .leftCol {
     a, h3, h5, h2, h6 {
       text-decoration: none !important;

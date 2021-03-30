@@ -12,7 +12,7 @@ export const Footer = () => (
       align="middle"
       className="footer-content">
       <h2>I build scalable applications for the web.</h2>
-      <h2>made with &hearts; Gatsby.</h2>
+      <h2>made with &#x2764; Gatsby.</h2>
     </Row>
     <Row
       justify="space-between"
