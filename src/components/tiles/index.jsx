@@ -37,10 +37,10 @@ export default (props) => {
     >
       <Row align="middle">
         <Col style={innerStyle}>
-          <p style={{ margin: '0', textAlign: 'left', fontWeight: '600' }}>
+          <p style={{ margin: '0', textAlign: 'left', fontWeight: '500' }}>
             {props.top}
           </p>
-          <p style={{ margin: '0', textAlign: 'left', fontWeight: '600' }}>
+          <p style={{ margin: '0', textAlign: 'left', fontWeight: '500' }}>
             {props.header}
           </p>
           <p>

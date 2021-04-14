@@ -19,27 +19,27 @@
     text-align: left;
     color: black;
     font-family: 'Calibre' !important;
-    font-weight: 600;
+    font-weight: 400;
   }
   .thumbnailContent {
     text-align: justify;
-    font-size: 1.2rem
+    font-size: 1.2rem;
   }
 }
 
 @media (min-width: 1024px) {
   .thumbnailTitle > a > div {
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin: 0;
     text-align: left;
     color: black;
-    font-family: 'Calibre';
-    font-weight: 600;
+    font-family: 'Roboto';
+    font-weight: 500;
     padding: 0;
   }
   .thumbnailContent {
     text-align: justify;
-    font-size: 1rem
+    font-size: 1.2rem;
   }
 }
 

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { Link } from 'gatsby'
 import { Card } from 'antd';
+import { FaRegCalendarAlt } from 'react-icons/fa';
 import { TARGET_CLASS } from '../../utils/visible';
 
 import './index.scss'
@@ -27,9 +28,9 @@ export const ThumbnailItem = (props) => {
             </div>
           </Link>
         </div>
-        <p>{node.frontmatter.date}</p>
+        <p style={{ fontFamily: 'Arial', verticalAlign: 'middle' }}><FaRegCalendarAlt/>{' '}{node.frontmatter.date}</p>
         {view === "complete-view" ? <p className="thumbnailContent"
-          style={{ marginBottom: '1vh', fontFamily: 'Calibre' }}
+          style={{ marginBottom: '1vh' }}
           dangerouslySetInnerHTML={{ __html: node.excerpt }} /> : <></>}
       </div>
     </Card>

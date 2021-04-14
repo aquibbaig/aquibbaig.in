@@ -1,13 +1,16 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import Layout from '../layout/index'
 import { ThumbnailItem } from '../components/thumbnail-item';
 import { rhythm } from '../utils/typography';
 import Tile from '../components/tiles';
+import { FaRegClock, FaRegBookmark } from 'react-icons/fa';
 // import Flag from '../components/flag';
-// import { Row, Col, Button } from 'antd';
+import { Typography } from 'antd';
 // import Banner from '../components/banner';
+
+const { Title } = Typography;
 
 export default ({ data, location }) => {
   const { title } = data.site.siteMetadata
@@ -30,12 +33,15 @@ export default ({ data, location }) => {
       {/* Latest BlogPosts */}
       <div className="posts" style={{ padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`, minHeight: '70vh' }}>
         <p className="header" style={{
-          fontSize: '1.6rem',
+          display: 'flex',
+          alignItems: 'baseline',
+          color: '#607FF9',
           fontWeight: 'bold',
-          marginBottom: '1vh',
-          textAlign: 'right',
-          color: '#607FF9'
-        }}>Latest Posts</p>
+          justifyContent: 'flex-end'
+        }}>
+          <FaRegClock/>
+          <Title level={3} style={{ color: '#607FF9', marginLeft: '0.2vw' }}>Latest Posts</Title>
+        </p>
         {/* <hr style={{ border: '2px solid #1890ff', width: '10%', background: '#ED585B' }} /> */}
         {(latestPosts || []).map(post => {
           return <ThumbnailItem
@@ -51,12 +57,15 @@ export default ({ data, location }) => {
       {/* Tiles. */}
       <div style={{ padding: `${rhythm(1.5)} ${rhythm(3 / 4)}` }}>
         <p className="header" style={{
-          fontSize: '1.6rem',
+          display: 'flex',
+          alignItems: 'baseline',
+          color: '#607FF9',
           fontWeight: 'bold',
-          marginBottom: '1vh',
-          textAlign: 'right',
-          color: '#607FF9'
-        }}>Featured</p>
+          justifyContent: 'flex-end'
+        }}>
+          <FaRegBookmark/>
+          <Title level={3} style={{ color: '#607FF9', marginLeft: '0.2vw' }}>Pinned</Title>
+        </p>
         {/* <hr style={{ border: '2px solid #ED585B', width: '10%' }} /> */}
         <Tile
           loading={false}
