@@ -4,7 +4,7 @@ body.dark {
   color: $dark-light-font-color;
 
   .top {
-    background-color:$dark-background-color;
+    background-color: $dark-background-color;
   }
 
   .ant-menu-horizontal > .ant-menu-item a {
@@ -28,7 +28,7 @@ body.dark {
   }
 
   .category-container {
-    background-color: #090A21;
+    background-color: #090a21;
     .item {
       border: 1px solid $dark-category-border-color;
       background-color: $dark-category-item-color;
@@ -74,7 +74,8 @@ body.dark {
 
   h1,
   h2,
-  h3, p {
+  h3,
+  p {
     color: $dark-light-font-color !important;
   }
 
@@ -83,7 +84,7 @@ body.dark {
   }
 
   .ant-tag {
-    background-color:  #0C2252;
+    background-color: #0c2252;
     border: 1px solid #121212;
     color: white;
     font-size: 1rem;
@@ -101,30 +102,35 @@ body.dark {
   }
 
   .footer {
-    h3, h4, h6, h5, a {
+    h3,
+    h4,
+    h6,
+    h5,
+    a {
       color: white !important;
     }
     h4 > svg {
-      fill:white !important;
+      fill: white !important;
     }
     a {
       color: $dark-lightest-font-color;
     }
-    background-color: #0C2252;
+    background-color: #0c2252;
   }
 
   .language-text {
     background-color: #11162d;
     color: white;
-      // color: $navigator-text-color;
+    // color: $navigator-text-color;
   }
 
   .thumbnailTitle > a > div {
     color: #fff;
   }
 
-  .gatsby-highlight > pre, .gatsby-highlight > pre > code {
-    background-color: #111D2D;
+  .gatsby-highlight > pre,
+  .gatsby-highlight > pre > code {
+    background-color: #111d2d;
     color: white;
     font-size: 1.2rem;
   }
@@ -132,10 +138,45 @@ body.dark {
   .navigator {
     a {
       background-color: #323486;
-      color:white;
+      color: white;
     }
   }
   td {
     border-bottom: 1px solid #eee;
+  }
+
+  .search > .ant-input-search,
+  .search > .ant-input-search > input {
+    background-color: #e2e2e2 !important;
+  }
+
+  .header > svg {
+    fill: #fff;
+  }
+
+  .search > .ant-input-suffix > div {
+    background-color: #00ffff;
+    padding: 1px;
+    border: 1px solid #a6a6a6;
+    border-radius: 2px;
+    color: #737373;
+  }
+
+  .search-container > div > div {
+    background: #353e86 !important;
+    border: 1px solid transparent !important;
+  }
+
+  .search-container > div > div > div > div > .ant-row {
+    background: transparent !important;
+    color: #fff !important;
+    border-bottom: 1px solid #fff !important;
+  }
+
+  .search-container > div > div > div > ol > a > div > p > span > mark {
+    background: #fff !important;
+    color: #000;
+    border-radius: 4px;
+    padding: 0.1em !important;
   }
 }

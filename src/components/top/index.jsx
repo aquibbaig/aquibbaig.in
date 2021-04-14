@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import './index.scss'
-import { Row, Col, Input, Menu } from 'antd'
+import { Row, Col, Menu } from 'antd'
 import { ThemeSwitch } from '../theme-switch'
 import { StaticQuery, graphql } from 'gatsby';
-
-const { Search } = Input;
+import Searchbar from '../search';
 
 export const Top = ({ title, location, rootPath, ...props }) => {
   const isRoot = location.pathname === rootPath;
@@ -82,8 +81,8 @@ export const Top = ({ title, location, rootPath, ...props }) => {
                         &#x2630;
                       </div>
                     </Col>
-                    <Col lg={8} className="search">
-                      <Search placeholder="Search" />
+                    <Col lg={8} className="search-container" style={{ marginTop: '-1vh' }}>
+                      <Searchbar />
                     </Col>
                     <Col>
                       <ThemeSwitch setVar={(c) => setThemeCheck(c)} />

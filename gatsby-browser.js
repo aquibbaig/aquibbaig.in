@@ -29,4 +29,14 @@ exports.onInitialClientRender = () => {
         fjs.parentNode.insertBefore(js, fjs)
       })(document, 'script', 'facebook-jssdk')
   }
+  // focus on search after clicking Ctrl+K
+  document.onkeydown = function (e) {
+    e = e || window.event;
+    if (!e.ctrlKey) return;
+    if (e.ctrlKey && e.key === 'k') {
+      e.preventDefault();
+      e.stopPropagation();
+      document.getElementById('search').focus();
+    }
+  }
 }
