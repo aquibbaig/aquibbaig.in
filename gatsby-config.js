@@ -1,4 +1,5 @@
 const metaConfig = require('./gatsby-meta-config')
+require("dotenv").config()
 
 module.exports = {
   siteMetadata: metaConfig,
@@ -10,13 +11,13 @@ module.exports = {
         name: `blog`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/__about`,
-        name: `about`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     path: `${__dirname}/content/__about`,
+    //     name: `about`,
+    //   },
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -104,5 +105,13 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-antd',
     },
+    {
+      resolve: `gatsby-plugin-algolia`,
+      options: {
+        appId: process.env.GATSBY_ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_ADMIN_KEY,
+        queries: require("./src/utils/algolia-queries")
+      },
+    }
   ],
 }

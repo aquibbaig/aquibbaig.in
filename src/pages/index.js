@@ -32,7 +32,7 @@ export default ({ data, location }) => {
     >
       {/* Latest BlogPosts */}
       <div className="posts" style={{ padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`, minHeight: '70vh' }}>
-        <p className="header" style={{
+        <div className="header" style={{
           display: 'flex',
           alignItems: 'baseline',
           color: '#607FF9',
@@ -41,7 +41,7 @@ export default ({ data, location }) => {
         }}>
           <FaRegClock/>
           <Title level={3} style={{ color: '#607FF9', marginLeft: '0.2vw' }}>Latest Posts</Title>
-        </p>
+        </div>
         {/* <hr style={{ border: '2px solid #1890ff', width: '10%', background: '#ED585B' }} /> */}
         {(latestPosts || []).map(post => {
           return <ThumbnailItem
@@ -56,7 +56,7 @@ export default ({ data, location }) => {
       {/* Latest BlogPosts end */}
       {/* Tiles. */}
       <div style={{ padding: `${rhythm(1.5)} ${rhythm(3 / 4)}` }}>
-        <p className="header" style={{
+        <div className="header" style={{
           display: 'flex',
           alignItems: 'baseline',
           color: '#607FF9',
@@ -65,7 +65,7 @@ export default ({ data, location }) => {
         }}>
           <FaRegBookmark/>
           <Title level={3} style={{ color: '#607FF9', marginLeft: '0.2vw' }}>Pinned</Title>
-        </p>
+        </div>
         {/* <hr style={{ border: '2px solid #ED585B', width: '10%' }} /> */}
         <Tile
           loading={false}

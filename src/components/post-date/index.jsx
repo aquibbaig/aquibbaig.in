@@ -9,8 +9,8 @@ export const PostDate = ({ date }) => {
       <p className="post-date">
         <Avatar size={60} src="https://avatars.githubusercontent.com/u/26324376?v=4" />
       </p>
-      <p className="post-date">
-        <p className="brand">Aquib Baig</p>
+      <p className="post-date" style={{ fontFamily: 'Arial' }}>
+        <span className="brand">Aquib Baig, </span>
         {date}
       </p>
     </Row>

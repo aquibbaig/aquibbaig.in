@@ -14,8 +14,8 @@ body.light {
   }
 
   .ant-tag {
-    background-color:#f5f5f5;
-    color: #2753B3;
+    background-color: #f5f5f5;
+    color: #2753b3;
     font-size: 1rem;
     font-family: 'Calibre';
   }
@@ -62,7 +62,7 @@ body.light {
         font-size: 1.2rem;
       }
       &[aria-selected='true'] {
-        border: 2px solid #38365D;
+        border: 2px solid #38365d;
         font-weight: bold;
         font-family: 'Calibre';
         font-size: 1.2rem;
@@ -100,10 +100,17 @@ body.light {
 
   .footer {
     color: white;
-    a, h1, h2, h3, h4, h5, h6, p {
+    a,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
       color: white;
     }
-    background-color: #0C2252;
+    background-color: #0c2252;
   }
 
   .resp-sharing-button {
@@ -111,26 +118,47 @@ body.light {
   }
 
   .gatsby-highlight > pre {
-    background-color:#F8F8F8;
-    border: 1px solid #999DA0;
+    background-color: #f8f8f8;
+    border: 1px solid #999da0;
     color: black;
   }
 
   .language-text {
-    background-color:#f5f5f5;
-    color: #2753B3;
+    background-color: #f5f5f5;
+    color: #2753b3;
   }
 
   .gatsby-highlight > pre > code {
     color: black;
-    background-color:#F8F8F8;
+    background-color: #f8f8f8;
     font-size: 1.2rem;
+  }
+
+  // search bar
+  .search-container > div > div {
+    background: #fff;
+    border: 1px solid #d1d1d1;
+  }
+
+  .search-container > div > div > div > div > .ant-row {
+    border-bottom: 1px solid #d1d1d1 !important;
+  }
+
+  .search-container > div > div > div > ol > a > div {
+    color: #737373;
+  }
+
+  .search-container > div > div > div > ol > a > div > p > span > mark {
+    background: #607ff9;
+    color: #fff;
+    border-radius: 4px;
+    padding: 0.1em !important;
   }
 
   // post
   .navigator {
     a {
-      background-color: #38365D;
+      background-color: #38365d;
       color: white;
     }
   }

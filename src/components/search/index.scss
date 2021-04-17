@@ -1,0 +1,21 @@
+.search > input::placeholder {
+  color: grey !important;
+}
+
+.search > .ant-input-suffix > div {
+  background-color: #a6a6a6;
+  padding: 1px;
+  border: 1px solid #a6a6a6;
+  border-radius: 2px;
+  color: #737373;
+}
+
+.ais-PoweredBy {
+  display: flex;
+  align-items: unset;
+}
+
+.ais-PoweredBy > a > svg {
+  height: 18px;
+  margin-left: -10px;
+}
