@@ -51,6 +51,10 @@ body.dark {
     color: $light-background-color !important;
   }
 
+  .archives > .thumbnail-container {
+    margin-top: 5vh;
+  }
+
   .ant-card-body {
     padding: 0;
   }

@@ -17,13 +17,11 @@ export default (props) => {
                 { background: 'transparent',
                   marginBottom: '4vh',
                   border: 0,
-                  padding: '12px'
                 }
                 :
                 { background: '#fff',
                   marginBottom: '4vh',
                   border: 0,
-                  padding: '12px'
                 }}>
                 <Title style={{
                   fontSize: '1.6rem',

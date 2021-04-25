@@ -30,9 +30,9 @@ export const ThumbnailItem = (props) => {
           </Link>
         </div>
         {/* <p style={{ fontFamily: 'Arial', verticalAlign: 'middle' }}><FaRegCalendarAlt/>{' '}{node.frontmatter.date}</p> */}
-        {view === "complete-view" ? <Paragraph className="thumbnailContent"
+        <Paragraph className="thumbnailContent"
           style={{ marginBottom: '1vh' }}
-          >{node.excerpt}</Paragraph> : <></>}
+          >{node.excerpt}</Paragraph>
       </div>
     </Card>
   )

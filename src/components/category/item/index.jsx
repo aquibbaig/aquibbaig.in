@@ -21,7 +21,7 @@ export const Item = ({ title, selectedCategory, onClick, scrollToCenter }) => {
       role="tab"
       aria-selected={selectedCategory === title ? 'true' : 'false'}
     >
-      <div onClick={handleClick}>{title}</div>
+      <div onClick={handleClick}>#{title}</div>
     </li>
   )
 }
