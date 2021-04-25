@@ -57,7 +57,7 @@ export default ({ data, location }) => {
       <div style={{ marginTop: '5vh' }}>
         <div className="header">
           <Title level={1} style={{ fontWeight: '800', margin: 0 }}>
-            Pinned
+            Contributions
           </Title>
         </div>
         <Tile

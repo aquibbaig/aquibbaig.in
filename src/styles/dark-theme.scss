@@ -2,6 +2,12 @@ body.dark {
   background-color: $dark-background-color;
   color: $dark-light-font-color;
 
+  div > .layout-content > hr {
+    height: 1px;
+    margin-top: 10vh;
+    background: #e5e7eb;
+  }
+
   .top {
     background-color: $dark-background-color;
   }
@@ -110,20 +116,20 @@ body.dark {
   }
 
   .language-text {
-    background-color: #11162d;
+    background-color: transparent;
     color: white;
-    // color: $navigator-text-color;
   }
 
   .thumbnailTitle > a > div {
     color: #fff;
   }
 
-  .gatsby-highlight > pre,
-  .gatsby-highlight > pre > code {
+  /* Code blocks */
+  pre[class*='language-'] {
+    padding: 1.2em;
+    margin: 1.5em 0;
+    overflow: auto;
     background-color: #111d2d;
-    color: white;
-    font-size: 1.2rem;
   }
 
   .navigator {

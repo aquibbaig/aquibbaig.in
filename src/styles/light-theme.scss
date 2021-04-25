@@ -13,6 +13,10 @@ body.light {
     background: #e5e7eb;
   }
 
+  .project > a > .ant-card > div > h1:hover {
+    color: $secondary-text-color;
+  }
+
   .ant-btn-primary {
     background: transparent;
     color: black;
@@ -113,19 +117,22 @@ body.light {
     color: white;
   }
 
-  .gatsby-highlight > pre {
-    background-color: #f8f8f8;
-    border: 1px solid #999da0;
-    color: black;
+  /* Code blocks */
+  pre[class*='language-'] {
+    padding: 1.2em;
+    margin: 1.5em 0;
+    overflow: auto;
+    background-color: #f6f8fa;
+    border: 1px solid #d1d1d1;
   }
 
   .language-text {
     background-color: #f5f5f5;
-    color: #2753b3;
+    color: rgb(65, 65, 65);
   }
 
   .gatsby-highlight > pre > code {
-    color: black;
+    color: rgb(27, 26, 26);
     background-color: #f8f8f8;
     font-size: 1.2rem;
   }

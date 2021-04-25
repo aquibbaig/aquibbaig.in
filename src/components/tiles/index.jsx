@@ -38,7 +38,7 @@ export default (props) => {
       <Row align="middle">
         <Col style={innerStyle}>
           <p style={{ margin: '0', textAlign: 'left', fontWeight: '500' }}>
-            <a href={buttonLink} target="_blank">
+            <a href={buttonLink}>
               {props.top}
             </a>
           </p>

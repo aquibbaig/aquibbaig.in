@@ -39,7 +39,7 @@ export default ({ data, pageContext, location }) => {
 
   return (
     <Layout location={location} title={title}>
-      <div style={{ padding: '24px' }}>
+      <div>
         <Head title={postTitle} description={post.excerpt} />
         <PostTitle title={postTitle} />
         <PostDate date={date} />

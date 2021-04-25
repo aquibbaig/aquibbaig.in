@@ -1,8 +1,10 @@
 import React, { useContext } from 'react'
 import { Link } from 'gatsby'
-import { Card } from 'antd';
+import { Card, Typography } from 'antd';
 import { FaRegCalendarAlt } from 'react-icons/fa';
 import { TARGET_CLASS } from '../../utils/visible';
+
+const { Title, Paragraph } = Typography;
 
 import './index.scss'
 import { ThemeContext } from '../../layout';
@@ -22,15 +24,15 @@ export const ThumbnailItem = (props) => {
       <div key={node.fields.slug}>
         <div className="thumbnailTitle">
           <Link className={`thumbnail ${TARGET_CLASS}`} to={node.fields.slug}>
-            <div style={{ fontWeight: '500' }}>
+            <Title level={2} style={{ fontWeight: '500', margin: 0, border: 0, padding: 0 }}>
               {node.frontmatter.title || node.fields.slug}
-            </div>
+            </Title>
           </Link>
         </div>
         {/* <p style={{ fontFamily: 'Arial', verticalAlign: 'middle' }}><FaRegCalendarAlt/>{' '}{node.frontmatter.date}</p> */}
-        {view === "complete-view" ? <p className="thumbnailContent"
+        {view === "complete-view" ? <Paragraph className="thumbnailContent"
           style={{ marginBottom: '1vh' }}
-          dangerouslySetInnerHTML={{ __html: node.excerpt }} /> : <></>}
+          >{node.excerpt}</Paragraph> : <></>}
       </div>
     </Card>
   )

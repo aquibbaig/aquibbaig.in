@@ -3,6 +3,9 @@ import { graphql } from 'gatsby'
 import ProjectList from '../components/project-list';
 import Layout from '../layout'
 import { rhythm } from '../utils/typography';
+import { Typography } from 'antd';
+
+const { Title } = Typography;
 
 export default ({ data, location }) => {
   const { siteMetadata } = data.site;
@@ -48,16 +51,16 @@ export default ({ data, location }) => {
   return (
     <>
       <Layout location={location} title={siteMetadata.title}>
-        <div style={{ padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`, minHeight: '70vh' }}>
-          <p className="header" style={{
-            fontSize: '1.6rem',
-            fontWeight: 'bold',
-            marginBottom: '1vh',
-            textAlign: 'right',
-            color: '#607FF9'
-          }}>Projects</p>
-          <ProjectList projects={projectList} />
-        </div>
+        <Title style={{
+          fontSize: '2.8rem',
+          fontWeight: '800',
+          padding: 0,
+          margin: 0,
+          marginBottom: '5vh'
+        }}>
+          Projects
+        </Title>
+        <ProjectList projects={projectList} />
       </Layout>
     </>
   )

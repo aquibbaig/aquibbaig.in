@@ -1,36 +1,38 @@
 import React, { useContext } from 'react'
 import { ThemeContext } from '../../layout';
+import { Typography } from 'antd';
 import './index.scss';
+
+const { Title } = Typography;
 
 const lightStyles = {
   textAlign: 'left',
-  fontWeight: 'bold',
-  fontSize: '3rem',
-  marginBottom: '2vh',
-  color: '#38365D',
-  fontFamily: 'Calibre'
+  color: '#000',
+  fontSize: '2.8rem',
+  fontWeight: '800',
+  padding: 0,
+  margin: 0,
+  marginBottom: `5vh`
 }
 
 const darkStyles = {
   textAlign: 'left',
-  fontWeight: 'bold',
-  fontSize: '3rem',
-  marginBottom: '2vh',
-  color: 'white',
-  fontFamily: 'Calibre'
-}
-
-const hrStyles = {
-  border: '2px solid #ED585B',
-  width: '10%',
-  marginTop: '1vh'
+  color: '#fff',
+  fontSize: '2.8rem',
+  fontWeight: '800',
+  padding: 0,
+  margin: 0,
+  marginBottom: `5vh`
 }
 
 export const PostTitle = ({ title }) => {
   const { dark } = useContext(ThemeContext);
   return (
-    <div className="postTitle" style={dark ? darkStyles : lightStyles}>
+    <Title className="postTitle" style={dark ? darkStyles : lightStyles}>
       {title}
-    </div>
+    </Title>
+    // <div className="postTitle" style={dark ? darkStyles : lightStyles}>
+    //   {title}
+    // </div>
   )
 }
