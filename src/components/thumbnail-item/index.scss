@@ -11,7 +11,7 @@ body.light .thumbnail:hover {
   transition: text-shadow 0.3s, opacity 0.4s;
 }
 
-.thumbnailTitle > a > div:hover {
+.thumbnailTitle > a > h2:hover {
   color: $link-hover-color;
 }
 

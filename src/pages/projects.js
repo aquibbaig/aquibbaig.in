@@ -2,10 +2,9 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import ProjectList from '../components/project-list';
 import Layout from '../layout'
-import { rhythm } from '../utils/typography';
 import { Typography } from 'antd';
 
-const { Title } = Typography;
+const { Title, Paragraph } = Typography;
 
 export default ({ data, location }) => {
   const { siteMetadata } = data.site;
@@ -56,10 +55,14 @@ export default ({ data, location }) => {
           fontWeight: '800',
           padding: 0,
           margin: 0,
-          marginBottom: '5vh'
         }}>
           Projects
         </Title>
+        <Paragraph style={{ margin: 0, marginBottom: '5vh', fontSize: '1.2rem' }}>
+          I tend to do hobby projects to learn how systems work and open source in
+          my free time. I personally like working with Javascript and Golang, and have experience in
+          C++, Java and Php.
+        </Paragraph>
         <ProjectList projects={projectList} />
       </Layout>
     </>

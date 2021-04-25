@@ -64,8 +64,8 @@ body.dark {
     color: $dark-light-font-color !important;
   }
 
-  .thumbnailTitle > a > div:hover {
-    color: $secondary-dark-link-color;
+  .thumbnailTitle > a > h2:hover {
+    color: $secondary-dark-link-color !important;
   }
 
   .ant-typography a {
@@ -83,7 +83,7 @@ body.dark {
   }
 
   .ant-tag {
-    background-color: #0c2252;
+    background-color: #111d2d;
     border: 1px solid #121212;
     color: white;
     font-size: 1rem;

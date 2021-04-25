@@ -50,8 +50,6 @@ export default ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteMetadata.title}>
-      <Head title={HOME_TITLE} keywords={siteMetadata.keywords} />
-      <Bio posts={posts} />
       <div className="archives" style={{ minHeight: '70vh' }}>
         <Title style={{
           fontSize: '2.8rem',
