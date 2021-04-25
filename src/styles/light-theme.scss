@@ -20,44 +20,35 @@ body.light {
     font-family: 'Calibre';
   }
 
+  .navigation {
+    .nav-menu {
+      a {
+        color: $primary;
+      }
+      a:hover {
+        color: $link-hover-color;
+      }
+    }
+  }
+
   .top {
     background-color: #fff;
   }
 
-  .tile > .ant-card-body > .ant-row > .ant-col > p > button:hover {
-    color: #1890ff;
+  .tile > .ant-card-body > .ant-row > .ant-col > p:nth-child(1) > a {
+    color: $primary;
   }
 
-  a {
-    color: $light-category-text-color;
-  }
-
-  .bio {
-    .author-name-content {
-      background-color: $light-category-border-color;
-    }
-    .author-introduction {
-      color: $middle-gray;
-    }
-    a {
-      color: $light-link-color;
-    }
+  .tile > .ant-card-body > .ant-row > .ant-col > p:nth-child(1) > a:hover {
+    color: $link-hover-color;
   }
 
   .category-container {
-    border-top: 1px solid $light-category-border-color;
-    border-bottom: 1px solid $light-category-border-color;
-    border-right: 6px solid $light-category-border-color;
-    border-left: 6px solid $light-category-border-color;
-    background-color: $light-category-background-color;
     font-family: 'Calibre';
     .item {
-      border: 1px solid $light-category-border-color;
-      background-color: $light-category-item-color;
       -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
       box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
       a {
-        color: $light-category-text-color;
         font-family: 'Calibre';
         font-size: 1.2rem;
       }
@@ -68,7 +59,6 @@ body.light {
         font-size: 1.2rem;
       }
       &[aria-selected='true'] a {
-        color: $light-category-highlight-text-color;
         font-family: 'Calibre';
         font-size: 1.2rem;
       }
@@ -82,9 +72,6 @@ body.light {
     h3 {
       color: $dark-gray;
     }
-    p {
-      color: $middle-gray;
-    }
     &:hover {
       text-shadow: $light-hover-text-shadow;
     }
@@ -95,22 +82,21 @@ body.light {
   }
 
   .ant-card-body {
-    padding: 12px;
+    padding: 0;
   }
 
-  .footer {
-    color: white;
-    a,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p {
-      color: white;
-    }
-    background-color: #0c2252;
+  .ant-typography:is(div) {
+    color: $secondary-text-color;
+  }
+
+  .ant-typography a {
+    color: $primary-link-color;
+    text-decoration: underline;
+  }
+
+  .ant-typography a:hover {
+    color: #38365d;
+    text-decoration: underline;
   }
 
   .resp-sharing-button {
@@ -153,6 +139,18 @@ body.light {
     color: #fff;
     border-radius: 4px;
     padding: 0.1em !important;
+  }
+
+  .navigation {
+    background: #fff;
+  }
+
+  .switch-container > label > svg {
+    background: #e5e7eb;
+  }
+
+  .hamburger-menu {
+    background: #e5e7eb;
   }
 
   // post

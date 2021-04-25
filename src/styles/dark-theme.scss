@@ -1,6 +1,5 @@
 body.dark {
   background-color: $dark-background-color;
-  text-shadow: $dark-text-shadow;
   color: $dark-light-font-color;
 
   .top {
@@ -15,50 +14,17 @@ body.dark {
     color: white;
   }
 
-  .bio {
-    .author-name-content {
-      background-color: $dark-category-border-color;
-    }
-    .author-introduction {
-      color: $dark-middle-font-color;
-    }
-    a {
-      color: $dark-link-color;
-    }
-  }
-
   .category-container {
     background-color: #090a21;
     .item {
-      border: 1px solid $dark-category-border-color;
-      background-color: $dark-category-item-color;
       -webkit-box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.1);
       box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.1);
-      a {
-        color: $dark-category-text-color;
-      }
       &[aria-selected='true'] {
-        border: 2px solid $dark-category-highlight-border-color;
         font-weight: bolder;
-      }
-      &[aria-selected='true'] a {
-        color: $dark-category-highlight-text-color;
       }
       div {
         font-size: 1rem;
       }
-    }
-  }
-
-  .thumbnail {
-    h3 {
-      color: $dark-light-font-color;
-    }
-    p {
-      color: $dark-middle-font-color;
-    }
-    &:hover {
-      text-shadow: $dark-hover-text-shadow;
     }
   }
 
@@ -76,11 +42,34 @@ body.dark {
   h2,
   h3,
   p {
-    color: $dark-light-font-color !important;
+    color: $light-background-color !important;
   }
 
   .ant-card-body {
-    padding: 12px !important;
+    padding: 0;
+  }
+
+  .header > div,
+  .thumbnailContent {
+    color: $dark-light-font-color !important;
+  }
+
+  .thumbnailTitle > a > div:hover {
+    color: $secondary-dark-link-color;
+  }
+
+  .ant-typography a {
+    color: $primary-link-color;
+    text-decoration: underline;
+  }
+
+  .ant-typography:is(div) {
+    color: $dark-light-font-color;
+  }
+
+  .ant-typography a:hover {
+    color: #38365d;
+    text-decoration: underline;
   }
 
   .ant-tag {
@@ -97,8 +86,14 @@ body.dark {
     color: #fff;
   }
 
-  .tile > .ant-card-body > .ant-row > .ant-col > p > button:hover {
-    border: 1px solid #1890f1;
+  .tile > .ant-card-body > .ant-row > .ant-col > p:nth-child(1) > a:hover {
+    color: $secondary-dark-link-color;
+  }
+
+  .tile > .ant-card-body > .ant-row > .ant-col > p:nth-child(3) {
+    font-size: 1.2rem;
+    font-family: 'Calibre';
+    color: $dark-light-font-color !important;
   }
 
   .footer {
@@ -109,13 +104,9 @@ body.dark {
     a {
       color: white !important;
     }
-    h4 > svg {
-      fill: white !important;
-    }
     a {
       color: $dark-lightest-font-color;
     }
-    background-color: #0c2252;
   }
 
   .language-text {
@@ -150,10 +141,6 @@ body.dark {
     background-color: #e2e2e2 !important;
   }
 
-  .header > svg {
-    fill: #fff;
-  }
-
   .search > .ant-input-suffix > div {
     background-color: #00ffff;
     padding: 1px;
@@ -173,9 +160,22 @@ body.dark {
     border-bottom: 1px solid #fff !important;
   }
 
+  .navigation {
+    background: #090a21;
+  }
+
+  .switch-container > label > svg {
+    background: #1f2937;
+    fill: #fff;
+  }
+
+  .hamburger-menu {
+    background: #1f2937;
+  }
+
   .search-container > div > div > div > ol > a > div > p > span > mark {
     background: #fff !important;
-    color: #000;
+    color: $primary;
     border-radius: 4px;
     padding: 0.1em !important;
   }

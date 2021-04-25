@@ -1,12 +1,18 @@
 @import '../../styles/variables.scss';
 
+body.light .thumbnail:hover {
+  text-shadow: none;
+}
+
 .thumbnail {
   display: block;
-  margin-bottom: 12px;
   padding: 4px;
-  padding-bottom: 12px;
   box-shadow: none;
   transition: text-shadow 0.3s, opacity 0.4s;
+}
+
+.thumbnailTitle > a > div:hover {
+  color: $link-hover-color;
 }
 
 @media (min-width: 168px) {
@@ -29,7 +35,7 @@
 
 @media (min-width: 1024px) {
   .thumbnailTitle > a > div {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin: 0;
     text-align: left;
     color: black;
@@ -40,6 +46,7 @@
   .thumbnailContent {
     text-align: justify;
     font-size: 1.2rem;
+    color: #616161;
   }
 }
 

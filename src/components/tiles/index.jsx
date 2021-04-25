@@ -38,20 +38,15 @@ export default (props) => {
       <Row align="middle">
         <Col style={innerStyle}>
           <p style={{ margin: '0', textAlign: 'left', fontWeight: '500' }}>
-            {props.top}
+            <a href={buttonLink} target="_blank">
+              {props.top}
+            </a>
           </p>
           <p style={{ margin: '0', textAlign: 'left', fontWeight: '500' }}>
             {props.header}
           </p>
           <p>
             {props.content}
-          </p>
-          <p>
-            <Button type="primary">
-              <a href={buttonLink}>
-                Navigate
-              </a>
-            </Button>
           </p>
         </Col>
       </Row>

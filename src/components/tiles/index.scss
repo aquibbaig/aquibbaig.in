@@ -1,6 +1,6 @@
 @media (min-width: 0px) {
-  .tile > .ant-card-body > .ant-row > .ant-col > p:nth-child(1) {
-    font-size: 1.6rem;
+  .tile > .ant-card-body > .ant-row > .ant-col > p:nth-child(1) > a {
+    font-size: 1.8rem;
     font-family: 'Calibre';
   }
   .tile > .ant-card-body > .ant-row > .ant-col > p:nth-child(2) {
@@ -14,8 +14,8 @@
 }
 
 @media (min-width: 1000px) {
-  .tile > .ant-card-body > .ant-row > .ant-col > p:nth-child(1) {
-    font-size: 1.6rem;
+  .tile > .ant-card-body > .ant-row > .ant-col > p:nth-child(1) > a {
+    font-size: 1.8rem;
     font-family: 'Calibre';
   }
   .tile > .ant-card-body > .ant-row > .ant-col > p:nth-child(2) {
@@ -25,5 +25,6 @@
   .tile > .ant-card-body > .ant-row > .ant-col > p:nth-child(3) {
     font-size: 1.2rem;
     font-family: 'Calibre';
+    color: #636363;
   }
 }

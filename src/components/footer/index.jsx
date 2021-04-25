@@ -6,9 +6,11 @@ import './index.scss';
 import { rhythm } from '../../utils/typography';
 
 export const Footer = () => (
-  <footer className="footer">
-    <Row justify="space-between"
+  <footer className="footer" style={{ maxWidth: rhythm(28) }}>
+    <h4>Copyright 2021, &#xa9;Aquib Baig, All rights reserved.</h4>
+    {/* <Row justify="space-between"
       align="middle"
+      style={{ maxWidth: rhythm(28), }}
       className="footer-content">
       <h2>I build scalable applications for the web.</h2>
       <h2>made with &#x2764; Gatsby.</h2>
@@ -49,6 +51,6 @@ export const Footer = () => (
           <TwitterCircleFilled style={{ marginLeft: '1rem', fontSize: '1.4rem' }} />
         </a>
       </Col>
-    </Row>
+    </Row> */}
   </footer>
 )

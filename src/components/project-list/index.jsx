@@ -11,7 +11,7 @@ export default (props) => {
         return (
           <Col sm={24} md={24} key={project.link}>
             <a href={project.link} style={{ marginBottom: '0' }}>
-              <Card hoverable style={dark ?
+              <Card style={dark ?
                 { background: '#0F1029', marginBottom: '1vh', border: 0 }
                 :
                 { background: '#fff', marginBottom: '1vh', border: 0 }}>

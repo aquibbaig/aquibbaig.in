@@ -5,21 +5,15 @@ import Layout from '../layout/index'
 import { ThumbnailItem } from '../components/thumbnail-item';
 import { rhythm } from '../utils/typography';
 import Tile from '../components/tiles';
-import { FaRegClock, FaRegBookmark } from 'react-icons/fa';
 // import Flag from '../components/flag';
 import { Typography } from 'antd';
 // import Banner from '../components/banner';
 
-const { Title } = Typography;
+const { Title, Paragraph } = Typography;
 
 export default ({ data, location }) => {
   const { title } = data.site.siteMetadata
   const latestPosts = data.allMarkdownRemark.edges
-
-  const OuterStyles = {
-    // padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-    // background: "black",
-  }
 
   const InnerStyles = {
     padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
@@ -30,24 +24,29 @@ export default ({ data, location }) => {
       title={title.toLowerCase()}
       location="/"
     >
+      <div className="header" style={{ marginBottom: '5vh' }}>
+        <Title style={{ fontSize: '2.8rem', fontWeight: '800', padding: 0, margin: 0 }}>
+          Hello, I'm Aquib Baig
+        </Title>
+        <Paragraph style={{ fontSize: '1.2rem', color: '#595959' }}>
+          I'm a full stack web developer from Bhubaneswar, India.
+          I work as a frontend developer at	&#8595;Redhat. I believe that learning 
+          has no language or boundaries and like to share my experiences with
+          technology to the community. <a href="#">Become a part.</a>
+        </Paragraph>
+      </div>
       {/* Latest BlogPosts */}
-      <div className="posts" style={{ padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`, minHeight: '70vh' }}>
+      <div className="posts">
         <div className="header" style={{
           display: 'flex',
-          alignItems: 'baseline',
-          color: '#607FF9',
-          fontWeight: 'bold',
-          justifyContent: 'flex-end'
         }}>
-          <FaRegClock/>
-          <Title level={3} style={{ color: '#607FF9', marginLeft: '0.2vw' }}>Latest Posts</Title>
+          <Title level={1} style={{ fontWeight: '800', margin: 0 }}>Most Recent</Title>
         </div>
-        {/* <hr style={{ border: '2px solid #1890ff', width: '10%', background: '#ED585B' }} /> */}
         {(latestPosts || []).map(post => {
           return <ThumbnailItem
             view="complete-view"
             lightBg="#fff"
-            darkBg="#0F1029"
+            darkBg="transparent"
             key={post.node.excerpt}
             node={post.node}
           />
@@ -55,61 +54,46 @@ export default ({ data, location }) => {
       </div>
       {/* Latest BlogPosts end */}
       {/* Tiles. */}
-      <div style={{ padding: `${rhythm(1.5)} ${rhythm(3 / 4)}` }}>
-        <div className="header" style={{
-          display: 'flex',
-          alignItems: 'baseline',
-          color: '#607FF9',
-          fontWeight: 'bold',
-          justifyContent: 'flex-end'
-        }}>
-          <FaRegBookmark/>
-          <Title level={3} style={{ color: '#607FF9', marginLeft: '0.2vw' }}>Pinned</Title>
+      <div style={{ marginTop: '5vh' }}>
+        <div className="header">
+          <Title level={1} style={{ fontWeight: '800', margin: 0 }}>
+            Pinned
+          </Title>
         </div>
-        {/* <hr style={{ border: '2px solid #ED585B', width: '10%' }} /> */}
         <Tile
           loading={false}
-          outerStyle={OuterStyles}
           innerStyles={InnerStyles}
           // darkOutline="#EAC6A2"
-          darkBg="#0F1029"
+          darkBg="transparent"
           lightBg="#fff"
           className="tile"
           buttonLink="/gsoc-2019-project-report/"
-          top="Student at 2019's"
-          header="Google Summer of Code"
+          top="Google Summer of Code 2019"
+          // header="Google Summer of Code"
           content="An excerpt of my gsoc journey with fossi foundation,
         working towards improving the Librecores project."
         />
         <Tile
           loading={false}
-          outerStyle={OuterStyles}
-          innerStyles={InnerStyles}
-          darkBg="#0F1029"
-          lightBg="#fff"
-          className="tile"
-          buttonLink="https://gophertuts.surge.sh"
-          top="Golang Tutorials with"
-          header="Hands on Exercises"
-          content="Gophertuts is a collection of topics in golang which are
-        lesser known, but widely used."
-        />
-        <Tile
-          loading={false}
-          outerStyle={OuterStyles}
           innerStyles={InnerStyles}
           // darkOutline="#EAC6A2"
-          darkBg="#0F1029"
+          darkBg="transparent"
           lightBg="#fff"
           className="tile"
           buttonLink="/blog?category=linux"
-          top="Explore the series of"
-          header="Linux Blog Posts"
+          top="Explore the series of Linux blog posts"
+          // header=""
           content="The Linux series of blog posts are aimed at 
         improving a broad understanding of Linux and it's tools."
         />
       </div>
       {/* Tiles end */}
+      <div className="courses" style={{ marginTop: '5vh' }}>
+        <Title level={1} style={{ fontWeight: '800', margin: 0 }}>
+          Courses
+        </Title>
+        <Paragraph>Coming soon..</Paragraph>
+      </div>
     </Layout>
   )
 }
@@ -138,7 +122,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 200, truncate: true)
+          excerpt(pruneLength: 150, truncate: true)
           fields {
             slug
           }

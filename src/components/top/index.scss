@@ -4,17 +4,21 @@
 
 .top {
   width: 100%;
-  .link {
-    // display: inline-block;
-    font-size: 28px;
-    padding-top: 8px;
-    color: $top-header-text-color;
-    opacity: 0.7;
-    margin-left: 20px;
-    font-family: 'Catamaran';
-  }
-  .toolbar {
-    padding-right: '20vw';
+  margin-top: 4vh;
+  .navigation {
+    .nav-menu {
+      font-size: 1.4rem;
+      justify-content: space-around;
+      a:is(.ff) {
+        margin-right: 4vw;
+      }
+      a {
+        margin-right: 2vw;
+      }
+    }
+    .hamburger-menu {
+      margin-right: 4vw;
+    }
   }
 }
 
@@ -22,25 +26,14 @@
   .nav-menu {
     display: none;
   }
-  .hamburger-menu > div {
-    font-size: 20px;
+  .hamburger-menu {
+    font-size: 1.8rem;
+    border-radius: 4px;
+    margin-top: -5px;
+    padding: 4px;
   }
-  .search {
+  .search-container {
     display: none;
-  }
-  .brand {
-    font-size: 26px !important;
-    font-family: 'Calibre';
-    font-weight: bold;
-  }
-  .top > div > .ant-col > ul > li {
-    font-size: 16px !important;
-    font-family: 'Calibre';
-  }
-  .top > div > ul > li {
-    font-size: 16px !important;
-    font-family: 'Calibre';
-    font-weight: bold;
   }
 }
 
@@ -52,11 +45,6 @@
     position: relative;
     width: 100%;
     height: 10vh;
-  }
-  .navigation {
-    padding-top: 2vh;
-    margin-left: 5vw;
-    margin-right: 5vw;
   }
 }
 
@@ -81,7 +69,7 @@
   }
 }
 
-@media (min-width: 1075px) {
+@media (min-width: 1025px) {
   .top {
     width: 100%;
     height: 10vh;
@@ -89,14 +77,20 @@
   .search {
     display: block;
   }
-  .brand {
-    font-size: 20px !important;
-    font-family: 'Calibre';
-    font-weight: bold;
-  }
-  .top > div > .ant-col > ul > li {
-    font-size: 20px !important;
-    font-family: 'Calibre';
+  .navigation {
+    .nav-menu {
+      font-size: 1.2rem;
+      justify-content: space-around;
+      a:is(.ff) {
+        margin-right: 2vw !important;
+      }
+      a {
+        margin-right: 0 !important;
+      }
+    }
+    .hamburger-menu {
+      margin-right: 4vw;
+    }
   }
 }
 
@@ -104,18 +98,5 @@
   .top {
     width: 100%;
     height: 10vh;
-  }
-  .navigation {
-    margin-left: 20vw;
-    margin-right: 20vw;
-    .brand {
-      font-size: 26px !important;
-      font-family: 'Calibre';
-      font-weight: bold;
-    }
-  }
-  .top > div > .ant-col > ul > li {
-    font-size: 20px !important;
-    font-family: 'Calibre';
   }
 }

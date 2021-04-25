@@ -11,6 +11,7 @@ import * as Storage from '../utils/storage'
 import { THEME } from '../constants'
 
 import './index.scss'
+import { Row, Col, Avatar } from 'antd'
 
 function getTheme(checked) {
   return checked ? THEME.DARK : THEME.LIGHT
@@ -57,13 +58,26 @@ const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   return (
     <>
-      <Top
-        setCheckVar={(c) => setChecked(c)}
-        title={title}
-        location={location}
-        rootPath={rootPath}
-        checked={checked}
-      />
+      <div
+        className="top"
+        style={{
+          top: '0',
+          zIndex: 100,
+          marginLeft: `auto`,
+          marginRight: `auto`,
+          maxWidth: rhythm(32),
+          textAlign: 'center',
+          position: 'sticky'
+        }}
+      >
+        <Top
+          setCheckVar={(c) => setChecked(c)}
+          title={title}
+          location={location}
+          rootPath={rootPath}
+          checked={checked}
+        />
+        </div>
       <div
         className="layout-content"
         style={{
@@ -72,7 +86,8 @@ const Layout = ({ location, title, children }) => {
           maxWidth: rhythm(30),
           fontSize: '1rem',
           textAlign: 'justify',
-          marginTop: '10vh'
+          paddingLeft: '4vw',
+          paddingRight: '4vw'
         }}
       >
         <Header title={title} location={location} rootPath={rootPath} />
