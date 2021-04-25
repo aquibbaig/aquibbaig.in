@@ -1,56 +1,46 @@
 import React from 'react';
-import { Col, Row } from 'antd';
-import { GithubOutlined, LinkedinFilled, TwitterCircleFilled } from '@ant-design/icons'
+import { Col, Row, Typography } from 'antd';
 
 import './index.scss';
 import { rhythm } from '../../utils/typography';
+import { Link } from 'gatsby';
+
+const { Text, Paragraph } = Typography;
 
 export const Footer = () => (
-  <footer className="footer" style={{ maxWidth: rhythm(28) }}>
-    <h4>Copyright 2021, &#xa9;Aquib Baig, All rights reserved.</h4>
-    {/* <Row justify="space-between"
-      align="middle"
-      style={{ maxWidth: rhythm(28), }}
-      className="footer-content">
-      <h2>I build scalable applications for the web.</h2>
-      <h2>made with &#x2764; Gatsby.</h2>
+  <footer className="footer" style={{ fontSize: '1.2rem' }}>
+    {/* <h4>Copyright 2021, &#xa9;Aquib Baig, All rights reserved.</h4> */}
+    <Row style={{ textAlign: 'left' }}>
+      <Col md={8} xs={24}>
+        <Paragraph>
+          <Link to="/">Home</Link>
+        </Paragraph>
+        <Paragraph>
+          <Link to="/projects">Projects</Link>
+        </Paragraph>
+        <Paragraph>
+          <Link to="/about">About</Link>
+        </Paragraph>
+      </Col>
+      <Col md={8} xs={24}>
+        <Paragraph>
+          <Link to="/">Twitter</Link>
+        </Paragraph>
+        <Paragraph>
+          <Link to="/">Github</Link>
+        </Paragraph>
+        <Paragraph>
+          <Link to="/">LinkedIn</Link>
+        </Paragraph>
+      </Col>
+      <Col md={8} xs={24}>
+        <Paragraph>
+          <Link to="/">BMC</Link>
+        </Paragraph>
+        <Paragraph>
+          <Link to="/">Patreon</Link>
+        </Paragraph>
+      </Col>
     </Row>
-    <Row
-      justify="space-between"
-      align="middle"
-      className="footer-content"
-      style={{
-        // maxWidth: rhythm(28),
-        // fontFamily: "Work Sans",
-        color: 'black'
-      }}
-    >
-      <Col
-        xs={24}
-        md={8}
-        lg={8}
-        className="leftCol"
-        style={{ marginBottom: '4vh' }}
-      >
-        <h4>Copyright 2021, &#xa9;Aquib Baig, All rights reserved.</h4>
-      </Col>
-      <Col
-        xs={24}
-        md={8}
-        lg={8}
-        className="rightCol"
-        style={{ marginBottom: '4vh', fontSize: '1rem' }}
-      >
-        <a target="blank" href="https://www.github.com/aquibbaig">
-          <GithubOutlined style={{ marginLeft: '1rem', fontSize: '1.4rem' }} />
-        </a>
-        <a target="blank" href="https://linked.in/baigaquib">
-          <LinkedinFilled style={{ marginLeft: '1rem', fontSize: '1.4rem' }} />
-        </a>
-        <a target="blank" href="https://twitter.com/BaigAquib">
-          <TwitterCircleFilled style={{ marginLeft: '1rem', fontSize: '1.4rem' }} />
-        </a>
-      </Col>
-    </Row> */}
   </footer>
 )

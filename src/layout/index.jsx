@@ -92,8 +92,9 @@ const Layout = ({ location, title, children }) => {
       >
         <Header title={title} location={location} rootPath={rootPath} />
         {renderChildren(children)}
+        <hr/>
+        <Footer />
       </div>
-      <Footer />
     </>
   )
 }

@@ -7,6 +7,12 @@ body.light {
     color: $dark-gray;
   }
 
+  div > .layout-content > hr {
+    height: 1px;
+    margin-top: 10vh;
+    background: #e5e7eb;
+  }
+
   .ant-btn-primary {
     background: transparent;
     color: black;
@@ -41,6 +47,10 @@ body.light {
 
   .tile > .ant-card-body > .ant-row > .ant-col > p:nth-child(1) > a:hover {
     color: $link-hover-color;
+  }
+
+  .tile > .ant-card-body > .ant-row > .ant-col > p:nth-child(3) {
+    color: #4b5563;
   }
 
   .category-container {
@@ -118,6 +128,10 @@ body.light {
     color: black;
     background-color: #f8f8f8;
     font-size: 1.2rem;
+  }
+
+  .thumbnailContent {
+    color: $secondary-text-color;
   }
 
   // search bar
