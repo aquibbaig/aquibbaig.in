@@ -4,12 +4,18 @@ import { Col, Row, Typography } from 'antd';
 import './index.scss';
 import { rhythm } from '../../utils/typography';
 import { Link } from 'gatsby';
+import { FaSpotify } from 'react-icons/fa';
 
 const { Text, Paragraph } = Typography;
 
 export const Footer = () => (
   <footer className="footer" style={{ fontSize: '1.2rem' }}>
-    {/* <h4>Copyright 2021, &#xa9;Aquib Baig, All rights reserved.</h4> */}
+    <a href="https://open.spotify.com/user/21e2gnoh5t42dkrsp7zc7bzjy" target="_blank">
+      <Row style={{ marginBottom: '4vh', color: '#1DB954', fontSize: '1.2rem' }}>
+        <FaSpotify style={{ marginRight: '4px' }}  />
+        <Text>Follow</Text>
+      </Row>
+    </a>
     <Row style={{ textAlign: 'left' }}>
       <Col md={8} xs={24}>
         <Paragraph>

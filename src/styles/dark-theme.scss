@@ -114,7 +114,7 @@ body.dark {
     a {
       color: white !important;
     }
-    a {
+    a > div > span {
       color: $dark-lightest-font-color;
     }
   }
