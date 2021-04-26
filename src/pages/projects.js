@@ -60,7 +60,7 @@ export default ({ data, location }) => {
           Projects
         </Title>
         <Paragraph style={{ margin: 0, marginBottom: '5vh', fontSize: '1.2rem' }}>
-          I tend to do hobby projects to learn how systems work and open source in
+          I do hobby projects to learn how systems work and open source in
           my free time. I personally like working with Javascript and Golang, and have experience in
           C++, Java and Php.
         </Paragraph>

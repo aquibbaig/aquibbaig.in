@@ -102,7 +102,7 @@ export default ({ data, location }) => {
                   <Timeline key={event.title} style={{ paddingLeft: '2vw' }}>
                     <Timeline.Item dot={event.icon} style={{ margin: 0, padding: 0 }}>
                       <Paragraph style={{
-                        fontSize: '1.2rem',
+                        fontSize: '1.4rem',
                         margin: 0,
                         padding: 0,
                         fontWeight: '500'
@@ -110,7 +110,7 @@ export default ({ data, location }) => {
                         {event.title}
                       </Paragraph>
                       <Paragraph style={{
-                        fontSize: '1rem',
+                        fontSize: '1.2rem',
                         margin: 0,
                         padding: 0
                       }}>

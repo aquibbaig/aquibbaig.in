@@ -24,7 +24,7 @@ export const ThumbnailItem = (props) => {
       <div key={node.fields.slug}>
         <div className="thumbnailTitle">
           <Link className={`thumbnail ${TARGET_CLASS}`} to={node.fields.slug}>
-            <Title level={2} style={{ fontWeight: '500', margin: 0, border: 0, padding: 0 }}>
+            <Title level={2} style={{ fontSize: '1.6rem',fontWeight: '500', margin: 0, border: 0, padding: 0 }}>
               {node.frontmatter.title || node.fields.slug}
             </Title>
           </Link>
