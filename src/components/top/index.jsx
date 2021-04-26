@@ -4,8 +4,8 @@ import './index.scss'
 import { Row, Col, Menu } from 'antd'
 import { ThemeSwitch } from '../theme-switch'
 import { StaticQuery, graphql } from 'gatsby';
-import Searchbar from '../search';
-import { FaEquals, FaOutdent } from 'react-icons/fa'
+// import Searchbar from '../search';
+import { FaBars } from 'react-icons/fa'
 
 export const Top = ({ title, location, rootPath, ...props }) => {
   const isRoot = location.pathname === rootPath;
@@ -41,19 +41,17 @@ export const Top = ({ title, location, rootPath, ...props }) => {
                 className="navigation"
                 justify="space-between"
                 align="middle"
-                style={{
-                  fontFamily: "Calibre"
-                }}
               >
                 <Col>
                   <ThemeSwitch setVar={(c) => setThemeCheck(c)} />
                 </Col>
                 <Col lg={8} className="nav-menu">
                   <Link className="ff" to="/projects">Projects</Link>
+                  <Link className="ff" to="/about">About</Link>
                   <Link className="ff" to="/blog">Blog</Link>
                   <Link to="/">Home</Link>
                 </Col>
-                <FaOutdent className="hamburger-menu" onClick={() => toggleShowMenu(expandMenu)}/>
+                <FaBars className="hamburger-menu" onClick={() => toggleShowMenu(expandMenu)}/>
                 {/* <Col lg={8} className="search-container" style={{ marginTop: '-1vh' }}>
                   <Searchbar />
                 </Col> */}
@@ -63,8 +61,6 @@ export const Top = ({ title, location, rootPath, ...props }) => {
                 justify="space-between"
                 align="middle"
                 style={{
-                  fontFamily: "Calibre",
-                  backgroundColor: '#0C2252',
                   margin: '0'
                 }}
               >
@@ -74,13 +70,16 @@ export const Top = ({ title, location, rootPath, ...props }) => {
                     border: '0',
                   }}>
                   <Menu.Item>
-                    <Link to="/" style={{ color: 'white' }}>Home</Link>
+                    <Link to="/" style={{ fontSize: '1.4rem' }}>Home</Link>
                   </Menu.Item>
                   <Menu.Item>
-                    <Link to="/projects" style={{ color: 'white' }}>Projects</Link>
+                    <Link to="/projects" style={{ fontSize: '1.4rem' }}>Projects</Link>
                   </Menu.Item>
                   <Menu.Item>
-                    <Link to="/blog" style={{ color: 'white' }}>Blog</Link>
+                    <Link to="/about" style={{ fontSize: '1.4rem' }}>About</Link>
+                  </Menu.Item>
+                  <Menu.Item>
+                    <Link to="/blog" style={{ fontSize: '1.4rem' }}>Blog</Link>
                   </Menu.Item>
                 </Menu>
               </Row>}

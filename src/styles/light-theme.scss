@@ -149,6 +149,14 @@ body.light {
     color: $secondary-text-color;
   }
 
+  .ant-menu-horizontal > .ant-menu-item a {
+    color: $primary !important;
+  }
+
+  .ant-timeline-item-head.ant-timeline-item-head-custom.ant-timeline-item-head-blue {
+    background: transparent;
+  }
+
   // search bar
   .search-container > div > div {
     background: #fff;

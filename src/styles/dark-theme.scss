@@ -13,7 +13,7 @@ body.dark {
   }
 
   .ant-menu-horizontal > .ant-menu-item a {
-    color: white !important;
+    color: white;
   }
 
   a {
@@ -104,6 +104,10 @@ body.dark {
     font-size: 1.2rem;
     font-family: 'Calibre';
     color: $dark-light-font-color !important;
+  }
+
+  .ant-timeline-item-head.ant-timeline-item-head-custom.ant-timeline-item-head-blue {
+    background: transparent;
   }
 
   .footer {

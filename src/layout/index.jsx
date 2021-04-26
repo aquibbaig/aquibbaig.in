@@ -86,8 +86,8 @@ const Layout = ({ location, title, children }) => {
           maxWidth: rhythm(30),
           fontSize: '1rem',
           textAlign: 'justify',
-          paddingLeft: '2vw',
-          paddingRight: '2vw'
+          paddingLeft: '4vw',
+          paddingRight: '4vw'
         }}
       >
         <Header title={title} location={location} rootPath={rootPath} />
