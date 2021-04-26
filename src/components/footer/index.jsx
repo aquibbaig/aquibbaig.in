@@ -30,18 +30,18 @@ export const Footer = () => (
       </Col>
       <Col md={8} xs={24}>
         <Paragraph>
-          <Link to="https://twitter.com/BaigAquib">Twitter</Link>
+          <a href="https://twitter.com/BaigAquib">Twitter</a>
         </Paragraph>
         <Paragraph>
-          <Link to="https://github.com/aquibbaig">Github</Link>
+          <a href="https://github.com/aquibbaig">Github</a>
         </Paragraph>
         <Paragraph>
-          <Link to="https://www.linkedin.com/in/baigaquib/">LinkedIn</Link>
+          <a href="https://www.linkedin.com/in/baigaquib/">LinkedIn</a>
         </Paragraph>
       </Col>
       <Col md={8} xs={24}>
         <Paragraph>
-          <Link to="https://www.buymeacoffee.com/aquibbaig">BMC</Link>
+          <a href="https://www.buymeacoffee.com/aquibbaig">BMC</a>
         </Paragraph>
       </Col>
     </Row>

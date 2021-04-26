@@ -12,6 +12,14 @@ body.dark {
     background-color: $dark-background-color;
   }
 
+  .ant-statistic-content-value-int {
+    color: #fff;
+  }
+
+  .ant-statistic-content-suffix > svg {
+    fill: $dark-lightest-font-color;
+  }
+
   .ant-menu-horizontal > .ant-menu-item a {
     color: white;
   }

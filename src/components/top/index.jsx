@@ -47,8 +47,9 @@ export const Top = ({ title, location, rootPath, ...props }) => {
                 </Col>
                 <Col lg={8} className="nav-menu">
                   <Link className="ff" to="/projects">Projects</Link>
-                  <Link className="ff" to="/about">About</Link>
                   <Link className="ff" to="/blog">Blog</Link>
+                  <Link className="ff" to="/inventory">Inventory</Link>
+                  <Link className="ff" to="/about">About</Link>
                   <Link to="/">Home</Link>
                 </Col>
                 <FaBars className="hamburger-menu" onClick={() => toggleShowMenu(expandMenu)}/>
