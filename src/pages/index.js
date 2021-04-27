@@ -25,7 +25,7 @@ export default ({ data, location }) => {
       location="/"
     >
       <div className="header" style={{ marginBottom: '5vh' }}>
-        <Title style={{ fontSize: '2.8rem', fontWeight: '800', padding: 0, margin: 0 }}>
+        <Title style={{ fontSize: '2.8rem', fontWeight: '700', padding: 0, margin: 0 }}>
           Hello, I'm Aquib Baig
         </Title>
         <Paragraph style={{ fontSize: '1.2rem', color: '#595959' }}>
@@ -40,7 +40,7 @@ export default ({ data, location }) => {
         <div className="header" style={{
           display: 'flex',
         }}>
-          <Title level={1} style={{ fontWeight: '800', margin: 0 }}>Most Recent</Title>
+          <Title level={1} style={{ fontWeight: '700', margin: 0 }}>Most Recent</Title>
         </div>
         {(latestPosts || []).map(post => {
           return <ThumbnailItem
@@ -56,7 +56,7 @@ export default ({ data, location }) => {
       {/* Tiles. */}
       <div style={{ marginTop: '5vh' }}>
         <div className="header">
-          <Title level={1} style={{ fontWeight: '800', margin: 0 }}>
+          <Title level={1} style={{ fontWeight: '700', margin: 0 }}>
             Contributions
           </Title>
         </div>

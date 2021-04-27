@@ -9,7 +9,7 @@ const lightStyles = {
   textAlign: 'left',
   color: '#000',
   fontSize: '2.8rem',
-  fontWeight: '800',
+  fontWeight: '700',
   padding: 0,
   margin: 0,
   marginBottom: `5vh`
@@ -19,7 +19,7 @@ const darkStyles = {
   textAlign: 'left',
   color: '#fff',
   fontSize: '2.8rem',
-  fontWeight: '800',
+  fontWeight: '700',
   padding: 0,
   margin: 0,
   marginBottom: `5vh`

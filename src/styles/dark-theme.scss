@@ -2,10 +2,48 @@ body.dark {
   background-color: $dark-background-color;
   color: $dark-light-font-color;
 
+  .ant-col-24.ant-form-item-label > label {
+    color: #fff;
+  }
+
+  .ant-btn-primary {
+    background: $dark-highlighter;
+    color: #fff;
+    border: 0;
+  }
+
+  .ant-btn-primary:hover {
+    background: $dark-highlighter;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+
+  .ant-input-affix-wrapper {
+    border: 0;
+  }
+
+  .ant-input-affix-wrapper > span {
+    background-color: $dark-background-color;
+    border: 2px solid $dark-highlighter !important;
+    margin: 0;
+    padding: 2px;
+    color: #fff;
+    border: 0;
+  }
+
+  .ant-input {
+    background: $dark-highlighter;
+    border: 0;
+    padding: 5px;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 0;
+  }
+
   div > .layout-content > hr {
     height: 1px;
     margin-top: 10vh;
-    background: #e5e7eb;
+    background: $light-highlighter;
   }
 
   .top {
@@ -29,12 +67,12 @@ body.dark {
   }
 
   .category-container {
-    background-color: #090a21;
+    // background-color: $dark-background-color;
     .item {
-      -webkit-box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.1);
-      box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.1);
+      background: $dark-highlighter;
       &[aria-selected='true'] {
         font-weight: bolder;
+        border: 2px solid $dark-light-font-color;
       }
       div {
         font-size: 1rem;
@@ -67,6 +105,10 @@ body.dark {
     padding: 0;
   }
 
+  .ant-card-bordered {
+    border: none;
+  }
+
   .header > div,
   .thumbnailContent {
     color: $dark-light-font-color !important;
@@ -92,7 +134,7 @@ body.dark {
 
   .ant-tag {
     background-color: #111d2d;
-    border: 1px solid #090a21;
+    border: 1px solid $dark-background-color;
     color: white;
     font-size: 1rem;
     font-family: 'Calibre';
@@ -183,16 +225,16 @@ body.dark {
   }
 
   .navigation {
-    background: #090a21;
+    background: $dark-background-color;
   }
 
   .switch-container > label > svg {
-    background: #1f2937;
+    background: $dark-highlighter;
     fill: #fff;
   }
 
   .hamburger-menu {
-    background: #1f2937;
+    background: $dark-highlighter;
   }
 
   .search-container > div > div > div > ol > a > div > p > span > mark {

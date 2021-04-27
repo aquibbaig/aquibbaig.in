@@ -47,7 +47,7 @@ export const Top = ({ title, location, rootPath, ...props }) => {
                 </Col>
                 <Col lg={8} className="nav-menu">
                   <Link className="ff" to="/projects">Projects</Link>
-                  <Link className="ff" to="/blog">Blog</Link>
+                  {/* <Link className="ff" to="/blog">Blog</Link> */}
                   <Link className="ff" to="/inventory">Inventory</Link>
                   <Link className="ff" to="/about">About</Link>
                   <Link to="/">Home</Link>
@@ -76,9 +76,9 @@ export const Top = ({ title, location, rootPath, ...props }) => {
                   <Menu.Item>
                     <Link to="/projects" style={{ fontSize: '1.4rem' }}>Projects</Link>
                   </Menu.Item>
-                  <Menu.Item>
+                  {/* <Menu.Item>
                     <Link to="/blog" style={{ fontSize: '1.4rem' }}>Blog</Link>
-                  </Menu.Item>
+                  </Menu.Item> */}
                   <Menu.Item>
                     <Link to="/inventory" style={{ fontSize: '1.4rem' }}>Inventory</Link>
                   </Menu.Item>

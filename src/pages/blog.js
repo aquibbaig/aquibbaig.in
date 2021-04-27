@@ -50,10 +50,10 @@ export default ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteMetadata.title}>
-      <div className="archives" style={{ minHeight: '70vh' }}>
+      <div className="archives" style={{ minHeight: '40vh' }}>
         <Title style={{
           fontSize: '2.8rem',
-          fontWeight: '800',
+          fontWeight: '700',
           padding: 0,
           margin: 0,
         }}>

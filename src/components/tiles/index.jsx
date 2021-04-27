@@ -24,14 +24,14 @@ export default (props) => {
     <Card
       loading={loading}
       className={className}
-      style={outerStyle, dark ?
+      style={dark ?
         {
           backgroundColor: darkBg,
           border: `0`,
-          marginBottom: '1vh'
+          marginBottom: '12px'
         } : {
           backgroundColor: lightBg,
-          marginBottom: '1vh'
+          marginBottom: '12px'
         }
       }
     >
@@ -45,7 +45,7 @@ export default (props) => {
           <p style={{ margin: '0', textAlign: 'left', fontWeight: '500' }}>
             {props.header}
           </p>
-          <p>
+          <p style={{ marginBottom: '1vh' }}>
             {props.content}
           </p>
         </Col>

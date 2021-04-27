@@ -69,7 +69,7 @@ export default ({ data, location }) => {
       <Layout location={location} title={siteMetadata.title}>
         <Title style={{
           fontSize: '2.8rem',
-          fontWeight: '800',
+          fontWeight: '700',
           padding: 0,
           margin: 0,
         }}>
@@ -85,7 +85,7 @@ export default ({ data, location }) => {
         </Paragraph>
         <Title style={{
           fontSize: '2.8rem',
-          fontWeight: '800',
+          fontWeight: '700',
           padding: 0,
           margin: 0,
         }}>

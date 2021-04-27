@@ -8,7 +8,7 @@ const { Title, Paragraph } = Typography;
 
 const projectList = [
   {
-    title: 'Bench routes',
+    title: 'Bench Routes',
     desc: `Bench-routes is a highly scalable network benchmarking,
       routes performance and monitoring tool,
       that monitors in regular intervals the state of the server,
@@ -36,7 +36,7 @@ const projectList = [
     tags: ['tutorials', 'gatsby/react']
   },
   {
-    title: 'Quiz generator',
+    title: 'Quiz Generator',
     desc: `Automated question generator using NLP. Just put in an input paragraph from
     your favorite story and the application will generate a set of questions for you to
     test your comprehensive skills. We built this to help people taking entrance examinations
@@ -53,7 +53,7 @@ export default ({ data, location }) => {
       <Layout location={location} title={siteMetadata.title}>
         <Title style={{
           fontSize: '2.8rem',
-          fontWeight: '800',
+          fontWeight: '700',
           padding: 0,
           margin: 0,
         }}>
