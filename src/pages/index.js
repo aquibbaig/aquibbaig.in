@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import Layout from '../layout/index'
 import { ThumbnailItem } from '../components/thumbnail-item';
@@ -52,9 +52,9 @@ export default ({ data, location }) => {
           />
         })}
         <Title style={{ fontSize: '1.4rem' }}>
-          <a href="/blog">
+          <Link href="/blog">
             View All Posts
-          </a>
+          </Link>
         </Title>
       </div>
       {/* Latest BlogPosts end */}
