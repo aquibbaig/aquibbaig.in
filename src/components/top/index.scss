@@ -3,6 +3,13 @@
 @import '../../styles/dark-theme.scss';
 
 .top {
+  .ant-menu-item:active,
+  .ant-menu-submenu-title:active {
+    background: rgba(29, 185, 84, 0.2);
+  }
+  .ant-menu-item a:hover {
+    color: #636363;
+  }
   width: 100%;
   margin-top: 2vh;
   .navigation {
@@ -16,6 +23,9 @@
       a {
         margin-right: 2vw;
       }
+    }
+    ul {
+      width: 100%;
     }
     .hamburger-menu {
       margin-right: 4vw;

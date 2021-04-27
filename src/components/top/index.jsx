@@ -77,10 +77,13 @@ export const Top = ({ title, location, rootPath, ...props }) => {
                     <Link to="/projects" style={{ fontSize: '1.4rem' }}>Projects</Link>
                   </Menu.Item>
                   <Menu.Item>
-                    <Link to="/about" style={{ fontSize: '1.4rem' }}>About</Link>
+                    <Link to="/blog" style={{ fontSize: '1.4rem' }}>Blog</Link>
                   </Menu.Item>
                   <Menu.Item>
-                    <Link to="/blog" style={{ fontSize: '1.4rem' }}>Blog</Link>
+                    <Link to="/inventory" style={{ fontSize: '1.4rem' }}>Inventory</Link>
+                  </Menu.Item>
+                  <Menu.Item>
+                    <Link to="/about" style={{ fontSize: '1.4rem' }}>About</Link>
                   </Menu.Item>
                 </Menu>
               </Row>}

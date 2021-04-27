@@ -1,5 +1,4 @@
 import querystring from 'querystring';
-import { useMemo } from 'react';
 
 const client_id = process.env.GATSBY_SPOTIFY_CLIENT_ID;
 const client_secret = process.env.GATSBY_SPOTIFY_CLIENT_SECRET;
@@ -7,7 +6,7 @@ const refresh_token = process.env.GATSBY_SPOTIFY_REFRESH_TOKEN;
 
 const basic = Buffer.from(`${client_id}:${client_secret}`).toString('base64');
 const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
-const TOP_TRACKS_ENDPOINT = `https://api.spotify.com/v1/me/top/tracks?limit=10`;
+const TOP_TRACKS_ENDPOINT = `https://api.spotify.com/v1/me/top/tracks?limit=10&time_range=short_term`;
 
 const getAccessToken = async () => {
   const response = await fetch(TOKEN_ENDPOINT, {

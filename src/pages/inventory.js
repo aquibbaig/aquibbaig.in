@@ -1,9 +1,9 @@
-import React, { lazy, useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../layout';
-import { Card, Typography, Row, Col } from 'antd';
+import { Typography, Row, Col } from 'antd';
 import Stats from '../components/stats';
-import { FaRocket, FaStar, FaTrophy } from 'react-icons/fa';
+import { FaStar, FaTrophy } from 'react-icons/fa';
 import { getTopTracks } from '../utils/integrations/spotify';
 import Tracks from '../components/track-container';
 
@@ -12,6 +12,7 @@ const { Title, Paragraph } = Typography;
 
 export default ({ data, location }) => {
   const [topTracks, setTopTracks] = useState([]);
+  const [ct, setCt] = useState(0);
   const [tracksLoading, setTracksLoading] = useState(true);
   useEffect(() => {
     (async() => {
