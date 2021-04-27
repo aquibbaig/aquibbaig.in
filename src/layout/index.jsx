@@ -85,7 +85,7 @@ const Layout = ({ location, title, children }) => {
           marginRight: `auto`,
           maxWidth: rhythm(30),
           fontSize: '1rem',
-          textAlign: 'justify',
+          textAlign: 'left',
           paddingLeft: '4vw',
           paddingRight: '4vw'
         }}

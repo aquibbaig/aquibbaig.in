@@ -28,11 +28,11 @@ export default ({ data, location }) => {
         <Title style={{ fontSize: '2.8rem', fontWeight: '700', padding: 0, margin: 0 }}>
           Hello, I'm Aquib Baig
         </Title>
-        <Paragraph style={{ fontSize: '1.2rem', color: '#595959' }}>
+        <Paragraph style={{ fontSize: '1.2rem', color: '#595959', textAlign: 'left' }}>
           I'm a full stack web developer from Bhubaneswar, India.
-          I work as a frontend developer at	&#8595;Redhat. I believe that learning 
+          I work as a frontend developer at	Redhat. I believe that learning 
           has no language or boundaries and like to share my experiences with
-          technology to the community. <a href="#">Become a part.</a>
+          technology to the community.
         </Paragraph>
       </div>
       {/* Latest BlogPosts */}
@@ -51,6 +51,11 @@ export default ({ data, location }) => {
             node={post.node}
           />
         })}
+        <Title style={{ fontSize: '1.4rem' }}>
+          <a href="/blog">
+            View All Posts
+          </a>
+        </Title>
       </div>
       {/* Latest BlogPosts end */}
       {/* Tiles. */}
@@ -89,7 +94,7 @@ export default ({ data, location }) => {
       </div>
       {/* Tiles end */}
       <div className="courses" style={{ marginTop: '5vh' }}>
-        <Title level={1} style={{ fontWeight: '800', margin: 0 }}>
+        <Title level={1} style={{ fontWeight: '700', margin: 0 }}>
           Courses
         </Title>
         <Paragraph>Coming soon..</Paragraph>
