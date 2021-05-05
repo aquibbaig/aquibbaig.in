@@ -7,57 +7,76 @@ body.light {
     color: $dark-gray;
   }
 
+  div > .layout-content > hr {
+    height: 1px;
+    margin-top: 10vh;
+    background: $light-highlighter;
+  }
+
+  .archives > .thumbnail-container {
+    margin-top: 5vh;
+  }
+
+  .archives > .thumbnail-container > div > div > div > div > a > h2:hover {
+    color: $secondary-text-color;
+  }
+
+  .project > a > .ant-card > div > div > h1:hover {
+    color: $secondary-text-color;
+  }
+
   .ant-btn-primary {
-    background: transparent;
+    background: $light-highlighter;
     color: black;
-    border: 1px solid $dark-gray;
+    border: 0;
+  }
+
+  .ant-input {
+    padding: 5px;
+    color: #000;
+    font-size: 1rem;
+    background: #fff;
   }
 
   .ant-tag {
-    background-color: #f5f5f5;
-    color: #2753b3;
+    background-color: $light-highlighter;
+    color: #000;
     font-size: 1rem;
     font-family: 'Calibre';
+  }
+
+  .navigation {
+    .nav-menu {
+      a {
+        color: $primary;
+      }
+      a:hover {
+        color: $link-hover-color;
+      }
+    }
   }
 
   .top {
     background-color: #fff;
   }
 
-  .tile > .ant-card-body > .ant-row > .ant-col > p > button:hover {
-    color: #1890ff;
+  .tile > .ant-card-body > .ant-row > .ant-col > p:nth-child(1) > a {
+    color: $primary;
   }
 
-  a {
-    color: $light-category-text-color;
+  .tile > .ant-card-body > .ant-row > .ant-col > p:nth-child(1) > a:hover {
+    color: $link-hover-color;
   }
 
-  .bio {
-    .author-name-content {
-      background-color: $light-category-border-color;
-    }
-    .author-introduction {
-      color: $middle-gray;
-    }
-    a {
-      color: $light-link-color;
-    }
+  .tile > .ant-card-body > .ant-row > .ant-col > p:nth-child(3) {
+    color: #4b5563;
   }
 
   .category-container {
-    border-top: 1px solid $light-category-border-color;
-    border-bottom: 1px solid $light-category-border-color;
-    border-right: 6px solid $light-category-border-color;
-    border-left: 6px solid $light-category-border-color;
-    background-color: $light-category-background-color;
     font-family: 'Calibre';
     .item {
-      border: 1px solid $light-category-border-color;
-      background-color: $light-category-item-color;
-      -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
-      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+      background: $light-highlighter;
       a {
-        color: $light-category-text-color;
         font-family: 'Calibre';
         font-size: 1.2rem;
       }
@@ -68,7 +87,6 @@ body.light {
         font-size: 1.2rem;
       }
       &[aria-selected='true'] a {
-        color: $light-category-highlight-text-color;
         font-family: 'Calibre';
         font-size: 1.2rem;
       }
@@ -82,9 +100,6 @@ body.light {
     h3 {
       color: $dark-gray;
     }
-    p {
-      color: $middle-gray;
-    }
     &:hover {
       text-shadow: $light-hover-text-shadow;
     }
@@ -95,43 +110,57 @@ body.light {
   }
 
   .ant-card-body {
-    padding: 12px;
+    padding: 0;
   }
 
-  .footer {
-    color: white;
-    a,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p {
-      color: white;
-    }
-    background-color: #0c2252;
+  .ant-typography:is(div) {
+    color: $secondary-text-color;
+  }
+
+  .ant-typography a {
+    color: $primary-link-color;
+    text-decoration: underline;
+  }
+
+  .ant-typography a:hover {
+    color: #38365d;
+    text-decoration: underline;
   }
 
   .resp-sharing-button {
     color: white;
   }
 
-  .gatsby-highlight > pre {
-    background-color: #f8f8f8;
-    border: 1px solid #999da0;
-    color: black;
+  /* Code blocks */
+  pre[class*='language-'] {
+    padding: 1.2em;
+    margin: 1.5em 0;
+    overflow: auto;
+    background-color: #f6f8fa;
+    border: 1px solid #d1d1d1;
   }
 
   .language-text {
     background-color: #f5f5f5;
-    color: #2753b3;
+    color: rgb(65, 65, 65);
   }
 
   .gatsby-highlight > pre > code {
-    color: black;
+    color: rgb(27, 26, 26);
     background-color: #f8f8f8;
     font-size: 1.2rem;
+  }
+
+  .thumbnailContent {
+    color: $secondary-text-color;
+  }
+
+  .ant-menu-horizontal > .ant-menu-item a {
+    color: $primary !important;
+  }
+
+  .ant-timeline-item-head.ant-timeline-item-head-custom.ant-timeline-item-head-blue {
+    background: transparent;
   }
 
   // search bar
@@ -153,6 +182,18 @@ body.light {
     color: #fff;
     border-radius: 4px;
     padding: 0.1em !important;
+  }
+
+  .navigation {
+    background: #fff;
+  }
+
+  .switch-container > label > svg {
+    background: $light-highlighter;
+  }
+
+  .hamburger-menu {
+    background: $light-highlighter;
   }
 
   // post

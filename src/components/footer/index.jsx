@@ -1,53 +1,54 @@
 import React from 'react';
-import { Col, Row } from 'antd';
-import { GithubOutlined, LinkedinFilled, TwitterCircleFilled } from '@ant-design/icons'
+import { Col, Row, Typography } from 'antd';
 
 import './index.scss';
 import { rhythm } from '../../utils/typography';
+import { Link } from 'gatsby';
+import { FaSpotify } from 'react-icons/fa';
+
+const { Text, Paragraph } = Typography;
 
 export const Footer = () => (
-  <footer className="footer">
-    <Row justify="space-between"
-      align="middle"
-      className="footer-content">
-      <h2>I build scalable applications for the web.</h2>
-      <h2>made with &#x2764; Gatsby.</h2>
-    </Row>
-    <Row
-      justify="space-between"
-      align="middle"
-      className="footer-content"
-      style={{
-        // maxWidth: rhythm(28),
-        // fontFamily: "Work Sans",
-        color: 'black'
-      }}
-    >
-      <Col
-        xs={24}
-        md={8}
-        lg={8}
-        className="leftCol"
-        style={{ marginBottom: '4vh' }}
-      >
-        <h4>Copyright 2021, &#xa9;Aquib Baig, All rights reserved.</h4>
+  <footer className="footer" style={{ fontSize: '1.2rem' }}>
+    <a href="https://open.spotify.com/user/21e2gnoh5t42dkrsp7zc7bzjy" target="_blank">
+      <Row style={{ marginBottom: '4vh', color: '#1DB954', fontSize: '1.2rem' }}>
+        <FaSpotify style={{ marginRight: '4px' }}  />
+        <Text>Follow</Text>
+      </Row>
+    </a>
+    <Row style={{ textAlign: 'left' }}>
+      <Col md={8} xs={24}>
+        <Paragraph>
+          <Link to="/">Home</Link>
+        </Paragraph>
+        <Paragraph>
+          <Link to="/blog">Blog</Link>
+        </Paragraph>
+        <Paragraph>
+          <Link to="/projects">Projects</Link>
+        </Paragraph>
+        <Paragraph>
+          <Link to="/inventory">Inventory</Link>
+        </Paragraph>
+        <Paragraph>
+          <Link to="/about">About</Link>
+        </Paragraph>
       </Col>
-      <Col
-        xs={24}
-        md={8}
-        lg={8}
-        className="rightCol"
-        style={{ marginBottom: '4vh', fontSize: '1rem' }}
-      >
-        <a target="blank" href="https://www.github.com/aquibbaig">
-          <GithubOutlined style={{ marginLeft: '1rem', fontSize: '1.4rem' }} />
-        </a>
-        <a target="blank" href="https://linked.in/baigaquib">
-          <LinkedinFilled style={{ marginLeft: '1rem', fontSize: '1.4rem' }} />
-        </a>
-        <a target="blank" href="https://twitter.com/BaigAquib">
-          <TwitterCircleFilled style={{ marginLeft: '1rem', fontSize: '1.4rem' }} />
-        </a>
+      <Col md={8} xs={24}>
+        <Paragraph>
+          <a href="https://twitter.com/BaigAquib">Twitter</a>
+        </Paragraph>
+        <Paragraph>
+          <a href="https://github.com/aquibbaig">Github</a>
+        </Paragraph>
+        <Paragraph>
+          <a href="https://www.linkedin.com/in/baigaquib/">LinkedIn</a>
+        </Paragraph>
+      </Col>
+      <Col md={8} xs={24}>
+        <Paragraph>
+          <a href="https://www.buymeacoffee.com/aquibbaig">BMC</a>
+        </Paragraph>
       </Col>
     </Row>
   </footer>

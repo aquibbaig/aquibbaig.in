@@ -1,8 +1,10 @@
 import React, { useContext } from 'react'
 import { Link } from 'gatsby'
-import { Card } from 'antd';
+import { Card, Typography } from 'antd';
 import { FaRegCalendarAlt } from 'react-icons/fa';
 import { TARGET_CLASS } from '../../utils/visible';
+
+const { Title, Paragraph } = Typography;
 
 import './index.scss'
 import { ThemeContext } from '../../layout';
@@ -13,7 +15,6 @@ export const ThumbnailItem = (props) => {
   return (
     <Card
       className="dark"
-      hoverable
       style={dark ?
         { background: darkBg, marginBottom: '1vh', border: 0, cursor: 'text' }
         :
@@ -23,15 +24,15 @@ export const ThumbnailItem = (props) => {
       <div key={node.fields.slug}>
         <div className="thumbnailTitle">
           <Link className={`thumbnail ${TARGET_CLASS}`} to={node.fields.slug}>
-            <div>
+            <Title level={2} style={{ fontSize: '1.6rem',fontWeight: '500', margin: 0, border: 0, padding: 0 }}>
               {node.frontmatter.title || node.fields.slug}
-            </div>
+            </Title>
           </Link>
         </div>
-        <p style={{ fontFamily: 'Arial', verticalAlign: 'middle' }}><FaRegCalendarAlt/>{' '}{node.frontmatter.date}</p>
-        {view === "complete-view" ? <p className="thumbnailContent"
+        {/* <p style={{ fontFamily: 'Arial', verticalAlign: 'middle' }}><FaRegCalendarAlt/>{' '}{node.frontmatter.date}</p> */}
+        <Paragraph className="thumbnailContent"
           style={{ marginBottom: '1vh' }}
-          dangerouslySetInnerHTML={{ __html: node.excerpt }} /> : <></>}
+          >{node.excerpt}</Paragraph>
       </div>
     </Card>
   )

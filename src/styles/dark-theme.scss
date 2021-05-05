@@ -1,64 +1,82 @@
 body.dark {
   background-color: $dark-background-color;
-  text-shadow: $dark-text-shadow;
   color: $dark-light-font-color;
+
+  .ant-col-24.ant-form-item-label > label {
+    color: #fff;
+  }
+
+  .ant-btn-primary {
+    background: $dark-highlighter;
+    color: #fff;
+    border: 0;
+  }
+
+  .ant-btn-primary:hover {
+    background: $dark-highlighter;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+
+  .ant-input-affix-wrapper {
+    border: 0;
+  }
+
+  .ant-input-affix-wrapper > span {
+    background-color: $dark-background-color;
+    border: 2px solid $dark-highlighter !important;
+    margin: 0;
+    padding: 2px;
+    color: #fff;
+    border: 0;
+  }
+
+  .ant-input {
+    background: $dark-highlighter;
+    border: 0;
+    padding: 5px;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 0;
+  }
+
+  div > .layout-content > hr {
+    height: 1px;
+    margin-top: 10vh;
+    background: $light-highlighter;
+  }
 
   .top {
     background-color: $dark-background-color;
   }
 
+  .ant-statistic-content-value-int {
+    color: #fff;
+  }
+
+  .ant-statistic-content-suffix > svg {
+    fill: $dark-lightest-font-color;
+  }
+
   .ant-menu-horizontal > .ant-menu-item a {
-    color: white !important;
+    color: white;
   }
 
   a {
     color: white;
   }
 
-  .bio {
-    .author-name-content {
-      background-color: $dark-category-border-color;
-    }
-    .author-introduction {
-      color: $dark-middle-font-color;
-    }
-    a {
-      color: $dark-link-color;
-    }
-  }
-
   .category-container {
-    background-color: #090a21;
+    // background-color: $dark-background-color;
     .item {
-      border: 1px solid $dark-category-border-color;
-      background-color: $dark-category-item-color;
-      -webkit-box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.1);
-      box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.1);
-      a {
-        color: $dark-category-text-color;
-      }
+      background: $dark-highlighter;
       &[aria-selected='true'] {
-        border: 2px solid $dark-category-highlight-border-color;
         font-weight: bolder;
-      }
-      &[aria-selected='true'] a {
-        color: $dark-category-highlight-text-color;
+        border: 2px solid $dark-light-font-color;
       }
       div {
         font-size: 1rem;
       }
-    }
-  }
-
-  .thumbnail {
-    h3 {
-      color: $dark-light-font-color;
-    }
-    p {
-      color: $dark-middle-font-color;
-    }
-    &:hover {
-      text-shadow: $dark-hover-text-shadow;
     }
   }
 
@@ -76,16 +94,47 @@ body.dark {
   h2,
   h3,
   p {
-    color: $dark-light-font-color !important;
+    color: $light-background-color !important;
+  }
+
+  .archives > .thumbnail-container {
+    margin-top: 5vh;
   }
 
   .ant-card-body {
-    padding: 12px !important;
+    padding: 0;
+  }
+
+  .ant-card-bordered {
+    border: none;
+  }
+
+  .header > div,
+  .thumbnailContent {
+    color: $dark-light-font-color !important;
+  }
+
+  .thumbnailTitle > a > h2:hover {
+    color: $secondary-dark-link-color !important;
+  }
+
+  .ant-typography a {
+    color: $primary-link-color;
+    text-decoration: underline;
+  }
+
+  .ant-typography:is(div) {
+    color: $dark-light-font-color;
+  }
+
+  .ant-typography a:hover {
+    color: #38365d;
+    text-decoration: underline;
   }
 
   .ant-tag {
-    background-color: #0c2252;
-    border: 1px solid #121212;
+    background-color: #111d2d;
+    border: 1px solid $dark-background-color;
     color: white;
     font-size: 1rem;
     font-family: 'Calibre';
@@ -97,8 +146,18 @@ body.dark {
     color: #fff;
   }
 
-  .tile > .ant-card-body > .ant-row > .ant-col > p > button:hover {
-    border: 1px solid #1890f1;
+  .tile > .ant-card-body > .ant-row > .ant-col > p:nth-child(1) > a:hover {
+    color: $secondary-dark-link-color;
+  }
+
+  .tile > .ant-card-body > .ant-row > .ant-col > p:nth-child(3) {
+    font-size: 1.2rem;
+    font-family: 'Calibre';
+    color: $dark-light-font-color !important;
+  }
+
+  .ant-timeline-item-head.ant-timeline-item-head-custom.ant-timeline-item-head-blue {
+    background: transparent;
   }
 
   .footer {
@@ -109,30 +168,26 @@ body.dark {
     a {
       color: white !important;
     }
-    h4 > svg {
-      fill: white !important;
-    }
-    a {
+    a > div > span {
       color: $dark-lightest-font-color;
     }
-    background-color: #0c2252;
   }
 
   .language-text {
-    background-color: #11162d;
+    background-color: transparent;
     color: white;
-    // color: $navigator-text-color;
   }
 
   .thumbnailTitle > a > div {
     color: #fff;
   }
 
-  .gatsby-highlight > pre,
-  .gatsby-highlight > pre > code {
+  /* Code blocks */
+  pre[class*='language-'] {
+    padding: 1.2em;
+    margin: 1.5em 0;
+    overflow: auto;
     background-color: #111d2d;
-    color: white;
-    font-size: 1.2rem;
   }
 
   .navigator {
@@ -148,10 +203,6 @@ body.dark {
   .search > .ant-input-search,
   .search > .ant-input-search > input {
     background-color: #e2e2e2 !important;
-  }
-
-  .header > svg {
-    fill: #fff;
   }
 
   .search > .ant-input-suffix > div {
@@ -173,9 +224,22 @@ body.dark {
     border-bottom: 1px solid #fff !important;
   }
 
+  .navigation {
+    background: $dark-background-color;
+  }
+
+  .switch-container > label > svg {
+    background: $dark-highlighter;
+    fill: #fff;
+  }
+
+  .hamburger-menu {
+    background: $dark-highlighter;
+  }
+
   .search-container > div > div > div > ol > a > div > p > span > mark {
     background: #fff !important;
-    color: #000;
+    color: $primary;
     border-radius: 4px;
     padding: 0.1em !important;
   }

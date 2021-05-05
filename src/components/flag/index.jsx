@@ -9,7 +9,6 @@ export default (props) => {
   return (
     <div className={className}>
       <Card
-        hoverable
         loading={loading}
         style={{ backgroundColor: bg, color: textCol, height: '20vh', textAlign: 'center' }}
       >

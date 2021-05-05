@@ -23,7 +23,7 @@ export const Contents = ({ posts, countOfInitialPost, count, category }) => {
           node={node}
           key={`item_${index}`}
           lightBg="#fff"
-          darkBg="#0F1029"
+          darkBg="transparent"
         />
       ))}
     </ThumbnailContainer>

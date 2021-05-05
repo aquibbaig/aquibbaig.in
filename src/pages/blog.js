@@ -14,6 +14,9 @@ import Layout from '../layout'
 import * as Dom from '../utils/dom'
 import * as EventManager from '../utils/event-manager'
 import { rhythm } from '../utils/typography'
+import { Typography } from 'antd';
+
+const { Title, Paragraph } = Typography;
 
 const BASE_LINE = 80
 
@@ -47,16 +50,21 @@ export default ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteMetadata.title}>
-      <Head title={HOME_TITLE} keywords={siteMetadata.keywords} />
-      <Bio posts={posts} />
-      <div style={{ padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`, minHeight: '70vh' }}>
-        <p className="header" style={{
-          fontSize: '1.6rem',
-          fontWeight: 'bold',
-          marginBottom: '1vh',
-          textAlign: 'right',
-          color: '#607FF9'
-        }}>Archives</p>
+      <div className="archives" style={{ minHeight: '40vh' }}>
+        <Title style={{
+          fontSize: '2.8rem',
+          fontWeight: '700',
+          padding: 0,
+          margin: 0,
+        }}>
+          Archives
+        </Title>
+        <Paragraph style={{ fontSize: '1.2rem' }}>
+          I started writing content related to tech in my college and have been writing
+          quite a lot since the lockdown of 2021.
+          I have published {posts.length} blog posts on this website. You can filter using the
+          keywords below.
+        </Paragraph>
         <Category
           categories={categories}
           category={category}
@@ -89,7 +97,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 200, truncate: true)
+          excerpt(pruneLength: 150, truncate: true)
           fields {
             slug
           }
