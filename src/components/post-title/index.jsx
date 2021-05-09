@@ -7,7 +7,6 @@ const { Title } = Typography;
 
 const lightStyles = {
   textAlign: 'left',
-  color: '#000',
   fontSize: '2.8rem',
   fontWeight: '700',
   padding: 0,
@@ -17,7 +16,6 @@ const lightStyles = {
 
 const darkStyles = {
   textAlign: 'left',
-  color: '#fff',
   fontSize: '2.8rem',
   fontWeight: '700',
   padding: 0,

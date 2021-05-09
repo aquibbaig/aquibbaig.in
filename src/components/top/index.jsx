@@ -42,17 +42,17 @@ export const Top = ({ title, location, rootPath, ...props }) => {
                 justify="space-between"
                 align="middle"
               >
-                <Col>
-                  <ThemeSwitch setVar={(c) => setThemeCheck(c)} />
-                </Col>
                 <Col lg={8} className="nav-menu">
                   <Link className="ff" to="/projects">Projects</Link>
                   {/* <Link className="ff" to="/blog">Blog</Link> */}
-                  <Link className="ff" to="/inventory">Inventory</Link>
+                  <Link className="ff" to="/dashboard">Dashboard</Link>
                   <Link className="ff" to="/about">About</Link>
                   <Link to="/">Home</Link>
                 </Col>
                 <FaBars className="hamburger-menu" onClick={() => toggleShowMenu(expandMenu)}/>
+                <Col>
+                  <ThemeSwitch setVar={(c) => setThemeCheck(c)} />
+                </Col>
                 {/* <Col lg={8} className="search-container" style={{ marginTop: '-1vh' }}>
                   <Searchbar />
                 </Col> */}
@@ -80,7 +80,7 @@ export const Top = ({ title, location, rootPath, ...props }) => {
                     <Link to="/blog" style={{ fontSize: '1.4rem' }}>Blog</Link>
                   </Menu.Item> */}
                   <Menu.Item>
-                    <Link to="/inventory" style={{ fontSize: '1.4rem' }}>Inventory</Link>
+                    <Link to="/dashboard" style={{ fontSize: '1.4rem' }}>Dashboard</Link>
                   </Menu.Item>
                   <Menu.Item>
                     <Link to="/about" style={{ fontSize: '1.4rem' }}>About</Link>

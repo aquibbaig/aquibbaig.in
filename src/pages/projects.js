@@ -56,6 +56,7 @@ export default ({ data, location }) => {
           fontWeight: '700',
           padding: 0,
           margin: 0,
+          color: '#082b38'
         }}>
           Projects
         </Title>

@@ -6,6 +6,10 @@ body.dark {
     color: #fff;
   }
 
+  .postTitle {
+    color: $dark-link-hover-color;
+  }
+
   .ant-btn-primary {
     background: $dark-highlighter;
     color: #fff;
@@ -81,6 +85,10 @@ body.dark {
   }
 
   // post
+  .posts > h1 > a {
+    color: #99dbcf;
+  }
+
   blockquote {
     border-left: 4px solid rgba(255, 255, 255, 0.822);
   }
@@ -226,15 +234,19 @@ body.dark {
 
   .navigation {
     background: $dark-background-color;
+    a:hover {
+      color: $dark-link-hover-color;
+    }
   }
 
   .switch-container > label > svg {
-    background: $dark-highlighter;
-    fill: #fff;
+    background: $secondary-dark-link-color;
+    fill: #051f28;
   }
 
   .hamburger-menu {
-    background: $dark-highlighter;
+    background: $dark-link-hover-color;
+    fill: #051f28;
   }
 
   .search-container > div > div > div > ol > a > div > p > span > mark {
