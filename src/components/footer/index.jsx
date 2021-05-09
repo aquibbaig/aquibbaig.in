@@ -28,7 +28,7 @@ export const Footer = () => (
           <Link to="/projects">Projects</Link>
         </Paragraph>
         <Paragraph>
-          <Link to="/inventory">Inventory</Link>
+          <Link to="/dashboard">Dashboard</Link>
         </Paragraph>
         <Paragraph>
           <Link to="/about">About</Link>

@@ -6,7 +6,7 @@ $top-header-text-color: #fff;
  * @light theme
 */
 $primary: #000;
-$link-hover-color: #636363;
+$link-hover-color: #33907f;
 $light-highlighter: #e5e7eb;
 
 // body
@@ -26,8 +26,9 @@ $light-category-text-color: #38365d;
 // /**
 //  * @dark theme
 //  */
-$dark-background-color: #090a21;
+$dark-background-color: #082b38;
+$dark-link-hover-color: #99dbcf;
 $dark-lightest-font-color: #fff;
 $dark-light-font-color: #c5c5c5;
-$secondary-dark-link-color: #329cff;
-$dark-highlighter: #1f2937;
+$secondary-dark-link-color: #99dbcf;
+$dark-highlighter: #051f28;

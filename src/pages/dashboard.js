@@ -31,7 +31,7 @@ export default ({ data, location }) => {
           padding: 0,
           margin: 0,
         }}>
-          Inventory
+          Dashboard
         </Title>
         <Paragraph style={{ fontSize: '1.2rem' }}>
           This is my personal dashboard. It has integrations with
@@ -46,7 +46,7 @@ export default ({ data, location }) => {
               icon={<FaTrophy />}
               value="1016"
               lightBg="#fff"
-              darkBg="#090a21"
+              darkBg="#082b38"
             />
           </Col>
           <Col md={12} xs={24}>
@@ -56,7 +56,7 @@ export default ({ data, location }) => {
               icon={<FaStar />}
               value="200"
               lightBg="#fff"
-              darkBg="#090a21"
+              darkBg="#082b38"
             />
           </Col>
         </Row>

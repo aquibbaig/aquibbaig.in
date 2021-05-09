@@ -14,7 +14,7 @@ const Tracks = ({ tracks, loading }) => {
               idx={idx}
               key={track.song}
               lightBg="#fff"
-              darkBg="#090a21"
+              darkBg="#082b38"
               track={track}
             />
           );

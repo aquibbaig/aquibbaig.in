@@ -10,15 +10,15 @@ class NotFoundPage extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <div style={{ minHeight: '70vh', textAlign: 'center' }}>
+        <div style={{ minHeight: '60vh', marginTop: '10vh', textAlign: 'center' }}>
           <center>
-            <p style={{ fontSize: '10rem', marginBottom: '2vh' }}>
+            <p style={{ fontSize: '10rem', marginBottom: '2vh', color: '#082b38' }}>
               404
             </p>
             <p style={{ fontSize: '1.6rem', paddingLeft: '2vw', paddingRight: '2vw' }}>
               Dang!!! The URL that you have requested for does not exist.
             </p>
-            <p style={{ fontSize: '1.2rem' }}>
+            <p style={{ fontSize: '1.2rem', textDecoration: 'underline' }}>
               <Link to="/">Start Again</Link>
             </p>
           </center>

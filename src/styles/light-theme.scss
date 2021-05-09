@@ -7,6 +7,10 @@ body.light {
     color: $dark-gray;
   }
 
+  a {
+    color: $dark-background-color;
+  }
+
   div > .layout-content > hr {
     height: 1px;
     margin-top: 10vh;
@@ -26,8 +30,8 @@ body.light {
   }
 
   .ant-btn-primary {
-    background: $light-highlighter;
-    color: black;
+    background: #99dbcf;
+    color: #000;
     border: 0;
   }
 
@@ -43,6 +47,14 @@ body.light {
     color: #000;
     font-size: 1rem;
     font-family: 'Calibre';
+  }
+
+  .ant-form.ant-form-horizontal
+    > .ant-form-item
+    > .ant-form-item-label
+    > label {
+    color: #598669;
+    font-weight: 600;
   }
 
   .navigation {
@@ -190,17 +202,33 @@ body.light {
 
   .switch-container > label > svg {
     background: $light-highlighter;
+    fill: #000;
   }
 
   .hamburger-menu {
     background: $light-highlighter;
   }
 
+  h1,
+  h2,
+  h3 {
+    color: $dark-background-color;
+  }
+
+  p {
+    color: #000 !important;
+  }
+
   // post
+  .posts > h1 > a {
+    color: $link-hover-color;
+  }
+
   .navigator {
     a {
-      background-color: #38365d;
-      color: white;
+      background-color: $dark-link-hover-color;
+      // border: 1px solid rgba(3, 17, 22, 0.2);
+      color: $dark-background-color;
     }
   }
 }

@@ -25,7 +25,13 @@ export default ({ data, location }) => {
       location="/"
     >
       <div className="header" style={{ marginBottom: '5vh' }}>
-        <Title style={{ fontSize: '2.8rem', fontWeight: '700', padding: 0, margin: 0 }}>
+        <Title style={{
+          fontSize: '2.8rem',
+          fontWeight: '700',
+          padding: 0,
+          margin: 0,
+          color: '#082b38'
+        }}>
           Hello, I'm Aquib Baig
         </Title>
         <Paragraph style={{ fontSize: '1.2rem', color: '#595959', textAlign: 'left' }}>
@@ -40,19 +46,24 @@ export default ({ data, location }) => {
         <div className="header" style={{
           display: 'flex',
         }}>
-          <Title level={1} style={{ fontWeight: '700', margin: 0 }}>Most Recent</Title>
+          <Title
+            level={1}
+            style={{ fontWeight: '700', margin: 0, color: '#082b38' }}
+          >
+              Most Recent
+          </Title>
         </div>
         {(latestPosts || []).map(post => {
           return <ThumbnailItem
             view="complete-view"
-            lightBg="#fff"
+            lightBg="transparent"
             darkBg="transparent"
             key={post.node.excerpt}
             node={post.node}
           />
         })}
         <Title style={{ fontSize: '1.4rem' }}>
-          <Link href="/blog">
+          <Link to="/blog">
             View All Posts
           </Link>
         </Title>
@@ -61,7 +72,7 @@ export default ({ data, location }) => {
       {/* Tiles. */}
       <div style={{ marginTop: '5vh' }}>
         <div className="header">
-          <Title level={1} style={{ fontWeight: '700', margin: 0 }}>
+          <Title level={1} style={{ fontWeight: '700', margin: 0, color: '#082b38' }}>
             Contributions
           </Title>
         </div>
@@ -70,7 +81,7 @@ export default ({ data, location }) => {
           innerStyles={InnerStyles}
           // darkOutline="#EAC6A2"
           darkBg="transparent"
-          lightBg="#fff"
+          lightBg="transparent"
           className="tile"
           buttonLink="/gsoc-2019-project-report/"
           top="Google Summer of Code 2019"
@@ -83,7 +94,7 @@ export default ({ data, location }) => {
           innerStyles={InnerStyles}
           // darkOutline="#EAC6A2"
           darkBg="transparent"
-          lightBg="#fff"
+          lightBg="transparent"
           className="tile"
           buttonLink="/blog?category=linux"
           top="Explore the series of Linux blog posts"

@@ -44,10 +44,10 @@ const SubscriberForm = ({ dark }) => {
     <Form
       style={!dark ? {
         marginTop: '4vh',
-        background: '#dceeff',
-        border: '1px solid rgba(24, 144, 255, 0.4)',
+        background: '#E0F9ED',
+        border: '1px solid rgba(3, 17, 22, 0.4)',
         padding: '24px',
-        borderRadius: '4px'
+        borderRadius: '4px',
       }: {
         marginTop: '4vh',
         background: '#0f1a2b',
@@ -57,9 +57,9 @@ const SubscriberForm = ({ dark }) => {
       {...layout}
       onFinish={handleSubmit}
     >
-      <Form.Item label="Subscribe to the Newsletter">
+      <Form.Item label="Like what you see?">
         <Paragraph style={!dark ?
-          { margin: 0, padding: 0, fontSize: '1.2rem' }:
+          { margin: 0, padding: 0, fontSize: '1.2rem', color: '#598669' }:
           { margin: 0, padding: 0, fontSize: '1.2rem', color: '#fff' }
         }>
           Get an email each time I publish a blog post on my website by subscribing
@@ -72,7 +72,7 @@ const SubscriberForm = ({ dark }) => {
       >
         <Input suffix={
           <Form.Item>
-            <Button type="primary" htmlType="submit">
+            <Button type="primary" htmlType="submit" style={{ border: 0 }}>
               Submit
             </Button>
           </Form.Item>
