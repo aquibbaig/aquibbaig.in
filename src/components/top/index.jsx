@@ -71,19 +71,19 @@ export const Top = ({ title, location, rootPath, ...props }) => {
                     border: '0',
                   }}>
                   <Menu.Item>
-                    <Link to="/" style={{ fontSize: '1.4rem' }}>Home</Link>
+                    <Link to="/" className="rf" style={{ fontSize: '1.4rem', textDecoration: 'none' }}>Home</Link>
                   </Menu.Item>
                   <Menu.Item>
-                    <Link to="/projects" style={{ fontSize: '1.4rem' }}>Projects</Link>
+                    <Link to="/projects" className="rf" style={{ fontSize: '1.4rem', textDecoration: 'none' }}>Projects</Link>
                   </Menu.Item>
                   {/* <Menu.Item>
                     <Link to="/blog" style={{ fontSize: '1.4rem' }}>Blog</Link>
                   </Menu.Item> */}
                   <Menu.Item>
-                    <Link to="/dashboard" style={{ fontSize: '1.4rem' }}>Dashboard</Link>
+                    <Link to="/dashboard" className="rf" style={{ fontSize: '1.4rem', textDecoration: 'none' }}>Dashboard</Link>
                   </Menu.Item>
                   <Menu.Item>
-                    <Link to="/about" style={{ fontSize: '1.4rem' }}>About</Link>
+                    <Link to="/about" className="rf" style={{ fontSize: '1.4rem', textDecoration: 'none' }}>About</Link>
                   </Menu.Item>
                 </Menu>
               </Row>}
