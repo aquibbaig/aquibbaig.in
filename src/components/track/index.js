@@ -9,6 +9,7 @@ const Track = ({ track, lightBg, darkBg, idx }) => {
   const { dark } = useContext(ThemeContext);
   return (
     <Card
+      className="track"
       style={dark ? 
         { background: darkBg,
           border: 0,
@@ -23,7 +24,11 @@ const Track = ({ track, lightBg, darkBg, idx }) => {
       }
       key={track.song}
     >
-      <a href={track.url} target="_blank">
+      <a
+        href={track.url}
+        target="_blank"
+        style={{ textDecoration: 'none' }}
+      >
         <Title style={{ fontSize: '1.4rem', margin: 0, padding: 0 }}>
           {idx+1}. {track.song}
         </Title>

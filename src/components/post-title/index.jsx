@@ -11,7 +11,7 @@ const lightStyles = {
   fontWeight: '700',
   padding: 0,
   margin: 0,
-  marginBottom: `5vh`
+  marginBottom: `0vh`
 }
 
 const darkStyles = {
@@ -20,7 +20,7 @@ const darkStyles = {
   fontWeight: '700',
   padding: 0,
   margin: 0,
-  marginBottom: `5vh`
+  marginBottom: `0vh`
 }
 
 export const PostTitle = ({ title }) => {
@@ -29,8 +29,5 @@ export const PostTitle = ({ title }) => {
     <Title className="postTitle" style={dark ? darkStyles : lightStyles}>
       {title}
     </Title>
-    // <div className="postTitle" style={dark ? darkStyles : lightStyles}>
-    //   {title}
-    // </div>
   )
 }

@@ -7,7 +7,7 @@ import './index.scss';
 const Tracks = ({ tracks, loading }) => {
   if (!loading) {
     return (
-      <>
+      <div className="track-container">
         {tracks.map((track, idx) => {
           return (
             <Track
@@ -19,7 +19,7 @@ const Tracks = ({ tracks, loading }) => {
             />
           );
         })}
-      </>
+      </div>
     )
   }
   return (

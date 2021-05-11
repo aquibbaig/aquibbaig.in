@@ -2,6 +2,10 @@ body.light {
   background-color: $light-background-color;
   text-shadow: $light-text-shadow;
 
+  .track-container > .track > .ant-card-body > a > h1:hover {
+    color: $link-hover-color;
+  }
+
   // home
   .home-header {
     color: $dark-gray;
@@ -23,11 +27,11 @@ body.light {
   }
 
   .archives > .thumbnail-container > div > div > div > div > a > h2:hover {
-    color: $secondary-text-color;
+    color: $link-hover-color;
   }
 
   .project > a > .ant-card > div > div > h1:hover {
-    color: $secondary-text-color;
+    color: $link-hover-color;
   }
 
   .ant-btn-primary {

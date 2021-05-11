@@ -2,6 +2,10 @@ body.dark {
   background-color: $dark-background-color;
   color: $dark-light-font-color;
 
+  .track-container > .track > .ant-card-body > a > h1:hover {
+    color: $dark-link-hover-color !important;
+  }
+
   .ant-col-24.ant-form-item-label > label {
     color: #fff;
   }

@@ -19,6 +19,7 @@ import { GithubOutlined } from '@ant-design/icons'
 
 import '../styles/code.scss'
 import 'katex/dist/katex.min.css'
+import { Tag } from 'antd'
 
 const getUrlSuffix = (location) => {
   return `${location.slice(1, -1)}.md`;
@@ -34,13 +35,26 @@ export default ({ data, pageContext, location }) => {
   const metaData = data.site.siteMetadata
   const { title, comment, siteUrl, author, sponsor } = metaData
   const { disqusShortName, utterances } = comment
-  const { title: postTitle, date } = post.frontmatter
+  const { title: postTitle, date, category } = post.frontmatter
   const { repositoryUrl } = data.site.siteMetadata
 
   return (
     <Layout location={location} title={title}>
       <div>
         <Head title={postTitle} description={post.excerpt} />
+        <Tag style={{ marginBottom: '4vh' }}>
+          <Link
+            className="ff"
+            style={{
+              textDecoration: 'none',
+              fontSize: '1.4rem',
+              padding: '4px'
+            }}
+            to={`http://localhost:8000/blog?category=${category}`}
+          >
+            {category}
+          </Link>
+        </Tag>
         <PostTitle title={postTitle} />
         <PostDate date={date} />
         <PostContainer html={post.html} />
@@ -95,6 +109,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        category
       }
     }
   }
