@@ -45,6 +45,8 @@ export default ({ data, pageContext, location }) => {
         <PostDate date={date} />
         <PostContainer html={post.html} />
         <Link
+          style={{ textDecoration: 'none', fontSize: '1.2rem' }}
+          className="rf"
           to={`${repositoryUrl}/blob/master/content/blog/${getUrlSuffix(location.pathname)}`}>
           Edit this page on <GithubOutlined style={{ marginLeft: '0.3rem', fontSize: '1.4rem' }} />
         </Link>

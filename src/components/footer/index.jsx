@@ -10,7 +10,11 @@ const { Text, Paragraph } = Typography;
 
 export const Footer = () => (
   <footer className="footer" style={{ fontSize: '1.2rem' }}>
-    <a href="https://open.spotify.com/user/21e2gnoh5t42dkrsp7zc7bzjy" target="_blank">
+    <a
+      href="https://open.spotify.com/user/21e2gnoh5t42dkrsp7zc7bzjy"
+      target="_blank"
+      style={{ textDecoration: 'none' }}
+    >
       <Row style={{ marginBottom: '4vh', color: '#1DB954', fontSize: '1.2rem' }}>
         <FaSpotify style={{ marginRight: '4px' }}  />
         <Text>Follow</Text>

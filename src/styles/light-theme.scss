@@ -9,6 +9,7 @@ body.light {
 
   a {
     color: $dark-background-color;
+    text-decoration: underline;
   }
 
   div > .layout-content > hr {
@@ -153,7 +154,7 @@ body.light {
   }
 
   .language-text {
-    background-color: #f5f5f5;
+    background-color: #e5e7eb;
     color: rgb(65, 65, 65);
   }
 

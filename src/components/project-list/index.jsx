@@ -12,7 +12,7 @@ export default (props) => {
       {projects.map(project => {
         return (
           <Col sm={24} md={24} key={project.link} className="project">
-            <a href={project.link} target="_blank" style={{ marginBottom: '0' }}>
+            <a href={project.link} target="_blank" style={{ marginBottom: '0', textDecoration: 'none' }}>
               <Card style={dark ?
                 { background: 'transparent',
                   borderBottom: '1px solid rgba(229, 231, 235, 0.4)',

@@ -49,7 +49,7 @@ const projectList = [
 export default ({ data, location }) => {
   const { siteMetadata } = data.site;
   return (
-    <>
+    <div className="projects">
       <Layout location={location} title={siteMetadata.title}>
         <Title style={{
           fontSize: '2.8rem',
@@ -67,7 +67,7 @@ export default ({ data, location }) => {
         </Paragraph>
         <ProjectList projects={projectList} />
       </Layout>
-    </>
+    </div>
   )
 }
 

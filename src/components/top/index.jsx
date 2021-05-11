@@ -43,11 +43,11 @@ export const Top = ({ title, location, rootPath, ...props }) => {
                 align="middle"
               >
                 <Col lg={8} className="nav-menu">
-                  <Link className="ff" to="/projects">Projects</Link>
+                  <Link className="ff" to="/projects" style={{ textDecoration: 'none' }}>Projects</Link>
                   {/* <Link className="ff" to="/blog">Blog</Link> */}
-                  <Link className="ff" to="/dashboard">Dashboard</Link>
-                  <Link className="ff" to="/about">About</Link>
-                  <Link to="/">Home</Link>
+                  <Link className="ff" to="/dashboard" style={{ textDecoration: 'none' }}>Dashboard</Link>
+                  <Link className="ff" to="/about" style={{ textDecoration: 'none' }}>About</Link>
+                  <Link className="rf" to="/" style={{ textDecoration: 'none' }}>Home</Link>
                 </Col>
                 <FaBars className="hamburger-menu" onClick={() => toggleShowMenu(expandMenu)}/>
                 <Col>

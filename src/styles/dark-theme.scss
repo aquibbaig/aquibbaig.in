@@ -66,8 +66,25 @@ body.dark {
     color: white;
   }
 
+  a:is(.ff),
+  a:is(.rf) {
+    color: #fff;
+  }
+
+  .projects
+    > .layout-content
+    > .project
+    > a
+    > .ant-card
+    > .ant-card-body
+    > div
+    > h1:hover {
+    color: $dark-link-hover-color !important;
+  }
+
   a {
-    color: white;
+    color: $dark-link-hover-color;
+    text-decoration: underline;
   }
 
   .category-container {
@@ -182,7 +199,7 @@ body.dark {
   }
 
   .language-text {
-    background-color: transparent;
+    background-color: #111d2d;
     color: white;
   }
 
@@ -200,8 +217,8 @@ body.dark {
 
   .navigator {
     a {
-      background-color: #323486;
-      color: white;
+      background-color: $dark-link-hover-color;
+      color: #000;
     }
   }
   td {
