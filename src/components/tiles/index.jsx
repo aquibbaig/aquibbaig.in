@@ -45,7 +45,7 @@ export default (props) => {
           <p style={{ margin: '0', textAlign: 'left', fontWeight: '500' }}>
             {props.header}
           </p>
-          <p style={{ marginBottom: '1vh' }}>
+          <p style={{ marginBottom: '1vh', color: '#4b5563' }}>
             {props.content}
           </p>
         </Col>

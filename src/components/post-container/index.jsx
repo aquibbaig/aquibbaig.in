@@ -1,7 +1,7 @@
 import React from 'react';
 
 const styles = {
-  fontSize: '1.3rem'
+  fontSize: '1.2rem'
 }
 
 export const PostContainer = ({ html }) => (

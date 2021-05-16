@@ -32,14 +32,9 @@ export default (props) => {
                   }}>
                     {project.title}
                   </Title>
-                  <Paragraph style={{ fontSize: '1.2rem' }}>
+                  <Paragraph style={{ fontSize: '1.4rem' }}>
                     {(project.desc).substring(0, 150)}...
                   </Paragraph>
-                  {project.tags.map(tag => {
-                    return (
-                      <Tag key={tag}>{tag}</Tag>
-                    )
-                  })}
                 </div>
               </Card>
             </a>

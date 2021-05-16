@@ -29,11 +29,11 @@ const Track = ({ track, lightBg, darkBg, idx }) => {
         target="_blank"
         style={{ textDecoration: 'none' }}
       >
-        <Title style={{ fontSize: '1.4rem', margin: 0, padding: 0 }}>
+        <Title style={{ fontSize: '1.6rem', margin: 0, padding: 0 }}>
           {idx+1}. {track.song}
         </Title>
       </a>
-      <Paragraph style={{ fontSize: '1.2rem', margin: 0, padding: 0 }}>
+      <Paragraph style={{ fontSize: '1.4rem', margin: 0, padding: 0 }}>
         {track.artist}
       </Paragraph>
     </Card>

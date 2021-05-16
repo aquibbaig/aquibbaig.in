@@ -92,7 +92,7 @@ const Layout = ({ location, title, children }) => {
       >
         <Header title={title} location={location} rootPath={rootPath} />
         {renderChildren(children)}
-        <SubscriberForm dark={checked} />
+        {/* <SubscriberForm dark={checked} /> */}
         <hr/>
         <Footer />
       </div>

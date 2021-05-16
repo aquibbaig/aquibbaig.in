@@ -30,15 +30,15 @@ export default ({ data, location }) => {
           fontWeight: '700',
           padding: 0,
           margin: 0,
-          color: '#082b38'
+          color: '#082b38',
         }}>
-          Hello, I'm Aquib Baig
+          Hey,
         </Title>
         <Paragraph style={{ fontSize: '1.2rem', color: '#595959', textAlign: 'left' }}>
-          I'm a full stack web developer from Bhubaneswar, India.
-          I work as a frontend developer at	Redhat. I believe that learning 
-          has no language or boundaries and like to share my experiences with
-          technology to the community.
+          I am a software engineer, technical writer and an athelete. My portfolio
+          is a reflection of my career comprising of bitersweet experiences and some
+          tech articles that will hopefully help readers avoid mistakes while programming
+          and learn something new.
         </Paragraph>
       </div>
       {/* Latest BlogPosts */}
@@ -50,7 +50,7 @@ export default ({ data, location }) => {
             level={1}
             style={{ fontWeight: '700', margin: 0, color: '#082b38' }}
           >
-              Most Recent
+              Latest Articles
           </Title>
         </div>
         {(latestPosts || []).map(post => {
@@ -62,7 +62,7 @@ export default ({ data, location }) => {
             node={post.node}
           />
         })}
-        <Title style={{ fontSize: '1.4rem' }}>
+        <Title style={{ fontSize: '1.2rem' }}>
           <Link to="/blog">
             View All Posts
           </Link>
@@ -73,7 +73,7 @@ export default ({ data, location }) => {
       <div style={{ marginTop: '5vh' }}>
         <div className="header">
           <Title level={1} style={{ fontWeight: '700', margin: 0, color: '#082b38' }}>
-            Contributions
+            Experiences
           </Title>
         </div>
         <Tile
@@ -84,12 +84,12 @@ export default ({ data, location }) => {
           lightBg="transparent"
           className="tile"
           buttonLink="/gsoc-2019-project-report/"
-          top="Google Summer of Code 2019"
+          top="Student, Google Summer of Code 2019"
           // header="Google Summer of Code"
           content="An excerpt of my gsoc journey with fossi foundation,
         working towards improving the Librecores project."
         />
-        <Tile
+        {/* <Tile
           loading={false}
           innerStyles={InnerStyles}
           // darkOutline="#EAC6A2"
@@ -101,15 +101,15 @@ export default ({ data, location }) => {
           // header=""
           content="The Linux series of blog posts are aimed at 
         improving a broad understanding of Linux and it's tools."
-        />
+        /> */}
       </div>
       {/* Tiles end */}
-      <div className="courses" style={{ marginTop: '5vh' }}>
+      {/* <div className="courses" style={{ marginTop: '5vh' }}>
         <Title level={1} style={{ fontWeight: '700', margin: 0 }}>
           Courses
         </Title>
         <Paragraph>Coming soon..</Paragraph>
-      </div>
+      </div> */}
     </Layout>
   )
 }

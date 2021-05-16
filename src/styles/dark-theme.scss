@@ -6,10 +6,6 @@ body.dark {
     color: $dark-link-hover-color !important;
   }
 
-  .ant-col-24.ant-form-item-label > label {
-    color: #fff;
-  }
-
   .postTitle {
     color: $dark-link-hover-color;
   }
@@ -73,6 +69,11 @@ body.dark {
   a:is(.ff),
   a:is(.rf) {
     color: #fff;
+  }
+
+  .editonGithub:hover {
+    text-decoration: underline !important;
+    text-decoration-color: $dark-link-hover-color !important;
   }
 
   .projects
@@ -157,16 +158,26 @@ body.dark {
   }
 
   .ant-typography a:hover {
-    color: #38365d;
+    text-decoration-color: $dark-link-hover-color !important;
     text-decoration: underline;
   }
 
   .ant-tag {
-    background-color: #111d2d;
-    border: 1px solid $dark-background-color;
-    color: white;
+    background-color: transparent;
+    border: 0;
     font-size: 1rem;
     font-family: 'Calibre';
+    text-decoration: underline !important;
+    a {
+      color: #fff !important;
+      text-decoration: underline;
+    }
+    a:hover {
+      background: transparent;
+      text-decoration: underline !important;
+      text-decoration-color: $dark-link-hover-color !important;
+      color: #fff !important;
+    }
   }
 
   .tile > .ant-card-body > .ant-row > .ant-col > p > button {
@@ -197,8 +208,8 @@ body.dark {
     a {
       color: white !important;
     }
-    a > div > span {
-      color: $dark-lightest-font-color;
+    div > div {
+      color: #fff;
     }
   }
 
@@ -219,10 +230,16 @@ body.dark {
     background-color: #111d2d;
   }
 
+  .showMore {
+    color: $dark-link-hover-color !important;
+    font-size: 1.4rem;
+  }
+
   .navigator {
     a {
       background-color: $dark-link-hover-color;
       color: #000;
+      font-size: 1rem;
     }
   }
   td {

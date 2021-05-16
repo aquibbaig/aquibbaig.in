@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../layout';
 import { Timeline, Typography } from 'antd';
-import { FaCheckCircle, FaGraduationCap } from 'react-icons/fa';
+import { FaCheckCircle, FaFileCode, FaGraduationCap } from 'react-icons/fa';
 import { GiBabyBottle } from 'react-icons/gi';
 
 const { Title, Paragraph } = Typography;
@@ -47,12 +47,40 @@ const events = {
   "d-2018": [
     {
       icon: <FaCheckCircle style={{ color: '#1DB954', fontSize: '1rem' }} />,
+      title: "Top 25 teams in Versionbeta, MANIT, Bhopal",
+      text: "",
+      trailingIcon: null
+    },
+    {
+      icon: <FaCheckCircle style={{ color: '#1DB954', fontSize: '1rem' }} />,
       title: "Runners up at gdg hackfest",
       text: "Close second in my first ever hackathon",
       trailingIcon: null
     }
   ],
-  "e-1997": [
+  "e-2017": [
+    {
+      icon: <FaFileCode style={{ color: '#1DB954', fontSize: '1rem' }} />,
+      title: "Started Programming",
+      text: "Introduction to programming with C-- Hello World!",
+      trailingIcon: null
+    }
+  ],
+  "f-2016": [
+    {
+      icon: <FaCheckCircle style={{ color: '#1DB954', fontSize: '1rem' }} />,
+      title: "Got into College of Engineering and Technology, Bhubaneswar",
+      text: "",
+      trailingIcon: null
+    },
+    {
+      icon: <FaCheckCircle style={{ color: '#1DB954', fontSize: '1rem' }} />,
+      title: "Cracked JEE Mains",
+      text: "",
+      trailingIcon: null
+    }
+  ],
+  "g-1997": [
     {
       icon: <GiBabyBottle style={{ color: '#1DB954',  fontSize: '1.2rem' }} />,
       title: "Born",
@@ -62,7 +90,28 @@ const events = {
   ],
 }
 
-export default ({ data, location }) => {
+const About = ({ data, location }) => {
+  const [displayableEvents, setDisplayableEvents] = useState({});
+  const handleShowMore = () => {
+    let obj = {};
+    const currIndex = Object.keys(displayableEvents).length;
+    Object.keys(events).map((key, idx) => {
+      if (idx < currIndex+2) {
+        obj[key] = events[key];
+      } else return;
+    });
+    setDisplayableEvents(obj);
+  }
+  useEffect(() => {
+    let obj = {};
+    // 4 keys into the obj
+    Object.keys(events).map((key, idx) => {
+      if (idx < 3) {
+        obj[key] = events[key];
+      } else return;
+    });
+    setDisplayableEvents(obj);
+  }, []);
   const { siteMetadata } = data.site;
   return (
     <>
@@ -74,15 +123,15 @@ export default ({ data, location }) => {
           margin: 0,
           color: '#082b38'
         }}>
-          About
+          About Me
         </Title>
         <Paragraph style={{ margin: 0, marginBottom: '5vh', fontSize: '1.2rem' }}>
-          I'm Aquib Baig. If you have arrived here, I would like
-          to tell you more about myself.
-          I am a full stack web developer. 
-          I like to play video games, write code and create
-          awesome applications. I plug in my headphones at work, keeps my distraction
-          free and focused.
+          Hi, I am Aquib Baig, I am 23 years old and currently work as an associate software
+          engineer at Redhat. I have worked on plenty of programming languages but
+          prefer Javascript and Golang.
+          Apart from programming, I play soccer whenever I get the time. 
+          I also listen to music quite a lot, you can find some of my most
+          played tracks on the Dashboard.
         </Paragraph>
         <Title style={{
           fontSize: '2.8rem',
@@ -93,7 +142,7 @@ export default ({ data, location }) => {
         }}>
           Timeline
         </Title>
-        {Object.keys(events).map(year => (
+        {Object.keys(displayableEvents).map(year => (
           <div key={year} style={{ marginTop: '2vh' }}>
             <Title style={{ fontSize: '2rem', fontWeight: '600', fontFamily: 'Calibre' }}>
               {year.split('-')[1]}
@@ -103,14 +152,14 @@ export default ({ data, location }) => {
                 <div key={event.title}>
                   <Timeline key={event.title} style={{ paddingLeft: '2vw' }}>
                     <Timeline.Item dot={event.icon} style={{ margin: 0, padding: 0 }}>
-                      <Paragraph style={{
+                      <Title style={{
                         fontSize: '1.4rem',
                         margin: 0,
                         padding: 0,
                         fontWeight: '500'
                       }}>
                         {event.title}
-                      </Paragraph>
+                      </Title>
                       <Paragraph style={{
                         fontSize: '1.2rem',
                         margin: 0,
@@ -126,6 +175,12 @@ export default ({ data, location }) => {
             })}
           </div>
         ))}
+        {
+          Object.keys(displayableEvents).length !== Object.keys(events).length && 
+          <Paragraph>
+            <a className="showMore" onClick={() => handleShowMore()}>Show More</a>
+          </Paragraph>
+        }
       </Layout>
     </>
   )
@@ -162,3 +217,5 @@ export const pageQuery = graphql`
     }
   }
 `
+
+export default About;

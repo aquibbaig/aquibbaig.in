@@ -47,23 +47,25 @@ export default ({ data, pageContext, location }) => {
             className="ff"
             style={{
               textDecoration: 'none',
-              fontSize: '1.4rem',
+              fontSize: '1.8rem',
               padding: '4px'
             }}
-            to={`http://localhost:8000/blog?category=${category}`}
+            to={`/blog?category=${category}`}
           >
-            {category}
+            #{category}
           </Link>
         </Tag>
         <PostTitle title={postTitle} />
         <PostDate date={date} />
         <PostContainer html={post.html} />
-        <Link
-          style={{ textDecoration: 'none', fontSize: '1.2rem' }}
-          className="rf"
-          to={`${repositoryUrl}/blob/master/content/blog/${getUrlSuffix(location.pathname)}`}>
-          Edit this page on <GithubOutlined style={{ marginLeft: '0.3rem', fontSize: '1.4rem' }} />
-        </Link>
+        <div style={{ marginTop: '10vh' }}>
+          <Link
+            style={{ textDecoration: 'none', fontSize: '1.4rem' }}
+            className="editonGithub rf"
+            to={`${repositoryUrl}/blob/master/content/blog/${getUrlSuffix(location.pathname)}`}>
+            Edit this page on <GithubOutlined style={{ marginLeft: '0.3rem', fontSize: '1.4rem' }} />
+          </Link>
+        </div>
         <SocialShare title={postTitle} author={author} />
         {!!sponsor.buyMeACoffeeId && (
           <SponsorButton sponsorId={sponsor.buyMeACoffeeId} />

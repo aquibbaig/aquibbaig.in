@@ -56,15 +56,11 @@ export default ({ data, location }) => {
           fontWeight: '700',
           padding: 0,
           margin: 0,
-          color: '#082b38'
+          marginBottom: '4vh',
+          color: '#082b38',
         }}>
-          Projects
+          Sometimes Science Is More Art Than Science
         </Title>
-        <Paragraph style={{ margin: 0, marginBottom: '5vh', fontSize: '1.2rem' }}>
-          I do hobby projects to learn how systems work and open source in
-          my free time. I personally like working with Javascript and Golang, and have experience in
-          C++, Java and Php.
-        </Paragraph>
         <ProjectList projects={projectList} />
       </Layout>
     </div>

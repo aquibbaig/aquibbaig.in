@@ -22,6 +22,15 @@ body.light {
     background: $light-highlighter;
   }
 
+  .showMore {
+    color: $dark-background-color !important;
+    font-size: 1.4rem;
+  }
+
+  div.layout-content > div > div:nth-child(4) > p:nth-child(1) {
+    color: $secondary-text-color !important;
+  }
+
   .archives > .thumbnail-container {
     margin-top: 5vh;
   }
@@ -48,10 +57,21 @@ body.light {
   }
 
   .ant-tag {
-    background-color: $light-highlighter;
-    color: #000;
+    background-color: transparent;
+    border: 0;
     font-size: 1rem;
     font-family: 'Calibre';
+    text-decoration: underline !important;
+    a {
+      color: #000 !important;
+      text-decoration: underline;
+    }
+    a:hover {
+      background: transparent;
+      text-decoration: underline !important;
+      text-decoration-color: $dark-link-hover-color !important;
+      color: #000 !important;
+    }
   }
 
   .ant-form.ant-form-horizontal
@@ -140,12 +160,17 @@ body.light {
   }
 
   .ant-typography a:hover {
-    color: #38365d;
+    text-decoration-color: $link-hover-color !important;
     text-decoration: underline;
   }
 
   .resp-sharing-button {
     color: white;
+  }
+
+  .editonGithub:hover {
+    text-decoration: underline !important;
+    text-decoration-color: $dark-link-hover-color !important;
   }
 
   /* Code blocks */
@@ -158,8 +183,8 @@ body.light {
   }
 
   .language-text {
-    background-color: #e5e7eb;
-    color: rgb(65, 65, 65);
+    background-color: $light-highlighter-green;
+    color: $secondary-text-color;
   }
 
   .gatsby-highlight > pre > code {
@@ -220,10 +245,6 @@ body.light {
     color: $dark-background-color;
   }
 
-  p {
-    color: #000 !important;
-  }
-
   // post
   .posts > h1 > a {
     color: $link-hover-color;
@@ -231,6 +252,7 @@ body.light {
 
   .navigator {
     a {
+      font-size: 1rem;
       background-color: $dark-link-hover-color;
       // border: 1px solid rgba(3, 17, 22, 0.2);
       color: $dark-background-color;
