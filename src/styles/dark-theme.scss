@@ -126,25 +126,12 @@ body.dark {
     color: $light-background-color !important;
   }
 
-  .archives > .thumbnail-container {
-    margin-top: 5vh;
-  }
-
   .ant-card-body {
     padding: 0;
   }
 
   .ant-card-bordered {
     border: none;
-  }
-
-  .header > div,
-  .thumbnailContent {
-    color: $dark-light-font-color !important;
-  }
-
-  .thumbnailTitle > a > h2:hover {
-    color: $secondary-dark-link-color !important;
   }
 
   .ant-typography a {
@@ -207,8 +194,24 @@ body.dark {
     color: white;
   }
 
-  .thumbnailTitle > a > div {
+  .header > .bio {
+    color: #fff !important;
+  }
+
+  .header > h1 > a {
+    color: $dark-link-hover-color;
+  }
+
+  .header > h1 > a:hover {
+    color: $dark-link-hover-color;
+  }
+
+  .ant-list-items > li > a > span {
     color: #fff;
+  }
+
+  .ant-list-items > li a span:hover {
+    color: $dark-link-hover-color;
   }
 
   /* Code blocks */
@@ -268,12 +271,5 @@ body.dark {
   .hamburger-menu {
     background: $dark-link-hover-color;
     fill: #051f28;
-  }
-
-  .search-container > div > div > div > ol > a > div > p > span > mark {
-    background: #fff !important;
-    color: $primary;
-    border-radius: 4px;
-    padding: 0.1em !important;
   }
 }

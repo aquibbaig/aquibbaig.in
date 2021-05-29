@@ -11,6 +11,14 @@ body.light {
     color: $dark-gray;
   }
 
+  .header > h1 > a {
+    color: $link-hover-color;
+  }
+
+  .header > h1 > a:hover {
+    color: $link-hover-color;
+  }
+
   a {
     color: $dark-background-color;
     text-decoration: underline;
@@ -20,14 +28,6 @@ body.light {
     height: 1px;
     margin-top: 10vh;
     background: $light-highlighter;
-  }
-
-  .archives > .thumbnail-container {
-    margin-top: 5vh;
-  }
-
-  .archives > .thumbnail-container > div > div > div > div > a > h2:hover {
-    color: $link-hover-color;
   }
 
   .project > a > .ant-card > div > div > h1:hover {
@@ -113,13 +113,8 @@ body.light {
     }
   }
 
-  .thumbnail {
-    h3 {
-      color: $dark-gray;
-    }
-    &:hover {
-      text-shadow: $light-hover-text-shadow;
-    }
+  .ant-list-items > li a span:hover {
+    color: $link-hover-color;
   }
 
   .ant-card-bordered {

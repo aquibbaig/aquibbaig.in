@@ -4,10 +4,8 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../layout/index'
 import { ThumbnailItem } from '../components/thumbnail-item';
 import { rhythm } from '../utils/typography';
-import Tile from '../components/tiles';
-// import Flag from '../components/flag';
 import { Typography, List } from 'antd';
-// import Banner from '../components/banner';
+import { FaRegHandPointRight } from 'react-icons/fa';
 
 const { Title, Paragraph } = Typography;
 
@@ -40,7 +38,7 @@ export default ({ data, location }) => {
         }}>
           Hey,
         </Title>
-        <Paragraph style={{ fontSize: '1.2rem', color: '#595959', textAlign: 'left', margin: 0 }}>
+        <Paragraph className="bio" style={{ fontSize: '1.2rem', color: '#595959', textAlign: 'left', margin: 0 }}>
           I'm Aquib Baig. I'm a full stack web developer who enjoys music and soccer/football.
           I currently work at Redhat. Things I love to work on at the moment are: Reactjs,
           Golang. You can follow me here:
@@ -49,13 +47,17 @@ export default ({ data, location }) => {
           size="small"
           dataSource={socials}
           renderItem={item => (
-            <List.Item style={{ border: 0, padding: '1vw 0 0 0' }}>
+            <List.Item style={{ border: 0, padding: '1vw 0 0 2px' }}>
               <Link
                 to={item.href}
                 target="blank"
+                style={{ textDecoration: 'none' }}
               >
                 <Typography.Text style={{ fontSize: '1.2rem' }}>
-                  {item.as}
+                  <div style={{ display: 'flex' }}>
+                    <FaRegHandPointRight />
+                    <div style={{ marginLeft: '4px' }}>{item.as}</div>
+                  </div>
                 </Typography.Text>
               </Link>
             </List.Item>
