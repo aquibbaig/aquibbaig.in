@@ -5,14 +5,26 @@ import Layout from '../layout/index'
 import { ThumbnailItem } from '../components/thumbnail-item';
 import { rhythm } from '../utils/typography';
 import { Typography, List } from 'antd';
-import { FaRegHandPointRight } from 'react-icons/fa';
+import { FaGithub, FaRegHandPointRight, FaSpotify, FaTwitter } from 'react-icons/fa';
 
 const { Title, Paragraph } = Typography;
 
 const socials = [
-  { "as": "GitHub", "href": "https://github.com/aquibbaig" },
-  { "as": "Twitter", "href": "https://github.com/aquibbaig" },
-  { "as": "Spotify", "href": "https://github.com/aquibbaig" },
+  {
+    "as": "GitHub",
+    "href": "https://github.com/aquibbaig",
+    "icon": <FaGithub />
+  },
+  {
+    "as": "Twitter",
+    "href": "https://twitter.com/BaigAquib",
+    "icon": <FaTwitter />
+  },
+  {
+    "as": "Spotify",
+    "href": "https://open.spotify.com/user/21e2gnoh5t42dkrsp7zc7bzjy",
+    "icon": <FaSpotify />
+  },
 ]
 
 export default ({ data, location }) => {
@@ -31,16 +43,25 @@ export default ({ data, location }) => {
       <div className="header" style={{ marginBottom: '5vh' }}>
         <Title style={{
           fontSize: '2.8rem',
-          fontWeight: '700',
+          fontWeight: '600',
           padding: 0,
           margin: 0,
           color: '#082b38'
         }}>
           Hey,
         </Title>
-        <Paragraph className="bio" style={{ fontSize: '1.2rem', color: '#595959', textAlign: 'left', margin: 0 }}>
+        <Paragraph className="bio" style={{
+          fontSize: '1.4rem',
+          color: '#595959',
+          textAlign: 'left',
+          margin: 0,
+          padding: 0,
+          fontWeight: 300
+        }}>
           I'm Aquib Baig. I'm a full stack web developer who enjoys music and soccer/football.
-          I currently work at Redhat. Things I love to work on at the moment are: Reactjs,
+          I currently work at
+          <a style={{ marginLeft: '6px' }} className="globalLink" href="https://www.redhat.com/">Redhat.</a>
+          Things I love to work on at the moment are: Reactjs,
           Golang. You can follow me here:
         </Paragraph>
         <List
@@ -73,25 +94,22 @@ export default ({ data, location }) => {
         }}>
           <Title
             level={2}
-            style={{ border: 0, fontWeight: '700', margin: 0, color: '#082b38' }}
+            style={{ border: 0, fontWeight: '500', margin: 0, color: '#082b38', marginBottom: '2vh' }}
           >
               Latest Articles
-          </Title>
-          <Title style={{ fontSize: '1.4rem' }}>
-            <Link to="/blog">
-              View All Posts
-            </Link>
           </Title>
         </div>
         {(latestPosts || []).map(post => {
           return <ThumbnailItem
-            view="complete-view"
-            lightBg="transparent"
-            darkBg="transparent"
             key={post.node.excerpt}
             node={post.node}
           />
         })}
+        <Title style={{ fontSize: '1.4rem', marginTop: 0, textAlign: 'left', fontWeight: '400' }}>
+          <Link to="/blog">
+            View Older Posts {'>>'}
+          </Link>
+        </Title>
       </div>
       {/* Latest BlogPosts end */}
       {/* Tiles. */}

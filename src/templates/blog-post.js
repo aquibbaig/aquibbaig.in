@@ -19,7 +19,7 @@ import { GithubOutlined } from '@ant-design/icons'
 
 import '../styles/code.scss'
 import 'katex/dist/katex.min.css'
-import { Tag } from 'antd'
+import { Typography } from 'antd'
 
 const getUrlSuffix = (location) => {
   return `${location.slice(1, -1)}.md`;
@@ -42,7 +42,7 @@ export default ({ data, pageContext, location }) => {
     <Layout location={location} title={title}>
       <div>
         <Head title={postTitle} description={post.excerpt} />
-        <Tag style={{ marginBottom: '4vh' }}>
+        {/* <Tag style={{ marginBottom: '4vh' }}>
           <Link
             className="ff"
             style={{
@@ -54,16 +54,21 @@ export default ({ data, pageContext, location }) => {
           >
             {category}
           </Link>
-        </Tag>
+        </Tag> */}
         <PostTitle title={postTitle} />
-        <PostDate date={date} />
+        {/* <PostDate date={date} /> */}
         <PostContainer html={post.html} />
-        <Link
-          style={{ textDecoration: 'none', fontSize: '1.2rem' }}
-          className="rf"
-          to={`${repositoryUrl}/blob/master/content/blog/${getUrlSuffix(location.pathname)}`}>
-          Edit this page on <GithubOutlined style={{ marginLeft: '0.3rem', fontSize: '1.4rem' }} />
-        </Link>
+        <div style={{ marginTop: '10vh' }}>
+          <Typography.Text style={{ fontSize: '1.2rem', marginRight: '4px' }}>
+            Is this page useful?
+          </Typography.Text>
+          <Link
+            style={{ fontSize: '1.2rem', textDecorationColor: '#c2c2c2' }}
+            className="rf"
+            to={`${repositoryUrl}/blob/master/content/blog/${getUrlSuffix(location.pathname)}`}>
+            Edit this page
+          </Link>
+        </div>
         <SocialShare title={postTitle} author={author} />
         {!!sponsor.buyMeACoffeeId && (
           <SponsorButton sponsorId={sponsor.buyMeACoffeeId} />

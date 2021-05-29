@@ -6,6 +6,13 @@ body.light {
     color: $link-hover-color;
   }
 
+  .layout-content > div:nth-child(1) > div:nth-child(2) > p:nth-child(1) {
+    margin-top: 4vh;
+    margin-bottom: 6vh;
+    color: $light-blog-info !important;
+    font-weight: 300;
+  }
+
   // home
   .home-header {
     color: $dark-gray;
@@ -19,9 +26,30 @@ body.light {
     color: $link-hover-color;
   }
 
+  .thumbnail-wrapper > .ant-row > .ant-col > a > h2:hover {
+    color: $link-hover-color;
+  }
+
   a {
     color: $dark-background-color;
     text-decoration: underline;
+  }
+
+  div.layout-content div div p a,
+  .globalLink {
+    padding: 2px 0 0 2px;
+    color: inherit !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
+    background: #e0f9ed;
+    font-size: inherit !important;
+  }
+
+  div.layout-content div div p a:hover,
+  .globalLink:hover {
+    background: $secondary-dark-link-color;
+    border-bottom: 1px solid #1a1a1a !important;
+    text-decoration-color: $secondary-text-color !important;
   }
 
   div > .layout-content > hr {
@@ -66,9 +94,11 @@ body.light {
     .nav-menu {
       a {
         color: $primary;
+        opacity: $high-em;
       }
       a:hover {
         color: $link-hover-color;
+        opacity: $high-em;
       }
     }
   }
@@ -79,6 +109,7 @@ body.light {
 
   .tile > .ant-card-body > .ant-row > .ant-col > p:nth-child(1) > a {
     color: $primary;
+    opacity: $high-em;
   }
 
   .tile > .ant-card-body > .ant-row > .ant-col > p:nth-child(1) > a:hover {
@@ -153,7 +184,8 @@ body.light {
   }
 
   .language-text {
-    background-color: #e5e7eb;
+    background-color: #fffae0;
+    font-size: 1.2rem;
     color: rgb(65, 65, 65);
   }
 
@@ -169,6 +201,7 @@ body.light {
 
   .ant-menu-horizontal > .ant-menu-item a {
     color: $primary !important;
+    opacity: $high-em;
   }
 
   .ant-timeline-item-head.ant-timeline-item-head-custom.ant-timeline-item-head-blue {
@@ -212,11 +245,20 @@ body.light {
   h1,
   h2,
   h3 {
+    margin-top: 10vh;
     color: $dark-background-color;
+    border-bottom: 0;
   }
 
   p {
     color: #000 !important;
+    font-weight: 300 !important;
+    opacity: $high-em;
+  }
+
+  li {
+    font-weight: 300;
+    opacity: 70%;
   }
 
   // post

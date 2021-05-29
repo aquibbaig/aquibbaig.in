@@ -1,6 +1,11 @@
 body.dark {
   background-color: $dark-background-color;
-  color: $dark-light-font-color;
+  color: #fff;
+
+  .before > svg,
+  .anchor > svg {
+    fill: $secondary-dark-link-color !important;
+  }
 
   .track-container > .track > .ant-card-body > a > h1:hover {
     color: $dark-link-hover-color !important;
@@ -52,6 +57,36 @@ body.dark {
     height: 1px;
     margin-top: 10vh;
     background: $light-highlighter;
+  }
+
+  .layout-content > div:nth-child(1) > div:nth-child(2) > p:nth-child(1) {
+    margin-top: 4vh;
+    margin-bottom: 6vh;
+    color: #fff !important;
+    opacity: 70%;
+    font-weight: 300;
+  }
+
+  div.layout-content div div p a,
+  .globalLink {
+    // color: inherit !important;
+    padding: 2px 0 0 2px;
+    background: #e0f9ed;
+    font-size: inherit !important;
+    color: $dark-background-color !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
+  }
+
+  .thumbnail-wrapper > .ant-row > .ant-col > a > h2:hover {
+    color: $dark-link-hover-color !important;
+  }
+
+  div.layout-content div div p a:hover,
+  .globalLink:hover {
+    background: $secondary-dark-link-color;
+    border-bottom: 1px solid #1a1a1a !important;
+    color: $dark-background-color;
   }
 
   .top {
@@ -114,9 +149,19 @@ body.dark {
     border-left: 4px solid rgba(255, 255, 255, 0.822);
   }
 
-  h1,
   h2 {
-    border-bottom-color: rgba(255, 255, 255, 0.3) !important;
+    margin-top: 10vh;
+    // margin-bottom: 0.5em !important;
+  }
+
+  p {
+    font-weight: 300;
+  }
+
+  li {
+    color: #fff;
+    opacity: 70%;
+    font-weight: 300;
   }
 
   h1,
@@ -124,6 +169,7 @@ body.dark {
   h3,
   p {
     color: $light-background-color !important;
+    border-bottom: 0;
   }
 
   .ant-card-body {
@@ -189,9 +235,10 @@ body.dark {
     }
   }
 
-  .language-text {
-    background-color: #111d2d;
-    color: white;
+  :not(pre) > .language-text {
+    background-color: #fffae0;
+    font-size: 1.2rem;
+    color: $dark-background-color;
   }
 
   .header > .bio {
@@ -208,10 +255,13 @@ body.dark {
 
   .ant-list-items > li > a > span {
     color: #fff;
+    opacity: $mid-em;
+    font-weight: 400;
   }
 
   .ant-list-items > li a span:hover {
     color: $dark-link-hover-color;
+    opacity: $mid-em;
   }
 
   /* Code blocks */
@@ -230,30 +280,6 @@ body.dark {
   }
   td {
     border-bottom: 1px solid #eee;
-  }
-
-  .search > .ant-input-search,
-  .search > .ant-input-search > input {
-    background-color: #e2e2e2 !important;
-  }
-
-  .search > .ant-input-suffix > div {
-    background-color: #00ffff;
-    padding: 1px;
-    border: 1px solid #a6a6a6;
-    border-radius: 2px;
-    color: #737373;
-  }
-
-  .search-container > div > div {
-    background: #353e86 !important;
-    border: 1px solid transparent !important;
-  }
-
-  .search-container > div > div > div > div > .ant-row {
-    background: transparent !important;
-    color: #fff !important;
-    border-bottom: 1px solid #fff !important;
   }
 
   .navigation {
