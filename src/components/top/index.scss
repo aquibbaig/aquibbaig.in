@@ -16,9 +16,9 @@
     .nav-menu {
       margin-top: 7px;
       font-size: 1.4rem;
-      justify-content: space-around;
+      // justify-content: space-around;
       a:is(.ff) {
-        margin-left: 2vw;
+        margin-left: 3vw;
       }
       a {
         margin-left: 2vw;
@@ -93,7 +93,7 @@
       font-size: 1.2rem;
       display: flex;
       a:is(.ff) {
-        margin-left: 2vw !important;
+        margin-left: 3vw;
       }
       a {
         margin-right: 0 !important;

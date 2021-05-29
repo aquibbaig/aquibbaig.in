@@ -6,10 +6,16 @@ import { ThumbnailItem } from '../components/thumbnail-item';
 import { rhythm } from '../utils/typography';
 import Tile from '../components/tiles';
 // import Flag from '../components/flag';
-import { Typography } from 'antd';
+import { Typography, List } from 'antd';
 // import Banner from '../components/banner';
 
 const { Title, Paragraph } = Typography;
+
+const socials = [
+  { "as": "GitHub", "href": "https://github.com/aquibbaig" },
+  { "as": "Twitter", "href": "https://github.com/aquibbaig" },
+  { "as": "Spotify", "href": "https://github.com/aquibbaig" },
+]
 
 export default ({ data, location }) => {
   const { title } = data.site.siteMetadata
@@ -32,25 +38,47 @@ export default ({ data, location }) => {
           margin: 0,
           color: '#082b38'
         }}>
-          Hello, I'm Aquib Baig
+          Hey,
         </Title>
-        <Paragraph style={{ fontSize: '1.2rem', color: '#595959', textAlign: 'left' }}>
-          I'm a full stack web developer from Bhubaneswar, India.
-          I work as a frontend developer at	Redhat. I believe that learning 
-          has no language or boundaries and like to share my experiences with
-          technology to the community.
+        <Paragraph style={{ fontSize: '1.2rem', color: '#595959', textAlign: 'left', margin: 0 }}>
+          I'm Aquib Baig. I'm a full stack web developer who enjoys music and soccer/football.
+          I currently work at Redhat. Things I love to work on at the moment are: Reactjs,
+          Golang. You can follow me here:
         </Paragraph>
+        <List
+          size="small"
+          dataSource={socials}
+          renderItem={item => (
+            <List.Item style={{ border: 0, padding: '1vw 0 0 0' }}>
+              <Link
+                to={item.href}
+                target="blank"
+              >
+                <Typography.Text style={{ fontSize: '1.2rem' }}>
+                  {item.as}
+                </Typography.Text>
+              </Link>
+            </List.Item>
+          )}
+        />
       </div>
       {/* Latest BlogPosts */}
       <div className="posts">
         <div className="header" style={{
           display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'baseline'
         }}>
           <Title
-            level={1}
-            style={{ fontWeight: '700', margin: 0, color: '#082b38' }}
+            level={2}
+            style={{ border: 0, fontWeight: '700', margin: 0, color: '#082b38' }}
           >
-              Most Recent
+              Latest Articles
+          </Title>
+          <Title style={{ fontSize: '1.4rem' }}>
+            <Link to="/blog">
+              View All Posts
+            </Link>
           </Title>
         </div>
         {(latestPosts || []).map(post => {
@@ -62,21 +90,16 @@ export default ({ data, location }) => {
             node={post.node}
           />
         })}
-        <Title style={{ fontSize: '1.4rem' }}>
-          <Link to="/blog">
-            View All Posts
-          </Link>
-        </Title>
       </div>
       {/* Latest BlogPosts end */}
       {/* Tiles. */}
-      <div style={{ marginTop: '5vh' }}>
+      {/* <div style={{ marginTop: '5vh' }}>
         <div className="header">
           <Title level={1} style={{ fontWeight: '700', margin: 0, color: '#082b38' }}>
             Contributions
           </Title>
-        </div>
-        <Tile
+        </div> */}
+        {/* <Tile
           loading={false}
           innerStyles={InnerStyles}
           // darkOutline="#EAC6A2"
@@ -88,8 +111,8 @@ export default ({ data, location }) => {
           // header="Google Summer of Code"
           content="An excerpt of my gsoc journey with fossi foundation,
         working towards improving the Librecores project."
-        />
-        <Tile
+        /> */}
+        {/* <Tile
           loading={false}
           innerStyles={InnerStyles}
           // darkOutline="#EAC6A2"
@@ -101,15 +124,15 @@ export default ({ data, location }) => {
           // header=""
           content="The Linux series of blog posts are aimed at 
         improving a broad understanding of Linux and it's tools."
-        />
-      </div>
+        /> */}
+      {/* </div> */}
       {/* Tiles end */}
-      <div className="courses" style={{ marginTop: '5vh' }}>
+      {/* <div className="courses" style={{ marginTop: '5vh' }}>
         <Title level={1} style={{ fontWeight: '700', margin: 0 }}>
           Courses
         </Title>
         <Paragraph>Coming soon..</Paragraph>
-      </div>
+      </div> */}
     </Layout>
   )
 }
@@ -134,7 +157,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { category: { ne: null }, draft: { eq: false } } }
-      limit: 3
+      limit: 10
     ) {
       edges {
         node {
