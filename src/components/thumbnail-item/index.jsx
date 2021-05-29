@@ -17,7 +17,7 @@ export const ThumbnailItem = (props) => {
       <Row justify="space-between">
         <Col md={20} sm={24}>
           <Link style={{ textDecoration: 'none' }} className={`thumbnail ${TARGET_CLASS}`} to={node.fields.slug}>
-          <Title level={2} style={{ fontSize: '1.4rem',fontWeight: '600', margin: 0, border: 0, padding: 0 }}>
+          <Title level={2} style={{ fontSize: '1.4rem',fontWeight: '500', margin: 0, border: 0, padding: 0 }}>
               {node.frontmatter.title || node.fields.slug}
             </Title>
           </Link>
@@ -27,6 +27,11 @@ export const ThumbnailItem = (props) => {
             {moment(node.frontmatter.date).format("MMM D")}
           </Title>
         </Col>
+      </Row>
+      <Row>
+        <Title level={2} style={{ fontSize: '1rem',fontWeight: '300', margin: '0 0 0 0', border: 0, padding: 0 }}>
+          {node.fields.readingTime.text}
+        </Title>
       </Row>
     </div>
   )
