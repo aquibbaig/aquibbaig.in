@@ -48,8 +48,8 @@ export default ({ data, location }) => {
           dataSource={socials}
           renderItem={item => (
             <List.Item style={{ border: 0, padding: '1vw 0 0 2px' }}>
-              <Link
-                to={item.href}
+              <a
+                href={item.href}
                 target="blank"
                 style={{ textDecoration: 'none' }}
               >
@@ -59,7 +59,7 @@ export default ({ data, location }) => {
                     <div style={{ marginLeft: '4px' }}>{item.as}</div>
                   </div>
                 </Typography.Text>
-              </Link>
+              </a>
             </List.Item>
           )}
         />
