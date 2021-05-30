@@ -139,13 +139,16 @@ body.dark {
   .category-container {
     // background-color: $dark-background-color;
     .item {
-      background: $dark-highlighter;
+      background: #e0f9ed;
+      color: $secondary-text-color;
       &[aria-selected='true'] {
-        font-weight: bolder;
-        border: 2px solid $dark-light-font-color;
+        background: $dark-link-hover-color;
+        font-weight: 600;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.2);
       }
       div {
         font-size: 1rem;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.2);
       }
     }
   }
@@ -301,15 +304,18 @@ body.dark {
     a:hover {
       color: $dark-link-hover-color;
     }
+    .active {
+      color: $link-hover-color;
+    }
   }
 
   .switch-container > label > svg {
     // background: $secondary-dark-link-color;
-    color: $dark-link-hover-color;
+    color: $light-background-color;
   }
 
   .hamburger-menu {
     // background: $dark-link-hover-color;
-    fill: $dark-link-hover-color;
+    fill: $light-background-color;
   }
 }

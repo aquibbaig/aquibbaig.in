@@ -126,16 +126,15 @@ body.light {
   .category-container {
     font-family: 'Calibre';
     .item {
-      background: $light-highlighter;
+      background: #e0f9ed;
       a {
         font-family: 'Calibre';
         font-size: 1.2rem;
       }
       &[aria-selected='true'] {
-        border: 2px solid #38365d;
-        font-weight: bold;
-        font-family: 'Calibre';
-        font-size: 1.2rem;
+        background: $dark-link-hover-color;
+        font-weight: 600;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.2);
       }
       &[aria-selected='true'] a {
         font-family: 'Calibre';
@@ -143,6 +142,7 @@ body.light {
       }
       div {
         font-size: 1rem;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.2);
       }
     }
   }

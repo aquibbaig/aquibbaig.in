@@ -29,7 +29,16 @@ export const ThumbnailItem = (props) => {
         </Col>
       </Row>
       <Row>
-        <Title level={2} style={{ fontSize: '1rem',fontWeight: '300', margin: '0 0 0 0', border: 0, padding: 0 }}>
+        <Title
+          level={2}
+          style={{
+            fontSize: '1rem',
+            fontWeight: '300',
+            margin: '0 0 0 0',
+            border: 0,
+            padding: 0,
+            opacity: '70%'
+          }}>
           {node.fields.readingTime.text}
         </Title>
       </Row>
