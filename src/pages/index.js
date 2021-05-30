@@ -106,7 +106,7 @@ export default ({ data, location }) => {
           />
         })}
         <Title style={{ fontSize: '1.4rem', marginTop: 0, textAlign: 'left', fontWeight: '400' }}>
-          <Link to="/blog">
+          <Link to="/blog" className="banner">
             View Older Posts {'>>'}
           </Link>
         </Title>

@@ -5,6 +5,7 @@ import './index.scss'
 export const SponsorButton = ({ sponsorId }) => (
   <div className="sponsor-button">
     <a
+      style={{ textDecoration: 'none', color: '#fff' }}
       className="bmc-button"
       target="_blank"
       rel="noopener noreferrer"

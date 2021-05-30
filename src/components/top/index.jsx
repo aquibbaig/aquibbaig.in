@@ -5,12 +5,26 @@ import { Row, Col, Menu } from 'antd'
 import { ThemeSwitch } from '../theme-switch'
 import { StaticQuery, graphql } from 'gatsby';
 // import Searchbar from '../search';
-import { FaBars } from 'react-icons/fa'
+import { RiMenuFill } from 'react-icons/ri';
+import { rhythm } from '../../utils/typography'
 
 export const Top = ({ title, location, rootPath, ...props }) => {
   const isRoot = location.pathname === rootPath;
   const [expandMenu, showExpandMenu] = useState(false);
-  const { setCheckVar, checked } = props;
+  const { setCheckVar } = props;
+
+  const isActive = (currRoute) => {
+    if (location.pathname) {
+      if (location.pathname === currRoute) {
+        return true;
+      }
+    } else {
+      if (location === currRoute) {
+        return true;
+      }
+    }
+    return false;
+  };
 
   const setThemeCheck = (ch) => {
     setCheckVar(ch);
@@ -38,6 +52,11 @@ export const Top = ({ title, location, rootPath, ...props }) => {
           !isRoot && (
             <>
               <Row
+                style={{
+                  maxWidth: rhythm(40),
+                  marginLeft: `auto`,
+                  marginRight: `auto`,
+                }}
                 className="navigation"
                 justify="space-between"
                 align="middle"
@@ -45,11 +64,26 @@ export const Top = ({ title, location, rootPath, ...props }) => {
                 <Col lg={8} className="nav-menu">
                   {/* <Link className="ff" to="/projects" style={{ textDecoration: 'none' }}>Projects</Link> */}
                   {/* <Link className="ff" to="/about" style={{ textDecoration: 'none' }}>About</Link> */}
-                  <Link className="rf" to="/" style={{ textDecoration: 'none' }}>Home</Link>
-                  <Link className="ff" to="/blog" style={{ textDecoration: 'none' }}>Articles</Link>
-                  <Link className="ff" to="/me" style={{ textDecoration: 'none' }}>About</Link>
+                  <Link
+                    className={isActive('/') ? `active` : `rf`}
+                    to="/"
+                    style={{ textDecoration: 'none' }}>
+                      Home
+                  </Link>
+                  <Link
+                    className={isActive('/blog') ? `active ff` : `ff`}
+                    to="/blog"
+                    style={{ textDecoration: 'none' }}>
+                      Articles
+                  </Link>
+                  <Link
+                    className={isActive('/me') ? `active ff` : `ff`}
+                    to="/me"
+                    style={{ textDecoration: 'none' }}>
+                      About
+                  </Link>
                 </Col>
-                <FaBars className="hamburger-menu" onClick={() => toggleShowMenu(expandMenu)}/>
+                <RiMenuFill className="hamburger-menu" onClick={() => toggleShowMenu(expandMenu)}/>
                 <Col>
                   <ThemeSwitch setVar={(c) => setThemeCheck(c)} />
                 </Col>

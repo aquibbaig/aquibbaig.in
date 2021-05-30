@@ -30,7 +30,7 @@ body.light {
     color: $link-hover-color;
   }
 
-  a {
+  a:not(.rf) {
     color: $dark-background-color;
     text-decoration: underline;
   }
@@ -93,12 +93,15 @@ body.light {
   .navigation {
     .nav-menu {
       a {
-        color: $primary;
+        color: $light-background-color;
         opacity: $high-em;
       }
       a:hover {
         color: $link-hover-color;
         opacity: $high-em;
+      }
+      .active {
+        color: $link-hover-color;
       }
     }
   }
@@ -156,17 +159,21 @@ body.light {
     padding: 0;
   }
 
+  .ant-typography {
+    color: $primary;
+  }
+
   .ant-typography:is(div) {
     color: $secondary-text-color;
   }
 
   .ant-typography a {
-    color: $primary-link-color;
+    // color: $primary-link-color;
     text-decoration: underline;
   }
 
   .ant-typography a:hover {
-    color: #38365d;
+    color: $link-hover-color;
     text-decoration: underline;
   }
 
@@ -199,9 +206,13 @@ body.light {
     color: $secondary-text-color;
   }
 
-  .ant-menu-horizontal > .ant-menu-item a {
+  .ant-menu-horizontal > .ant-menu-item a:not(.rf) {
     color: $primary !important;
     opacity: $high-em;
+  }
+
+  .rf {
+    color: $light-background-color;
   }
 
   .ant-timeline-item-head.ant-timeline-item-head-custom.ant-timeline-item-head-blue {
@@ -230,16 +241,18 @@ body.light {
   }
 
   .navigation {
-    background: #fff;
+    background: $top-background;
   }
 
   .switch-container > label > svg {
-    background: $light-highlighter;
-    fill: #000;
+    // background: $light-highlighter;
+    color: $light-background-color;
   }
 
   .hamburger-menu {
-    background: $light-highlighter;
+    // background: $light-highlighter;
+    color: $light-background-color;
+    font-weight: 300;
   }
 
   h1,
@@ -270,7 +283,7 @@ body.light {
     a {
       background-color: $dark-link-hover-color;
       // border: 1px solid rgba(3, 17, 22, 0.2);
-      color: $dark-background-color;
+      color: #fff;
     }
   }
 }

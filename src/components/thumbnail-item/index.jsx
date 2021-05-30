@@ -11,6 +11,7 @@ import { ThemeContext } from '../../layout';
 
 export const ThumbnailItem = (props) => {
   const { node } = props;
+  console.log(node.frontmatter.date)
   return (
     <div className="thumbnail-wrapper" key={node.fields.slug}>
       <Row justify="space-between">
@@ -23,7 +24,7 @@ export const ThumbnailItem = (props) => {
         </Col>
         <Col md={4} sm={24}>
           <Title level={2} style={{ fontSize: '1.2rem',fontWeight: '300', margin: '0 0 0 0px', border: 0, padding: 0 }}>
-            {moment(node.frontmatter.date).format("MMM D")}
+            {moment(new Date(node.frontmatter.date)).format("MMM D")}
           </Title>
         </Col>
       </Row>

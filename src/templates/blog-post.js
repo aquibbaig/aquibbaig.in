@@ -63,8 +63,7 @@ export default ({ data, pageContext, location }) => {
             Is this page useful?
           </Typography.Text>
           <Link
-            style={{ fontSize: '1.2rem', textDecorationColor: '#c2c2c2' }}
-            className="rf"
+            style={{ fontSize: '1.2rem', textDecoration: 'underline', textDecorationColor: 'rgba(0,0,0,0.2)' }}
             to={`${repositoryUrl}/blob/master/content/blog/${getUrlSuffix(location.pathname)}`}>
             Edit this page
           </Link>

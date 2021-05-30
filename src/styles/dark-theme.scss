@@ -67,8 +67,7 @@ body.dark {
     font-weight: 300;
   }
 
-  div.layout-content div div p a,
-  .globalLink {
+  div.layout-content div div p a {
     // color: inherit !important;
     padding: 2px 0 0 2px;
     background: #e0f9ed;
@@ -78,12 +77,23 @@ body.dark {
     border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
   }
 
+  .globalLink {
+    color: $dark-link-hover-color;
+    font-size: inherit;
+    padding: 2px 0 0 2px;
+    text-decoration: none !important;
+  }
+
+  .globalLink:hover {
+    text-decoration: underline !important;
+    text-decoration-color: $dark-link-hover-color !important;
+  }
+
   .thumbnail-wrapper > .ant-row > .ant-col > a > h2:hover {
     color: $dark-link-hover-color !important;
   }
 
-  div.layout-content div div p a:hover,
-  .globalLink:hover {
+  div.layout-content div div p a:hover {
     background: $secondary-dark-link-color;
     border-bottom: 1px solid #1a1a1a !important;
     color: $dark-background-color;
@@ -180,8 +190,12 @@ body.dark {
     border: none;
   }
 
-  .ant-typography a {
-    color: $primary-link-color;
+  .ant-typography {
+    color: $light-background-color;
+  }
+
+  .ant-typography a:is(.banner) {
+    color: $dark-link-hover-color;
     text-decoration: underline;
   }
 
@@ -190,7 +204,7 @@ body.dark {
   }
 
   .ant-typography a:hover {
-    color: #38365d;
+    color: $dark-link-hover-color;
     text-decoration: underline;
   }
 
@@ -290,12 +304,12 @@ body.dark {
   }
 
   .switch-container > label > svg {
-    background: $secondary-dark-link-color;
-    fill: #051f28;
+    // background: $secondary-dark-link-color;
+    color: $dark-link-hover-color;
   }
 
   .hamburger-menu {
-    background: $dark-link-hover-color;
-    fill: #051f28;
+    // background: $dark-link-hover-color;
+    fill: $dark-link-hover-color;
   }
 }

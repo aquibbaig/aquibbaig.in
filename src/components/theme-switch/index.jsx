@@ -5,6 +5,8 @@ import * as Storage from '../../utils/storage'
 import { THEME } from '../../constants'
 
 import { FaSun, FaMoon } from 'react-icons/fa';
+import { RiMoonClearLine } from 'react-icons/ri';
+import { FiSun } from 'react-icons/fi';
 
 import './index.scss'
 
@@ -52,7 +54,7 @@ export const ThemeSwitch = (props) => {
     <div className="switch-container" onClick={() => handleChange(!checked)}>
       <label htmlFor="normal-switch">
         {!checked ?
-          <FaMoon /> : <FaSun />
+          <RiMoonClearLine /> : <FiSun />
         }
       </label>
     </div>
