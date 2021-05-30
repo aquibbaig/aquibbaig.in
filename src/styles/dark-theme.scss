@@ -289,16 +289,6 @@ body.dark {
     background-color: #111d2d;
   }
 
-  .navigator {
-    a {
-      background-color: $dark-link-hover-color;
-      color: #000;
-    }
-  }
-  td {
-    border-bottom: 1px solid #eee;
-  }
-
   .navigation {
     background: $dark-background-color;
     a:hover {
@@ -317,5 +307,25 @@ body.dark {
   .hamburger-menu {
     // background: $dark-link-hover-color;
     fill: $light-background-color;
+  }
+
+  // bottom post navigator
+  .navigator {
+    .ant-col > .ant-typography {
+      color: $dark-link-hover-color;
+      padding: 0;
+      margin: 0;
+      a {
+        color: #fff;
+        font-size: 1.4rem;
+        padding: 0;
+        border-bottom: 1px solid #fff;
+        border-radius: 0;
+      }
+      a:hover {
+        border-bottom: 1px solid $dark-link-hover-color;
+        border-radius: 0;
+      }
+    }
   }
 }

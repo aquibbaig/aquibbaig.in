@@ -75,21 +75,6 @@ body.light {
     background: #fff;
   }
 
-  .ant-tag {
-    background-color: $light-highlighter;
-    color: #000;
-    font-size: 1rem;
-    font-family: 'Calibre';
-  }
-
-  .ant-form.ant-form-horizontal
-    > .ant-form-item
-    > .ant-form-item-label
-    > label {
-    color: #598669;
-    font-weight: 600;
-  }
-
   .navigation {
     .nav-menu {
       a {
@@ -224,27 +209,6 @@ body.light {
     background: transparent;
   }
 
-  // search bar
-  .search-container > div > div {
-    background: #fff;
-    border: 1px solid #d1d1d1;
-  }
-
-  .search-container > div > div > div > div > .ant-row {
-    border-bottom: 1px solid #d1d1d1 !important;
-  }
-
-  .search-container > div > div > div > ol > a > div {
-    color: #737373;
-  }
-
-  .search-container > div > div > div > ol > a > div > p > span > mark {
-    background: #607ff9;
-    color: #fff;
-    border-radius: 4px;
-    padding: 0.1em !important;
-  }
-
   .navigation {
     background: $top-background;
   }
@@ -284,11 +248,23 @@ body.light {
     color: $link-hover-color;
   }
 
+  // bottom-navigator
   .navigator {
-    a {
-      background-color: $dark-link-hover-color;
-      // border: 1px solid rgba(3, 17, 22, 0.2);
-      color: #fff;
+    .ant-col > .ant-typography {
+      color: $link-hover-color;
+      padding: 0;
+      margin: 0;
+      a {
+        font-size: 1.4rem;
+        padding: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 0;
+      }
+      a:hover {
+        border-bottom: 1px solid $link-hover-color;
+        border-radius: 0;
+        color: $primary;
+      }
     }
   }
 }
