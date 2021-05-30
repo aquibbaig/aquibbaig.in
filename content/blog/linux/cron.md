@@ -22,14 +22,14 @@ These tasks are called `cron jobs`.
 
 You can view the list of all cronjobs that are currently scheduled using the command
 
-```
+```shell
 $ crontab -l
 
 ```
 
 To view the crontab of a specific user, you can try
 
-```
+```shell
 $ sudo crontab -u ${username} -l
 ```
 
@@ -39,7 +39,7 @@ $ sudo crontab -u ${username} -l
 
 A crontab entry is written using the following command
 
-```
+```shell
 $ crontab -e
 ```
 
@@ -47,7 +47,7 @@ It opens up your favorite text editor where you can add/edit the crontab entries
 
 ## Syntax of a crontable entry
 
-```
+```shell
 * * * * * command to be executed
 – – – – –
 | | | | |
@@ -60,7 +60,7 @@ It opens up your favorite text editor where you can add/edit the crontab entries
 
 Look at the first line where it says "command to be executed", that's it! That's the syntax. You can provide 5 prefixes called "cron schedule expressions" to the command to be executed. These will help determine the point of time your command has to run by `cron`.
 
-```
+```shell
 * * * * * echo "Superb!!!" >> /home/a.txt
 ```
 
@@ -68,7 +68,7 @@ A "\*" simply means "any". The above command means it will be executed every min
 
 ## Advanced syntax
 
-```
+```shell
 0,15 0-5 * * */2 echo "Superb!!!" >> /home/a.txt
 ```
 
@@ -82,7 +82,7 @@ The snippet above means that your command will run every 0th and 15th minute of 
 
 Let's try something else. I'd like to clean my `/tmp` folder every Friday so that it doesn't clog up. Let's do that with cron. The syntax of the above can be as follows
 
-```
+```shell
 0 0 * * 5 sudo rm -rf /tmp
 ```
 

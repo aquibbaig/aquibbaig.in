@@ -12,10 +12,9 @@ The virtual DOM is where an ideal, or “virtual”, representation of a UI is k
 The "real" DOM is a heirarchical data structure containing HTML nodes that appear on the web page. The "painting of the DOM" is the action which shows
 content on your browser. In simpler words lets imagine the following HTML structure.
 
-```
+```html
 <html>
-  <head>
-  </head>
+  <head></head>
   <body>
     <p></p>
   </body>
