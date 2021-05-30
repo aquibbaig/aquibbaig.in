@@ -13,6 +13,14 @@ body.light {
     font-weight: 300;
   }
 
+  .footer {
+    font-weight: 300;
+    opacity: $disabled-em;
+    .ant-row > svg {
+      fill: rgba(0, 0, 0, $disabled-em);
+    }
+  }
+
   // home
   .home-header {
     color: $dark-gray;

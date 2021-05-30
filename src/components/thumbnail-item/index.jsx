@@ -1,17 +1,15 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { Link } from 'gatsby'
-import { Card, Typography, Row, Col } from 'antd';
+import { Typography, Row, Col } from 'antd';
 import moment from 'moment'
 import { TARGET_CLASS } from '../../utils/visible';
 
-const { Title, Paragraph } = Typography;
+const { Title } = Typography;
 
 import './index.scss'
-import { ThemeContext } from '../../layout';
 
 export const ThumbnailItem = (props) => {
   const { node } = props;
-  console.log(node.frontmatter.date)
   return (
     <div className="thumbnail-wrapper" key={node.fields.slug}>
       <Row justify="space-between">

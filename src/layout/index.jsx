@@ -11,7 +11,7 @@ import * as Storage from '../utils/storage'
 import { THEME } from '../constants'
 
 import './index.scss'
-import SubscriberForm from '../components/subscriber-form'
+// import SubscriberForm from '../components/subscriber-form'
 
 function getTheme(checked) {
   return checked ? THEME.DARK : THEME.LIGHT
@@ -94,7 +94,7 @@ const Layout = ({ location, title, children }) => {
         <Header title={title} location={location} rootPath={rootPath} />
         {renderChildren(children)}
         {/* <SubscriberForm dark={checked} /> */}
-        <hr/>
+        {/* <hr/> */}
         <Footer />
       </div>
     </>

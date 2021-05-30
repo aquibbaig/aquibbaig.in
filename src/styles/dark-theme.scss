@@ -245,7 +245,7 @@ body.dark {
     h6,
     h5,
     a {
-      color: white !important;
+      color: $light-background-color !important;
     }
     a > div > span {
       color: $dark-lightest-font-color;

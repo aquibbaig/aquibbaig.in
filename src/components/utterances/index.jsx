@@ -12,7 +12,6 @@ const LIGHT_THEME = 'github-light'
 export const Utterances = ({ repo }) => {
   const rootElm = React.createRef();
   const { dark } = useContext(ThemeContext);
-  console.log(dark);
 
   useEffect(() => {
     const utterances = document.createElement('script')
