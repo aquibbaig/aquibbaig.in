@@ -17,7 +17,7 @@ body.light {
     font-weight: 300;
     opacity: $disabled-em;
     .ant-row > svg {
-      fill: rgba(0, 0, 0, $disabled-em);
+      fill: rgba(0, 0, 0, 0.87);
     }
   }
 
@@ -248,7 +248,7 @@ body.light {
 
   li {
     font-weight: 300;
-    opacity: 70%;
+    opacity: 0.7;
   }
 
   // post

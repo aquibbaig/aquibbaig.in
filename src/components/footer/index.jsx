@@ -1,9 +1,7 @@
 import React from 'react';
-import { Col, Row, Typography } from 'antd';
+import { Row, Typography } from 'antd';
 
 import './index.scss';
-import { rhythm } from '../../utils/typography';
-import { Link } from 'gatsby';
 import { RiHeartFill } from 'react-icons/ri';
 
 const { Text, Paragraph } = Typography;
