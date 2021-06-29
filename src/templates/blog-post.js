@@ -63,7 +63,8 @@ export default ({ data, pageContext, location }) => {
             Is this page useful?
           </Typography.Text>
           <a
-            style={{ fontSize: '1.2rem', textDecoration: 'underline', textDecorationColor: 'rgba(0,0,0,0.2)' }}
+            class="edit-this"
+            style={{ fontSize: '1.2rem', textDecoration: 'none' }}
             href={`${repositoryUrl}/blob/master/content/blog/${getUrlSuffix(location.pathname)}`}>
             Edit this page
           </a>

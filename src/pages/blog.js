@@ -68,7 +68,7 @@ export default ({ data, location }) => {
           marginBottom: '2vh'
         }}>
           I started writing content related to tech in my college and have been writing
-          quite a lot since the lockdown of 2021.
+          since 2021.
           I have published {posts.length} blog posts on this website so far, which
           you can filter using
           keywords below.

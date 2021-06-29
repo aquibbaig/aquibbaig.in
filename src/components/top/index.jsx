@@ -13,19 +13,6 @@ export const Top = ({ title, location, rootPath, ...props }) => {
   const [expandMenu, showExpandMenu] = useState(false);
   const { setCheckVar } = props;
 
-  const isActive = (currRoute) => {
-    if (location.pathname) {
-      if (location.pathname === currRoute) {
-        return true;
-      }
-    } else {
-      if (location === currRoute) {
-        return true;
-      }
-    }
-    return false;
-  };
-
   const setThemeCheck = (ch) => {
     setCheckVar(ch);
   }
@@ -56,6 +43,7 @@ export const Top = ({ title, location, rootPath, ...props }) => {
                   maxWidth: rhythm(40),
                   marginLeft: `auto`,
                   marginRight: `auto`,
+                  paddingTop: `1vh`
                 }}
                 className="navigation"
                 justify="space-between"
@@ -65,19 +53,19 @@ export const Top = ({ title, location, rootPath, ...props }) => {
                   {/* <Link className="ff" to="/projects" style={{ textDecoration: 'none' }}>Projects</Link> */}
                   {/* <Link className="ff" to="/about" style={{ textDecoration: 'none' }}>About</Link> */}
                   <Link
-                    className={isActive('/') ? `active` : `rf`}
+                    className="rf"
                     to="/"
                     style={{ textDecoration: 'none' }}>
                       Home
                   </Link>
                   <Link
-                    className={isActive('/blog') ? `active ff` : `ff`}
+                    className="rf"
                     to="/blog"
                     style={{ textDecoration: 'none' }}>
                       Articles
                   </Link>
                   <Link
-                    className={isActive('/me') ? `active ff` : `ff`}
+                    className="rf"
                     to="/me"
                     style={{ textDecoration: 'none' }}>
                       About

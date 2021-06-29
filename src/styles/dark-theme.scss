@@ -67,36 +67,40 @@ body.dark {
     font-weight: 300;
   }
 
+  .globalLink {
+    color: white;
+    font-size: inherit;
+    padding: 2px 0 0 2px;
+    text-decoration: none !important;
+    border-bottom: 1px solid white !important;
+  }
+
+  .globalLink:hover {
+    color: white !important;
+    border-bottom: 1px solid $dark-link-hover-color !important;
+  }
+
   div.layout-content div div p a {
     // color: inherit !important;
     padding: 2px 0 0 2px;
-    background: #e0f9ed;
+    background: $secondary-dark-link-color;
     font-size: inherit !important;
-    color: $dark-background-color !important;
+    color: $dark-link-hover-color !important;
     text-decoration: none !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
   }
 
-  .globalLink {
-    color: $dark-link-hover-color;
-    font-size: inherit;
-    padding: 2px 0 0 2px;
-    text-decoration: none !important;
-  }
-
-  .globalLink:hover {
-    text-decoration: underline !important;
-    text-decoration-color: $dark-link-hover-color !important;
+  div.layout-content div div p a:hover {
+    background: $secondary-dark-link-color;
+    border-bottom: 1px solid $dark-link-hover-color !important;
+    color: $dark-background-color;
   }
 
   .thumbnail-wrapper > .ant-row > .ant-col > a > h2:hover {
-    color: $dark-link-hover-color !important;
-  }
-
-  div.layout-content div div p a:hover {
-    background: $secondary-dark-link-color;
-    border-bottom: 1px solid #1a1a1a !important;
-    color: $dark-background-color;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 5px;
+    text-decoration-color: $dark-link-hover-color !important;
   }
 
   .top {
@@ -139,7 +143,7 @@ body.dark {
   .category-container {
     // background-color: $dark-background-color;
     .item {
-      background: #e0f9ed;
+      background: #e0e0e0;
       color: $secondary-text-color;
       &[aria-selected='true'] {
         background: $dark-link-hover-color;
@@ -173,7 +177,6 @@ body.dark {
 
   li {
     color: #fff;
-    opacity: 0.7;
     font-weight: 300;
   }
 
@@ -203,7 +206,7 @@ body.dark {
   }
 
   .ant-typography:is(div) {
-    color: $dark-light-font-color;
+    color: #fff;
   }
 
   .ant-typography a:hover {
@@ -252,13 +255,27 @@ body.dark {
     }
   }
 
-  :not(pre) > .language-text {
-    background-color: #fffae0;
-    font-size: 1.2rem;
-    color: $dark-background-color;
+  .edit-this {
+    color: #fff;
+    border-bottom: 1px solid #fff;
   }
 
-  .header > .bio {
+  .edit-this:hover {
+    border-bottom: 1px solid $dark-link-hover-color;
+  }
+
+  // :not(pre) > .language-text {
+  //   padding: 2px 0 0 2px;
+  //   background: $secondary-dark-link-color;
+  //   color: $dark-link-hover-color !important;
+  //   text-decoration: none !important;
+  //   border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
+  //   font-size: 1.2rem;
+  //   color: $dark-background-color;
+  // }
+
+  .header > .bio,
+  .paragraph {
     color: #fff !important;
   }
 
@@ -270,13 +287,25 @@ body.dark {
     color: $dark-link-hover-color;
   }
 
-  .ant-list-items > li > a > span {
+  .ant-list-items > li > a > span,
+  .ant-list-item-meta-description {
     color: #fff;
-    opacity: $mid-em;
-    font-weight: 400;
+    opacity: 0.8;
+    font-weight: 300;
   }
 
-  .ant-list-items > li a span:hover {
+  .ant-list-item-meta-title > a {
+    color: #fff !important;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .ant-list-item-meta-title > a:hover {
+    border-bottom: 1px solid $dark-link-hover-color !important;
+  }
+
+  .ant-list-items > li a span:hover,
+  .ant-list-item-meta-title > a:hover {
     color: $dark-link-hover-color;
     opacity: $mid-em;
   }
@@ -287,10 +316,27 @@ body.dark {
     margin: 1.5em 0;
     overflow: auto;
     background-color: #111d2d;
+    border: 1px solid transparent;
+  }
+
+  .gatsby-highlight > pre > code {
+    font-size: 1.2rem;
+  }
+
+  .gatsby-highlight > .language-text > .language-text {
+    background: transparent;
+    color: inherit;
+  }
+
+  :not(.gatsby-highlight) > .language-text {
+    padding: 2px 0 0 2px;
+    background-color: #fffae0;
+    font-size: 1.2rem;
+    color: rgb(65, 65, 65);
   }
 
   .navigation {
-    background: $dark-background-color;
+    background: $top-background;
     a:hover {
       color: $dark-link-hover-color;
     }

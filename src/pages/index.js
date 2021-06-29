@@ -31,10 +31,6 @@ export default ({ data, location }) => {
   const { title } = data.site.siteMetadata
   const latestPosts = data.allMarkdownRemark.edges
 
-  const InnerStyles = {
-    padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-  }
-
   return (
     <Layout
       title={title.toLowerCase()}
@@ -58,32 +54,15 @@ export default ({ data, location }) => {
           padding: 0,
           fontWeight: 300
         }}>
-          I'm Aquib Baig. I'm a full stack web developer who enjoys music and soccer/football.
+          I'm Aquib Baig. I'm a full stack web developer who enjoys music and football.
           I currently work at
-          <a style={{ marginLeft: '6px' }} className="globalLink" href="https://www.redhat.com/">Redhat.</a>
-          Things I love to work on at the moment are: Reactjs,
-          Golang. You can follow me here:
+          <a target="_blank" style={{ marginLeft: '6px' }} className="globalLink" href="https://www.redhat.com/">Redhat.</a>
+          {' '}Currently I am focused on reactjs and
+          golang. You can find me on
+          <a target="_blank" style={{ marginLeft: '6px' }} className="globalLink" href="https://github.com/aquibbaig">Github</a>
+          , <a target="_blank" style={{ marginLeft: '6px' }} className="globalLink" href="https://twitter.com/BaigAquib">Twitter</a>
+          {' '}or <a target="_blank" style={{ marginLeft: '6px' }} className="globalLink" href="https://open.spotify.com/user/21e2gnoh5t42dkrsp7zc7bzjy">Spotify</a>.
         </Paragraph>
-        <List
-          size="small"
-          dataSource={socials}
-          renderItem={item => (
-            <List.Item style={{ border: 0, padding: '1vw 0 0 2px' }}>
-              <a
-                href={item.href}
-                target="blank"
-                style={{ textDecoration: 'none' }}
-              >
-                <Typography.Text style={{ fontSize: '1.2rem' }}>
-                  <div style={{ display: 'flex' }}>
-                    <FaRegHandPointRight />
-                    <div style={{ marginLeft: '4px' }}>{item.as}</div>
-                  </div>
-                </Typography.Text>
-              </a>
-            </List.Item>
-          )}
-        />
       </div>
       {/* Latest BlogPosts */}
       <div className="posts">

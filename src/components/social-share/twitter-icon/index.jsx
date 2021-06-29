@@ -9,7 +9,7 @@ export const TwitterIcon = ({ onClick }) => (
     rel="noopener"
     aria-label="Share on Twitter"
     onClick={onClick}
-    style={{ textDecoration: 'none' }}
+    style={{ textDecoration: 'none', color: '#fff' }}
   >
     <div className="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--large">
       <div

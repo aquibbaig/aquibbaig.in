@@ -65,7 +65,7 @@ const Layout = ({ location, title, children }) => {
           zIndex: 100,
           marginTop: 0,
           marginBottom: '5vh',
-          background: !checked ? '#212329' : '#121212',
+          background: !checked ? '#272A36' : '#272A36',
           // maxWidth: rhythm(40),
           textAlign: 'center',
           position: 'sticky'

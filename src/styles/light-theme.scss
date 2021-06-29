@@ -27,15 +27,18 @@ body.light {
   }
 
   .header > h1 > a {
-    color: $link-hover-color;
+    color: $primary-link-color;
   }
 
   .header > h1 > a:hover {
-    color: $link-hover-color;
+    color: $primary-link-color;
   }
 
   .thumbnail-wrapper > .ant-row > .ant-col > a > h2:hover {
-    color: $link-hover-color;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-color: $primary-link-color !important;
+    text-decoration-thickness: 1px;
   }
 
   a:not(.rf) {
@@ -43,21 +46,32 @@ body.light {
     text-decoration: underline;
   }
 
-  div.layout-content div div p a,
+  // link inside a post.
+  div.layout-content div div p a {
+    padding: 2px 0 0 2px;
+    color: $primary-link-color !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
+    // background: #e0f9ed;
+    font-size: inherit !important;
+  }
+
+  div.layout-content div div p a:hover {
+    // background: $secondary-dark-link-color;
+    border-bottom: 1px solid $primary-link-color !important;
+  }
+
   .globalLink {
     padding: 2px 0 0 2px;
     color: inherit !important;
     text-decoration: none !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
-    background: #e0f9ed;
+    // background: #e0f9ed;
     font-size: inherit !important;
   }
 
-  div.layout-content div div p a:hover,
   .globalLink:hover {
-    background: $secondary-dark-link-color;
-    border-bottom: 1px solid #1a1a1a !important;
-    text-decoration-color: $secondary-text-color !important;
+    border-bottom: 1px solid $primary-link-color !important;
   }
 
   div > .layout-content > hr {
@@ -67,7 +81,7 @@ body.light {
   }
 
   .project > a > .ant-card > div > div > h1:hover {
-    color: $link-hover-color;
+    color: $primary-link-color;
   }
 
   .ant-btn-primary {
@@ -90,11 +104,11 @@ body.light {
         opacity: $high-em;
       }
       a:hover {
-        color: $link-hover-color;
+        color: $primary-link-color;
         opacity: $high-em;
       }
       .active {
-        color: $link-hover-color;
+        color: $primary-link-color;
       }
     }
   }
@@ -109,7 +123,7 @@ body.light {
   }
 
   .tile > .ant-card-body > .ant-row > .ant-col > p:nth-child(1) > a:hover {
-    color: $link-hover-color;
+    color: $primary-link-color;
   }
 
   .tile > .ant-card-body > .ant-row > .ant-col > p:nth-child(3) {
@@ -119,13 +133,13 @@ body.light {
   .category-container {
     font-family: 'Calibre';
     .item {
-      background: #e0f9ed;
+      background: #e0e0e0;
       a {
         font-family: 'Calibre';
         font-size: 1.2rem;
       }
       &[aria-selected='true'] {
-        background: $dark-link-hover-color;
+        background: $primary-link-color;
         font-weight: 600;
         border-bottom: 2px solid rgba(0, 0, 0, 0.2);
       }
@@ -140,8 +154,13 @@ body.light {
     }
   }
 
-  .ant-list-items > li a span:hover {
-    color: $link-hover-color;
+  .ant-list-item-meta-title > a:hover {
+    border-bottom: 1px solid $primary-link-color !important;
+  }
+
+  .ant-list-item-meta-title > a {
+    font-weight: 500;
+    text-decoration: none;
   }
 
   .ant-card-bordered {
@@ -166,7 +185,7 @@ body.light {
   }
 
   .ant-typography a:hover {
-    color: $link-hover-color;
+    color: $primary-link-color;
     text-decoration: underline;
   }
 
@@ -189,6 +208,7 @@ body.light {
   }
 
   :not(.gatsby-highlight) > .language-text {
+    padding: 2px 0 0 2px;
     background-color: #fffae0;
     font-size: 1.2rem;
     color: rgb(65, 65, 65);
@@ -198,6 +218,15 @@ body.light {
     // color: rgb(27, 26, 26);
     // background-color: #f8f8f8;
     font-size: 1.2rem;
+  }
+
+  .edit-this {
+    color: #000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  .edit-this:hover {
+    border-bottom: 1px solid $primary-link-color;
   }
 
   .thumbnailContent {
@@ -248,18 +277,17 @@ body.light {
 
   li {
     font-weight: 300;
-    opacity: 0.7;
   }
 
   // post
   .posts > h1 > a {
-    color: $link-hover-color;
+    color: $primary-link-color;
   }
 
   // bottom-navigator
   .navigator {
     .ant-col > .ant-typography {
-      color: $link-hover-color;
+      color: $primary-link-color;
       padding: 0;
       margin: 0;
       a {
@@ -269,7 +297,7 @@ body.light {
         border-radius: 0;
       }
       a:hover {
-        border-bottom: 1px solid $link-hover-color;
+        border-bottom: 1px solid $primary-link-color;
         border-radius: 0;
         color: $primary;
       }

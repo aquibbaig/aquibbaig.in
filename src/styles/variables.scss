@@ -6,11 +6,12 @@ $top-header-text-color: #fff;
  * @light theme
 */
 $primary: #000;
-$link-hover-color: #08b5bd;
+$link-hover-color: #ff79c6;
+$dark-link-color-light-mode: #eb459e;
 $light-highlighter: #e5e7eb;
 
 // top
-$top-background: #212329;
+$top-background: #272a36;
 
 // body
 $light-background-color: #fff;
@@ -30,15 +31,15 @@ $light-category-text-color: #38365d;
 // /**
 //  * @dark theme
 //  */
-$dark-background-color: #121212;
-$dark-link-hover-color: #03dac6;
+$dark-background-color: #45485a;
+$dark-link-hover-color: #ff79c6;
 $mild-grey: #ebfbff;
 $dark-lightest-font-color: #fff;
 $dark-light-font-color: #c5c5c5;
-$secondary-dark-link-color: #03dac6;
+$secondary-dark-link-color: #272a36;
 $dark-highlighter: #051f28;
 
 // opacity/emphasis
-$high-em: 0.87;
-$mid-em: 0.7;
+$high-em: 1;
+$mid-em: 1;
 $disabled-em: 0.38;
