@@ -106,7 +106,7 @@ connection.
 -> Accept and save? (y/n)
 ```
 
-- After the server is verified, session keys are generated using [Diffie Hellman](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange) algorithm.
+After the server is verified, session keys are generated using [Diffie Hellman](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange) algorithm.
 
 - Now comes the part where key exchanges take place. The client begins by sending an ID for the key pair it would like to authenticate with to the server.
   The server checks the authorized_keys file of the account that the client is attempting to log into for the key ID.

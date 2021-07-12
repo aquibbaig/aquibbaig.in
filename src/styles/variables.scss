@@ -6,13 +6,20 @@ $top-header-text-color: #fff;
  * @light theme
 */
 $primary: #000;
-$link-hover-color: #33907f;
-$light-highlighter: #e5e7eb;
+$link-hover-color: #2597ed;
+$dark-link-color-light-mode: #2597ed;
+$light-highlighter: #f6f8fa;
+$light-code-bg: #f7f8fa;
+$light-code-color: #67717d;
+
+// top
+$top-background: #101d24;
 
 // body
 $light-background-color: #fff;
 $light-text-shadow: 0 0 0.1px rgba(0, 0, 0, 0.3);
 $light-hover-text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+$light-blog-info: #6d6d6d;
 
 // // index
 $dark-gray: #333;
@@ -26,9 +33,18 @@ $light-category-text-color: #38365d;
 // /**
 //  * @dark theme
 //  */
-$dark-background-color: #082b38;
-$dark-link-hover-color: #99dbcf;
+$dark-background-color: #031e31;
+$dark-link-text-color: #9cd4f7;
+$dark-code-bg: #0a121b;
+$dark-code-color: #c1f1f0;
+$dark-link-hover-color: #2597ed;
+$mild-grey: #ebfbff;
 $dark-lightest-font-color: #fff;
 $dark-light-font-color: #c5c5c5;
-$secondary-dark-link-color: #99dbcf;
+$secondary-dark-link-color: #272a36;
 $dark-highlighter: #051f28;
+
+// opacity/emphasis
+$high-em: 1;
+$mid-em: 1;
+$disabled-em: 0.38;

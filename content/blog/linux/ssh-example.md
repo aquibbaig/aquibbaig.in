@@ -14,9 +14,9 @@ SSH allows you to remotely log in and passwordless access into machines you can 
 
 ## Networking obligations with SSH
 
-SSH always looks to connect on `PORT 22` of the machine, hence if it is closed for some reason due to your firewall, it is recommended to configure your firewall to expose `PORT 22` else you will get an error as follows:
+SSH always looks to connect on `:22` of the machine, hence if it is closed for some reason due to your firewall, it is recommended to configure your firewall to expose `:22` else you will get an error as follows:
 
-```
+```shell
 port 22: Connection refused
 ```
 
@@ -24,7 +24,7 @@ port 22: Connection refused
 
 This weekend, I got some time off my schedule and I got my Linux machine and my Mac ready to test stuff out. I configured **openssh-server** on my Mac and tried to connect through my SSH client on Linux.
 
-```
+```shell
 ssh user@hostname
 ```
 
@@ -36,7 +36,7 @@ I noticed that I could connect to my Mac till it was connecting to the same netw
 
 _drum rolls_
 
-- Well, for starters you "cannot" access any machine over the internet, you can only access servers. SSH works as a client-server architecture, you are requesting access as a client and are requesting access to a server. So, the machine on which you're requesting access should have an installation of SSH server and should be configured to allow connections on `PORT 22`. In Linux machines, you do that by installing **openssh-server**.
+- Well, for starters you "cannot" access any machine over the internet, you can only access servers. SSH works as a client-server architecture, you are requesting access as a client and are requesting access to a server. So, the machine on which you're requesting access should have an installation of SSH server and should be configured to allow connections on `:22`. In Linux machines, you do that by installing **openssh-server**.
   For Mac, just go into your **System Preferences, Sharing Tab** and **check Remote Login**.
 
 - You cannot just access any network other than your own due to restrictions applied by routers or private networks in general. To access those networks you need to have some kind of a gateway between your network and the target network. You need to manually configure that somehow.
@@ -45,4 +45,4 @@ _drum rolls_
 
 ## Can I access the workstation at my home from the office
 
-That's where the part of manual configuration comes in. When you will be executing SSH from the office, you are trying to access your machine's **PORT 22**, but the first thing you hit is not your machine, but your router (Router's **PORT 22**). Routers generally have firewalls pre-installed. So, a part of configuration involves you to implement _[port forwarding](https://en.wikipedia.org/wiki/Port_forwarding)_ which is nothing but mapping your machine's **PORT 22** with the router's **PORT 22** such that any request to the router's **PORT 22** reaches directly to the machine.
+That's where the part of manual configuration comes in. When you will be executing SSH from the office, you are trying to access your machine's `:22`, but the first thing you hit is not your machine, but your router (Router's `:22`). Routers generally have firewalls pre-installed. So, a part of configuration involves you to implement [port forwarding](https://en.wikipedia.org/wiki/Port_forwarding) which is nothing but mapping your machine's `:22` with the router's `:22` such that any request to the router's `:22` reaches directly to the machine.

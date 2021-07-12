@@ -11,7 +11,7 @@ import * as Storage from '../utils/storage'
 import { THEME } from '../constants'
 
 import './index.scss'
-import SubscriberForm from '../components/subscriber-form'
+// import SubscriberForm from '../components/subscriber-form'
 
 function getTheme(checked) {
   return checked ? THEME.DARK : THEME.LIGHT
@@ -63,9 +63,10 @@ const Layout = ({ location, title, children }) => {
         style={{
           top: '0',
           zIndex: 100,
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(32),
+          marginTop: 0,
+          marginBottom: '5vh',
+          background: !checked ? '#101d24' : '#101d24',
+          // maxWidth: rhythm(40),
           textAlign: 'center',
           position: 'sticky'
         }}
@@ -92,8 +93,8 @@ const Layout = ({ location, title, children }) => {
       >
         <Header title={title} location={location} rootPath={rootPath} />
         {renderChildren(children)}
-        <SubscriberForm dark={checked} />
-        <hr/>
+        {/* <SubscriberForm dark={checked} /> */}
+        {/* <hr/> */}
         <Footer />
       </div>
     </>

@@ -61,6 +61,7 @@ module.exports = {
               inlineCodeMarker: '%',
             },
           },
+          `gatsby-remark-reading-time`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
           `gatsby-remark-autolink-headers`,

@@ -4,20 +4,32 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../layout/index'
 import { ThumbnailItem } from '../components/thumbnail-item';
 import { rhythm } from '../utils/typography';
-import Tile from '../components/tiles';
-// import Flag from '../components/flag';
-import { Typography } from 'antd';
-// import Banner from '../components/banner';
+import { Typography, List } from 'antd';
+import { FaGithub, FaRegHandPointRight, FaSpotify, FaTwitter } from 'react-icons/fa';
 
 const { Title, Paragraph } = Typography;
+
+const socials = [
+  {
+    "as": "GitHub",
+    "href": "https://github.com/aquibbaig",
+    "icon": <FaGithub />
+  },
+  {
+    "as": "Twitter",
+    "href": "https://twitter.com/BaigAquib",
+    "icon": <FaTwitter />
+  },
+  {
+    "as": "Spotify",
+    "href": "https://open.spotify.com/user/21e2gnoh5t42dkrsp7zc7bzjy",
+    "icon": <FaSpotify />
+  },
+]
 
 export default ({ data, location }) => {
   const { title } = data.site.siteMetadata
   const latestPosts = data.allMarkdownRemark.edges
-
-  const InnerStyles = {
-    padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-  }
 
   return (
     <Layout
@@ -27,56 +39,66 @@ export default ({ data, location }) => {
       <div className="header" style={{ marginBottom: '5vh' }}>
         <Title style={{
           fontSize: '2.8rem',
-          fontWeight: '700',
+          fontWeight: '600',
           padding: 0,
           margin: 0,
           color: '#082b38'
         }}>
-          Hello, I'm Aquib Baig
+          Hey,
         </Title>
-        <Paragraph style={{ fontSize: '1.2rem', color: '#595959', textAlign: 'left' }}>
-          I'm a full stack web developer from Bhubaneswar, India.
-          I work as a frontend developer at	Redhat. I believe that learning 
-          has no language or boundaries and like to share my experiences with
-          technology to the community.
+        <Paragraph className="bio" style={{
+          fontSize: '1.4rem',
+          color: '#595959',
+          textAlign: 'left',
+          margin: 0,
+          padding: 0,
+          fontWeight: 300
+        }}>
+          I'm Aquib Baig. I'm a full stack web developer who enjoys music and football.
+          I currently work at
+          <a target="_blank" style={{ marginLeft: '6px' }} className="globalLink" href="https://www.redhat.com/">Redhat.</a>
+          {' '}Currently I am focused on reactjs and
+          golang. You can find me on
+          <a target="_blank" style={{ marginLeft: '6px' }} className="globalLink" href="https://github.com/aquibbaig">Github</a>
+          , <a target="_blank" style={{ marginLeft: '6px' }} className="globalLink" href="https://twitter.com/BaigAquib">Twitter</a>
+          {' '}or <a target="_blank" style={{ marginLeft: '6px' }} className="globalLink" href="https://open.spotify.com/user/21e2gnoh5t42dkrsp7zc7bzjy">Spotify</a>.
         </Paragraph>
       </div>
       {/* Latest BlogPosts */}
       <div className="posts">
         <div className="header" style={{
           display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'baseline'
         }}>
           <Title
-            level={1}
-            style={{ fontWeight: '700', margin: 0, color: '#082b38' }}
+            level={2}
+            style={{ border: 0, fontWeight: '500', margin: 0, color: '#082b38', marginBottom: '2vh' }}
           >
-              Most Recent
+              Latest Articles
           </Title>
         </div>
         {(latestPosts || []).map(post => {
           return <ThumbnailItem
-            view="complete-view"
-            lightBg="transparent"
-            darkBg="transparent"
             key={post.node.excerpt}
             node={post.node}
           />
         })}
-        <Title style={{ fontSize: '1.4rem' }}>
-          <Link to="/blog">
-            View All Posts
+        <Title style={{ fontSize: '1.4rem', marginTop: 0, textAlign: 'left', fontWeight: '400' }}>
+          <Link to="/blog" className="banner">
+            View Older Posts {'>>'}
           </Link>
         </Title>
       </div>
       {/* Latest BlogPosts end */}
       {/* Tiles. */}
-      <div style={{ marginTop: '5vh' }}>
+      {/* <div style={{ marginTop: '5vh' }}>
         <div className="header">
           <Title level={1} style={{ fontWeight: '700', margin: 0, color: '#082b38' }}>
             Contributions
           </Title>
-        </div>
-        <Tile
+        </div> */}
+        {/* <Tile
           loading={false}
           innerStyles={InnerStyles}
           // darkOutline="#EAC6A2"
@@ -88,8 +110,8 @@ export default ({ data, location }) => {
           // header="Google Summer of Code"
           content="An excerpt of my gsoc journey with fossi foundation,
         working towards improving the Librecores project."
-        />
-        <Tile
+        /> */}
+        {/* <Tile
           loading={false}
           innerStyles={InnerStyles}
           // darkOutline="#EAC6A2"
@@ -101,15 +123,15 @@ export default ({ data, location }) => {
           // header=""
           content="The Linux series of blog posts are aimed at 
         improving a broad understanding of Linux and it's tools."
-        />
-      </div>
+        /> */}
+      {/* </div> */}
       {/* Tiles end */}
-      <div className="courses" style={{ marginTop: '5vh' }}>
+      {/* <div className="courses" style={{ marginTop: '5vh' }}>
         <Title level={1} style={{ fontWeight: '700', margin: 0 }}>
           Courses
         </Title>
         <Paragraph>Coming soon..</Paragraph>
-      </div>
+      </div> */}
     </Layout>
   )
 }
@@ -134,13 +156,16 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { category: { ne: null }, draft: { eq: false } } }
-      limit: 3
+      limit: 10
     ) {
       edges {
         node {
           excerpt(pruneLength: 150, truncate: true)
           fields {
             slug
+            readingTime {
+              text
+            }
           }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")

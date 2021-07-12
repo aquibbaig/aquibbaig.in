@@ -60,10 +60,17 @@ export default ({ data, location }) => {
         }}>
           Archives
         </Title>
-        <Paragraph style={{ fontSize: '1.2rem' }}>
+        <Paragraph style={{ fontSize: '1.4rem',
+          textAlign: 'left',
+          margin: '0px',
+          padding: '0px',
+          fontWeight: 300,
+          marginBottom: '2vh'
+        }}>
           I started writing content related to tech in my college and have been writing
-          quite a lot since the lockdown of 2021.
-          I have published {posts.length} blog posts on this website. You can filter using the
+          since 2021.
+          I have published {posts.length} blog posts on this website so far, which
+          you can filter using
           keywords below.
         </Paragraph>
         <Category
@@ -101,6 +108,9 @@ export const pageQuery = graphql`
           excerpt(pruneLength: 150, truncate: true)
           fields {
             slug
+            readingTime {
+              text
+            }
           }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")

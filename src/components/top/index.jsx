@@ -5,12 +5,13 @@ import { Row, Col, Menu } from 'antd'
 import { ThemeSwitch } from '../theme-switch'
 import { StaticQuery, graphql } from 'gatsby';
 // import Searchbar from '../search';
-import { FaBars } from 'react-icons/fa'
+import { RiMenuFill } from 'react-icons/ri';
+import { rhythm } from '../../utils/typography'
 
 export const Top = ({ title, location, rootPath, ...props }) => {
   const isRoot = location.pathname === rootPath;
   const [expandMenu, showExpandMenu] = useState(false);
-  const { setCheckVar, checked } = props;
+  const { setCheckVar } = props;
 
   const setThemeCheck = (ch) => {
     setCheckVar(ch);
@@ -38,18 +39,39 @@ export const Top = ({ title, location, rootPath, ...props }) => {
           !isRoot && (
             <>
               <Row
+                style={{
+                  maxWidth: rhythm(40),
+                  marginLeft: `auto`,
+                  marginRight: `auto`,
+                  paddingTop: `1vh`
+                }}
                 className="navigation"
                 justify="space-between"
                 align="middle"
               >
                 <Col lg={8} className="nav-menu">
-                  <Link className="ff" to="/projects" style={{ textDecoration: 'none' }}>Projects</Link>
-                  {/* <Link className="ff" to="/blog">Blog</Link> */}
-                  <Link className="ff" to="/dashboard" style={{ textDecoration: 'none' }}>Dashboard</Link>
-                  <Link className="ff" to="/about" style={{ textDecoration: 'none' }}>About</Link>
-                  <Link className="rf" to="/" style={{ textDecoration: 'none' }}>Home</Link>
+                  {/* <Link className="ff" to="/projects" style={{ textDecoration: 'none' }}>Projects</Link> */}
+                  {/* <Link className="ff" to="/about" style={{ textDecoration: 'none' }}>About</Link> */}
+                  <Link
+                    className="rf"
+                    to="/"
+                    style={{ textDecoration: 'none' }}>
+                      Home
+                  </Link>
+                  <Link
+                    className="rf"
+                    to="/blog"
+                    style={{ textDecoration: 'none' }}>
+                      Articles
+                  </Link>
+                  <Link
+                    className="rf"
+                    to="/me"
+                    style={{ textDecoration: 'none' }}>
+                      About
+                  </Link>
                 </Col>
-                <FaBars className="hamburger-menu" onClick={() => toggleShowMenu(expandMenu)}/>
+                <RiMenuFill className="hamburger-menu" onClick={() => toggleShowMenu(expandMenu)}/>
                 <Col>
                   <ThemeSwitch setVar={(c) => setThemeCheck(c)} />
                 </Col>
@@ -74,16 +96,13 @@ export const Top = ({ title, location, rootPath, ...props }) => {
                     <Link to="/" className="rf" style={{ fontSize: '1.4rem', textDecoration: 'none' }}>Home</Link>
                   </Menu.Item>
                   <Menu.Item>
-                    <Link to="/projects" className="rf" style={{ fontSize: '1.4rem', textDecoration: 'none' }}>Projects</Link>
+                    <Link to="/blog" className="rf" style={{ fontSize: '1.4rem', textDecoration: 'none' }}>Articles</Link>
                   </Menu.Item>
                   {/* <Menu.Item>
                     <Link to="/blog" style={{ fontSize: '1.4rem' }}>Blog</Link>
                   </Menu.Item> */}
                   <Menu.Item>
-                    <Link to="/dashboard" className="rf" style={{ fontSize: '1.4rem', textDecoration: 'none' }}>Dashboard</Link>
-                  </Menu.Item>
-                  <Menu.Item>
-                    <Link to="/about" className="rf" style={{ fontSize: '1.4rem', textDecoration: 'none' }}>About</Link>
+                    <Link to="/me" className="rf" style={{ fontSize: '1.4rem', textDecoration: 'none' }}>About</Link>
                   </Menu.Item>
                 </Menu>
               </Row>}
