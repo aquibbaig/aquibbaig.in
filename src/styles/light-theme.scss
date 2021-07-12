@@ -62,10 +62,10 @@ body.light {
   }
 
   .globalLink {
-    padding: 2px 0 0 2px;
-    color: inherit !important;
+    padding: 0;
+    color: $dark-link-hover-color !important;
     text-decoration: none !important;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
+    // border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
     // background: #e0f9ed;
     font-size: inherit !important;
   }
@@ -204,14 +204,19 @@ body.light {
 
   .gatsby-highlight > .language-text > .language-text {
     background: transparent;
-    color: inherit;
+    color: $light-code-color;
+  }
+
+  blockquote {
+    border-left: 4px solid $dark-link-text-color !important;
+    background: $light-code-bg;
   }
 
   :not(.gatsby-highlight) > .language-text {
     padding: 2px 0 0 2px;
-    background-color: #fffae0;
-    font-size: 1.2rem;
-    color: rgb(65, 65, 65);
+    background-color: $light-code-bg;
+    font-size: 1rem;
+    color: $light-code-color;
   }
 
   .gatsby-highlight > pre > code {
@@ -253,6 +258,11 @@ body.light {
   .switch-container > label > svg {
     // background: $light-highlighter;
     color: $light-background-color;
+  }
+
+  .switch-container > label > svg:hover {
+    // background: $secondary-dark-link-color;
+    color: $dark-link-hover-color;
   }
 
   .hamburger-menu {

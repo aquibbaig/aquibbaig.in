@@ -5,7 +5,6 @@ import * as Elements from '../components/elements'
 import Layout from '../layout'
 import { Head } from '../components/head'
 import { PostTitle } from '../components/post-title'
-import { PostDate } from '../components/post-date'
 import { PostContainer } from '../components/post-container'
 import { SocialShare } from '../components/social-share'
 import { SponsorButton } from '../components/sponsor-button'
@@ -14,8 +13,6 @@ import { PostNavigator } from '../components/post-navigator'
 import { Disqus } from '../components/disqus'
 import { Utterances } from '../components/utterances'
 import * as ScrollManager from '../utils/scroll'
-
-import { GithubOutlined } from '@ant-design/icons'
 
 import '../styles/code.scss'
 import 'katex/dist/katex.min.css'
@@ -63,7 +60,7 @@ export default ({ data, pageContext, location }) => {
             Is this page useful?
           </Typography.Text>
           <a
-            class="edit-this"
+            className="edit-this"
             style={{ fontSize: '1.2rem', textDecoration: 'none' }}
             href={`${repositoryUrl}/blob/master/content/blog/${getUrlSuffix(location.pathname)}`}>
             Edit this page

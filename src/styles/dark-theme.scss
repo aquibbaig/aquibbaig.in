@@ -2,6 +2,11 @@ body.dark {
   background-color: $dark-background-color;
   color: #fff;
 
+  blockquote {
+    border-left: 4px solid #2697ed;
+    background: $dark-code-bg;
+  }
+
   .before > svg,
   .anchor > svg {
     fill: $secondary-dark-link-color !important;
@@ -68,22 +73,22 @@ body.dark {
   }
 
   .globalLink {
-    color: white;
+    color: $dark-link-text-color;
     font-size: inherit;
-    padding: 2px 0 0 2px;
+    // padding: 2px 0 0 2px;
     text-decoration: none !important;
-    border-bottom: 1px solid white !important;
+    // border-bottom: 1px solid white !important;
   }
 
   .globalLink:hover {
-    color: white !important;
+    color: $dark-link-hover-color;
     border-bottom: 1px solid $dark-link-hover-color !important;
   }
 
   div.layout-content div div p a {
     // color: inherit !important;
     padding: 2px 0 0 2px;
-    background: $secondary-dark-link-color;
+    background: $dark-code-bg;
     font-size: inherit !important;
     color: $dark-link-hover-color !important;
     text-decoration: none !important;
@@ -91,7 +96,7 @@ body.dark {
   }
 
   div.layout-content div div p a:hover {
-    background: $secondary-dark-link-color;
+    background: $dark-code-bg;
     border-bottom: 1px solid $dark-link-hover-color !important;
     color: $dark-background-color;
   }
@@ -162,10 +167,6 @@ body.dark {
     color: #99dbcf;
   }
 
-  blockquote {
-    border-left: 4px solid rgba(255, 255, 255, 0.822);
-  }
-
   h2 {
     margin-top: 10vh;
     // margin-bottom: 0.5em !important;
@@ -182,8 +183,8 @@ body.dark {
 
   h1,
   h2,
-  h3,
-  p {
+  h3 {
+    margin-top: 10vh;
     color: $light-background-color !important;
     border-bottom: 0;
   }
@@ -201,7 +202,7 @@ body.dark {
   }
 
   .ant-typography a:is(.banner) {
-    color: $dark-link-hover-color;
+    color: $dark-link-text-color;
     text-decoration: underline;
   }
 
@@ -215,11 +216,20 @@ body.dark {
   }
 
   .ant-tag {
-    background-color: #111d2d;
+    background-color: $dark-code-bg;
     border: 1px solid $dark-background-color;
     color: white;
     font-size: 1rem;
     font-family: 'Calibre';
+  }
+
+  .token.tag,
+  .token.attr-name,
+  .token.namespace,
+  .token.deleted,
+  .token.punctuation {
+    color: $dark-code-color;
+    font-weight: 300;
   }
 
   .tile > .ant-card-body > .ant-row > .ant-col > p > button {
@@ -315,8 +325,8 @@ body.dark {
     padding: 1.2em;
     margin: 1.5em 0;
     overflow: auto;
-    background-color: #111d2d;
-    border: 1px solid transparent;
+    background-color: $dark-code-bg;
+    border: 1px solid #000;
   }
 
   .gatsby-highlight > pre > code {
@@ -330,9 +340,9 @@ body.dark {
 
   :not(.gatsby-highlight) > .language-text {
     padding: 2px 0 0 2px;
-    background-color: #fffae0;
-    font-size: 1.2rem;
-    color: rgb(65, 65, 65);
+    background-color: $dark-code-bg;
+    font-size: 1rem;
+    color: $dark-code-color;
   }
 
   .navigation {
@@ -348,6 +358,11 @@ body.dark {
   .switch-container > label > svg {
     // background: $secondary-dark-link-color;
     color: $light-background-color;
+  }
+
+  .switch-container > label > svg:hover {
+    // background: $secondary-dark-link-color;
+    color: $dark-link-hover-color;
   }
 
   .hamburger-menu {

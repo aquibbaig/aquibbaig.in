@@ -39,7 +39,6 @@ const Me = ({ data, location }) => {
   const { siteMetadata } = data.site;
   return (
     <Layout location={location} title={siteMetadata.title}>
-      <Avatar style={{ textAlign: 'center', marginBottom: '2vh' }} size={64} src="https://avatars.githubusercontent.com/u/26324376?v=4" />
       <Paragraph
         className="paragraph"
         style={{
